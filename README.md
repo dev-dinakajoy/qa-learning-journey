@@ -49,31 +49,31 @@ The goal is to become capable of **finding problems, communicating them clearly,
 
 ### Phase 1 — Manual QA Fundamentals
 
-* [ ] What is Quality Assurance?
-* [ ] What is Software Testing?
-* [ ] QA vs QC vs Testing
-* [ ] Software Development Life Cycle (SDLC)
-* [ ] Software Testing Life Cycle (STLC)
-* [ ] Test scenarios
-* [ ] Test cases
-* [ ] Test data
-* [ ] Test execution
-* [ ] Bug/defect lifecycle
-* [ ] Bug reporting
-* [ ] Severity vs Priority
-* [ ] Functional testing
-* [ ] Non-functional testing
-* [ ] Smoke testing
-* [ ] Sanity testing
-* [ ] Regression testing
-* [ ] Retesting
-* [ ] Exploratory testing
-* [ ] Positive and negative testing
-* [ ] Boundary Value Analysis
+* [x] What is Quality Assurance?
+* [x] What is Software Testing?
+* [x] QA vs QC vs Testing
+* [x] Software Development Life Cycle (SDLC)
+* [x] Software Testing Life Cycle (STLC)
+* [x] Test scenarios
+* [x] Test cases
+* [x] Test data
+* [x] Test execution
+* [x] Bug/defect lifecycle
+* [x] Bug reporting
+* [x] Severity vs Priority
+* [x] Functional testing
+* [x] Non-functional testing
+* [x] Smoke testing
+* [x] Sanity testing
+* [x] Regression testing
+* [x] Retesting
+* [x] Exploratory testing
+* [x] Positive and negative testing
+* [x] Boundary Value Analysis
 * [ ] Equivalence Partitioning
-* [ ] Agile methodology
-* [ ] Scrum
-* [ ] QA's role in an Agile development team
+* [x] Agile methodology
+* [x] Scrum
+* [x] QA's role in an Agile development team
 
 ---
 
