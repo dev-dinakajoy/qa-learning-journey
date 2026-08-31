@@ -4,8 +4,6 @@ Welcome to my **QA Learning Journey** — a hands-on repository documenting my j
 
 This repository contains my learning notes, testing exercises, test cases, bug reports, projects, and practical experiments as I build my skills in software quality assurance.
 
-> **Learn → Practice → Test → Document → Improve**
-
 ## About Me
 
 I'm currently building my skills toward a career in **Software Quality Assurance**.
@@ -39,9 +37,7 @@ Instead, I want to:
 6. **Apply it to a project**
 7. **Review and improve**
 
-The goal is not simply to finish a roadmap.
-
-The goal is to become capable of **finding problems, communicating them clearly, and helping teams deliver better software.**
+The goal is not simply to finish a roadmap but to become capable of **finding problems, communicating them clearly, and helping teams deliver better software.**
 
 ---
 
@@ -70,7 +66,10 @@ The goal is to become capable of **finding problems, communicating them clearly,
 * [x] Exploratory testing
 * [x] Positive and negative testing
 * [x] Boundary Value Analysis
-* [ ] Equivalence Partitioning
+* [x] Equivalence Partitioning
+* [x] State Transition Testing
+* [x] Decision tables
+* [x] Error Guessing
 * [x] Agile methodology
 * [x] Scrum
 * [x] QA's role in an Agile development team
@@ -216,40 +215,6 @@ The tools I expect to explore during this journey include:
 For each major topic, I will try to document more than just theory.
 - Learning Notes: Concepts, definitions, examples, and important lessons.
 - Test Cases: Practical test cases written for real or sample applications.
-Example:
-
-| ID     | Test Case                    | Expected Result                 | Status |
-| ------ | ---------------------------- | ------------------------------- | ------ |
-| TC-001 | Login with valid credentials | User successfully logs in       | ✅      |
-| TC-002 | Login with invalid password  | Error message is displayed      | ✅      |
-| TC-003 | Login with empty password    | Validation message is displayed | ⏳      |
-
-### Bug Reports
-
-Each bug report will contain relevant information such as:
-
-* Bug ID
-* Title
-* Description
-* Steps to reproduce
-* Expected result
-* Actual result
-* Severity
-* Priority
-* Environment
-* Evidence
-* Status
-
-### Testing Techniques
-
-I will practice techniques such as:
-
-* Equivalence Partitioning
-* Boundary Value Analysis
-* Decision Table Testing
-* State Transition Testing
-* Exploratory Testing
-* Error Guessing
 
 ---
 
@@ -301,8 +266,8 @@ I will update my progress as I move through the roadmap.
 
 | Phase                    | Status         |
 | ------------------------ | -------------- |
-| Manual QA Fundamentals   | 🟡 In Progress |
-| Practical Manual Testing | ⚪ Not Started  |
+| Manual QA Fundamentals   | 🟢 Completed    |
+| Practical Manual Testing | 🟡 In Progress  |
 | Test Management & Agile  | ⚪ Not Started  |
 | API Testing              | ⚪ Not Started  |
 | SQL                      | ⚪ Not Started  |
