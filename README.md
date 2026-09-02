@@ -341,35 +341,3 @@ Practice:
 * Test reports
 * Quality checks
 * Automated quality gates
-
----
-
-# Progress
-
-I will update my progress as I move through the roadmap.
-
-| Phase                           | Status         |
-| ------------------------------- | -------------- |
-| Manual QA Fundamentals          | 🟢 Completed   |
-| Practical Manual Testing        | 🟡 In Progress |
-| Test Management & Collaboration | ⚪ Not Started  |
-| API Testing                     | ⚪ Not Started  |
-| SQL                             | ⚪ Not Started  |
-| Test Automation                 | ⚪ Not Started  |
-| CI/CD                           | ⚪ Not Started  |
-
----
-
-# My Transition
-
-This repository represents a shift in perspective:
-
-**Software Developer → QA Tester → QA Engineer → Quality Engineer**
-
-I'm not starting from zero.
-
-I'm building on **4+ years of software development experience** while developing the testing expertise needed to approach software from another critical perspective:
-
-> **Don't just ask, "Does it work?" Ask, "How can it fail?"**
-
-The journey continues.
