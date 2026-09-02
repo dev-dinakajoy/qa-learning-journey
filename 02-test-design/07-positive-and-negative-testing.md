@@ -67,7 +67,7 @@ The test **passes** if the application correctly rejects the invalid input.
 
 ---
 
-## 🧠 An important distinction
+## An important distinction
 
 I initially thought:
 
@@ -255,7 +255,7 @@ This is why I don't have to rely on only one test design technique.
 
 ---
 
-## 🧪 Practice Exercise
+## Practice Exercise
 
 Consider this requirement:
 
@@ -298,7 +298,7 @@ Then apply:
 
 ---
 
-## 🧠 What clicked for me
+## What clicked for me
 
 Positive and negative testing aren't separate complicated techniques.
 
@@ -311,7 +311,7 @@ The real strength comes from combining them with other test design techniques.
 
 ---
 
-## 💡 Key Takeaway
+## Key Takeaway
 
 A good test suite should not only verify that **valid inputs work**.
 
@@ -324,7 +324,7 @@ Together, they help me build more complete and realistic test coverage.
 
 ---
 
-## 🔗 Related
+## Related
 
 * [Equivalence Partitioning](02-equivalence-partitioning.md)
 * [Boundary Value Analysis](03-boundary-value-analysis.md)
