@@ -89,9 +89,9 @@ I want to become capable of **thinking like a tester, finding meaningful problem
 
 ---
 
-# Learning Roadmap
+## Learning Roadmap
 
-## Phase 1 — Manual QA Fundamentals
+### Phase 1 — Manual QA Fundamentals
 
 Build a strong foundation in software testing and quality assurance.
 
@@ -126,7 +126,7 @@ Build a strong foundation in software testing and quality assurance.
 
 ---
 
-## Phase 2 — Practical Manual Testing
+### Phase 2 — Practical Manual Testing
 
 Apply manual testing techniques to real-world applications.
 
@@ -145,7 +145,7 @@ Apply manual testing techniques to real-world applications.
 
 ---
 
-## Phase 3 — Test Management & Collaboration
+### Phase 3 — Test Management & Collaboration
 
 Learn the tools, processes, and collaboration practices used by modern QA teams.
 
@@ -163,7 +163,7 @@ Learn the tools, processes, and collaboration practices used by modern QA teams.
 
 ---
 
-## Phase 4 — API Testing
+### Phase 4 — API Testing
 
 Learn how to test application functionality beyond the user interface.
 
@@ -187,7 +187,7 @@ Learn how to test application functionality beyond the user interface.
 
 ---
 
-## Phase 5 — SQL for QA
+### Phase 5 — SQL for QA
 
 Learn SQL to validate application data and investigate issues.
 
@@ -207,7 +207,7 @@ Learn SQL to validate application data and investigate issues.
 
 ---
 
-## Phase 6 — Test Automation
+### Phase 6 — Test Automation
 
 Use my software development background to build a strong foundation in automated testing.
 
@@ -226,7 +226,7 @@ Use my software development background to build a strong foundation in automated
 
 ---
 
-## Phase 7 — CI/CD & Advanced QA
+### Phase 7 — CI/CD & Advanced QA
 
 Learn how QA integrates with modern software delivery pipelines.
 
@@ -242,7 +242,7 @@ Learn how QA integrates with modern software delivery pipelines.
 
 ---
 
-# Tools & Technologies
+## Tools & Technologies
 
 | Area             | Tools / Technologies    |
 | ---------------- | ----------------------- |
@@ -259,31 +259,6 @@ Learn how QA integrates with modern software delivery pipelines.
 
 ---
 
-# What I Will Document
-
-For each major topic, I will document more than just theory.
-
-### Learning Notes
-
-Concepts, definitions, examples, practical observations, mistakes, and lessons learned.
-
-### Test Cases
-
-Practical test cases designed around real or sample applications.
-
-### Bug Reports
-
-Clear and reproducible defect reports including:
-
-* Title
-* Description
-* Steps to reproduce
-* Expected result
-* Actual result
-* Severity
-* Priority
-* Environment
-* Evidence
 
 ### Testing Projects
 
@@ -291,11 +266,11 @@ Practical projects demonstrating how I apply testing concepts to real applicatio
 
 ---
 
-# Projects
+## Projects
 
 This journey focuses on **hands-on practice**, not just completing tutorials.
 
-## Project 1 — Web Application Manual Testing
+### Project 1 — Web Application Manual Testing
 
 Practice:
 
@@ -308,7 +283,7 @@ Practice:
 * Bug reporting
 * Test documentation
 
-## Project 2 — API Testing
+### Project 2 — API Testing
 
 Practice:
 
@@ -320,7 +295,7 @@ Practice:
 * Negative testing
 * API test collections
 
-## Project 3 — Automated Test Suite
+### Project 3 — Automated Test Suite
 
 Practice:
 
@@ -332,7 +307,7 @@ Practice:
 * Test reporting
 * Regression automation
 
-## Project 4 — CI/CD Testing Pipeline
+### Project 4 — CI/CD Testing Pipeline
 
 Practice:
 
