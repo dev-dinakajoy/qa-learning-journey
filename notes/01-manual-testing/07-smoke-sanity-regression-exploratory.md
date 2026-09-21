@@ -23,7 +23,7 @@ The simplest way I understand them is:
 
 ---
 
-# 1. Smoke Testing
+## 1. Smoke Testing
 
 Smoke testing is a **quick check of the major functionality** of an application or build.
 
@@ -66,7 +66,7 @@ It simply answers:
 
 ---
 
-# 2. Sanity Testing
+## 2. Sanity Testing
 
 Sanity testing is a **focused check of a specific area**, usually after a change, enhancement, or bug fix.
 
@@ -105,7 +105,7 @@ It helps me quickly determine whether a particular change appears to be working.
 
 ---
 
-# 3. Regression Testing
+## 3. Regression Testing
 
 Regression testing checks whether **existing functionality still works after changes have been made**.
 
@@ -146,7 +146,7 @@ The goal is to make sure existing functionality hasn't been negatively affected.
 
 ---
 
-# 4. Exploratory Testing
+## 4. Exploratory Testing
 
 Exploratory testing is different from the previous three.
 
@@ -201,7 +201,7 @@ I'm using **curiosity, observation, and testing knowledge** to discover unexpect
 
 ---
 
-# Smoke vs Sanity vs Regression
+## Smoke vs Sanity vs Regression
 
 These three are easy to confuse.
 
@@ -231,7 +231,7 @@ Imagine a shopping application receives a new checkout update.
 
 ---
 
-# Smoke vs Regression
+## Smoke vs Regression
 
 These can sometimes involve overlapping tests, but their purpose is different.
 
@@ -253,7 +253,7 @@ Regression testing is usually **broader and deeper**, depending on the project's
 
 ---
 
-# Sanity vs Retesting
+## Sanity vs Retesting
 
 Another important distinction is between **sanity testing and retesting**.
 
@@ -281,7 +281,7 @@ They can overlap in practice, and different teams may use these terms differentl
 
 ---
 
-# Exploratory Testing vs Test Cases
+## Exploratory Testing vs Test Cases
 
 Exploratory testing doesn't mean:
 
@@ -307,7 +307,7 @@ Exploratory testing gives me freedom to investigate things I didn't anticipate w
 
 ---
 
-# Example: Testing a Registration Page
+### Example: Testing a Registration Page
 
 Imagine I have this registration form:
 
@@ -373,7 +373,7 @@ This gives me much broader coverage.
 
 ---
 
-# How These Tests Fit Together
+## How These Tests Fit Together
 
 In a real project, these aren't necessarily four completely separate activities.
 
@@ -403,7 +403,7 @@ The exact workflow depends on the team's process.
 
 ---
 
-# A Practical Example
+## A Practical Example
 
 Imagine a developer gives me a new build containing:
 
@@ -447,7 +447,7 @@ That's how these concepts can work together.
 
 ---
 
-# What clicked for me
+## What clicked for me
 
 I initially thought these testing terms were just different names for the same thing.
 
@@ -471,7 +471,7 @@ Exploratory
 
 ---
 
-# Key Takeaway
+## Key Takeaway
 
 The four concepts I want to remember are:
 

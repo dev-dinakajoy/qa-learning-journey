@@ -18,7 +18,7 @@ Today I learned the fundamentals of Manual QA:
 * Sanity Testing
 * Regression Testing
 * Exploratory Testing
-* Agile/Scrum
+* Agile/Scrum and how QA works in a development team
 
 ### What clicked for me
 
@@ -97,3 +97,5 @@ For example:
 ### Next
 
 Move from designing tests to writing and executing professional test cases.
+
+## September 21, 2026

@@ -16,7 +16,7 @@ Understanding this difference is important because not every serious bug is the 
 
 ---
 
-# Severity
+## Severity
 
 **Severity** describes the **impact of a defect on the software**.
 
@@ -28,13 +28,11 @@ A bug that prevents users from completing a critical function usually has high s
 
 ---
 
-## Common Severity Levels
+### Common Severity Levels
 
 Different companies may use different names, but a simple classification is:
 
-### Critical
-
-The application or a critical feature is completely unusable.
+- **Critical:** The application or a critical feature is completely unusable.
 
 Example:
 
@@ -44,9 +42,7 @@ Example:
 Severity: Critical
 ```
 
-### High
-
-A major feature is broken, but the entire application isn't necessarily unusable.
+- **High:** A major feature is broken, but the entire application isn't necessarily unusable.
 
 Example:
 
@@ -56,9 +52,7 @@ Example:
 Severity: High
 ```
 
-### Medium
-
-The bug affects functionality but there is a workaround or the impact is limited.
+- **Medium:** The bug affects functionality but there is a workaround or the impact is limited.
 
 Example:
 
@@ -68,9 +62,7 @@ Example:
 Severity: Medium
 ```
 
-### Low
-
-The bug has little functional impact.
+- **Low:** The bug has little functional impact.
 
 Example:
 
@@ -82,7 +74,7 @@ Severity: Low
 
 ---
 
-# Priority
+## Priority
 
 **Priority** describes how urgently the team should fix the bug.
 
@@ -106,7 +98,7 @@ means the team should address the bug quickly.
 
 ---
 
-# Severity vs Priority
+## Severity vs Priority
 
 Here's the easiest way I remember it:
 
@@ -119,7 +111,7 @@ Here's the easiest way I remember it:
 
 ---
 
-# Example 1: High Severity + High Priority
+### Example 1: High Severity + High Priority
 
 Imagine an e-commerce application.
 
@@ -136,7 +128,7 @@ The defect prevents users from completing purchases and directly affects the cor
 
 ---
 
-# Example 2: Low Severity + Low Priority
+### Example 2: Low Severity + Low Priority
 
 The company's footer contains a small spacing issue.
 
@@ -151,7 +143,7 @@ It can probably wait until a future release.
 
 ---
 
-# Example 3: Low Severity + High Priority
+### Example 3: Low Severity + High Priority
 
 This is where things get interesting.
 
@@ -185,7 +177,7 @@ This example helped me understand that severity and priority don't have to be th
 
 ---
 
-# Example 4: High Severity + Low Priority
+### Example 4: High Severity + Low Priority
 
 Imagine an old admin feature that crashes when a very specific, rarely used input is entered.
 
@@ -212,7 +204,7 @@ The exact decision depends on the project's context.
 
 ---
 
-# A Simple Matrix
+## A Simple Matrix
 
 I can think about bugs using this matrix:
 
@@ -234,7 +226,7 @@ The product team ultimately decides what gets prioritized based on factors such 
 
 ---
 
-# Who Decides Severity and Priority?
+## Who Decides Severity and Priority?
 
 This can vary between organizations.
 
@@ -259,7 +251,7 @@ Just because I want the developer to fix it quickly.
 
 ---
 
-# Example Bug Report
+## Example Bug Report
 
 Suppose I'm testing a banking application.
 
@@ -293,7 +285,7 @@ I need to understand **why** the defect has that severity and priority.
 
 ---
 
-# Common Mistake
+## Common Mistake
 
 One mistake I want to avoid is thinking:
 
@@ -323,7 +315,7 @@ Depending on the organization, the Product Owner, Project Manager, QA Lead, or t
 
 ---
 
-# What clicked for me
+## What clicked for me
 
 Before learning this, I thought:
 
@@ -342,7 +334,7 @@ The context of the product and business matters.
 
 ---
 
-# Key Takeaway
+## Key Takeaway
 
 The easiest way for me to remember the difference is:
 

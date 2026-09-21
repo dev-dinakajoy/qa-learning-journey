@@ -22,7 +22,7 @@ The goal is to build and test software continuously while working closely with t
 
 ---
 
-# What is Agile?
+## What is Agile?
 
 **Agile** is an approach to software development that focuses on:
 
@@ -68,7 +68,7 @@ This allows the team to get feedback earlier.
 
 ---
 
-# What is Scrum?
+## What is Scrum?
 
 **Scrum** is one framework teams can use to work in an Agile way.
 
@@ -82,11 +82,11 @@ The team selects a group of work to complete during the Sprint.
 
 ---
 
-# Scrum Team
+### Scrum Team
 
 A typical Scrum team has three key accountabilities:
 
-## Product Owner
+#### Product Owner
 
 The Product Owner focuses on the product and business needs.
 
@@ -104,7 +104,7 @@ They may:
 
 ---
 
-## Scrum Master
+#### Scrum Master
 
 The Scrum Master helps the team use Scrum effectively.
 
@@ -119,7 +119,7 @@ The Scrum Master isn't simply the team's manager.
 
 ---
 
-## Developers
+#### Developers
 
 Developers build the product.
 
@@ -158,7 +158,7 @@ One important thing I learned is:
 
 ---
 
-# The Product Backlog
+## The Product Backlog
 
 The **Product Backlog** is a prioritized list of work that may need to be done on the product.
 
@@ -188,7 +188,7 @@ The Product Owner helps prioritize the backlog.
 
 ---
 
-# User Stories
+## User Stories
 
 Agile teams often describe features using **user stories**.
 
@@ -208,7 +208,7 @@ This describes the feature from the user's perspective.
 
 ---
 
-# Acceptance Criteria
+## Acceptance Criteria
 
 User stories usually have **acceptance criteria** that describe the conditions the feature must satisfy.
 
@@ -236,7 +236,7 @@ They help me determine:
 
 ---
 
-# QA During Sprint Planning
+## QA During Sprint Planning
 
 Before a Sprint starts, the team discusses the work they want to complete.
 
@@ -256,7 +256,7 @@ These questions can expose gaps in requirements before development starts.
 
 ---
 
-# QA During Development
+## QA During Development
 
 While developers are working, QA doesn't necessarily sit and wait.
 
@@ -286,7 +286,7 @@ Then I'm ready when the feature becomes available.
 
 ---
 
-# QA During Testing
+## QA During Testing
 
 Once the feature is available in the test environment, QA executes the planned tests.
 
@@ -306,7 +306,7 @@ If a test fails because of a defect, I create a bug report.
 
 ---
 
-# QA and Developers Working Together
+## QA and Developers Working Together
 
 Suppose I find a bug.
 
@@ -332,11 +332,11 @@ If it fails:
 
 ---
 
-# Scrum Events
+## Scrum Events
 
 Scrum has several important events.
 
-## Sprint Planning
+### Sprint Planning
 
 The team decides:
 
@@ -346,7 +346,7 @@ QA participates by helping understand the testing requirements, risks, and effor
 
 ---
 
-## Daily Scrum
+### Daily Scrum
 
 This is a short daily synchronization meeting.
 
@@ -364,7 +364,7 @@ Keep it short and relevant.
 
 ---
 
-## Sprint Review
+### Sprint Review
 
 At the end of the Sprint, the team demonstrates completed work to stakeholders.
 
@@ -372,7 +372,7 @@ QA can help ensure that the demonstrated features meet the agreed requirements.
 
 ---
 
-## Sprint Retrospective
+### Sprint Retrospective
 
 The team reflects on the Sprint.
 
@@ -392,7 +392,7 @@ This is one way QA contributes to **process improvement**, not just product test
 
 ---
 
-# Backlog Refinement
+## Backlog Refinement
 
 Teams often spend time refining upcoming backlog items.
 
@@ -414,7 +414,7 @@ That question might prevent ambiguity before development begins.
 
 ---
 
-# Definition of Done
+## Definition of Done
 
 A Scrum team may have a **Definition of Done (DoD)**.
 
@@ -442,7 +442,7 @@ The important thing is:
 
 ---
 
-# A Complete Sprint Example
+## A Complete Sprint Example
 
 Imagine we're building a food delivery application.
 
@@ -515,7 +515,7 @@ This is Agile/Scrum with QA in practice.
 
 ---
 
-# QA Is Not Just "The Bug Finder"
+## QA Is Not Just "The Bug Finder"
 
 One of the biggest things I'm learning is that QA isn't just:
 
@@ -551,7 +551,7 @@ QA helps verify quality
 
 ---
 
-# What clicked for me
+## What clicked for me
 
 Before learning about Agile and Scrum, I thought QA mainly happened **after development**.
 
@@ -563,7 +563,7 @@ I also learned that QA and developers should work together rather than treating 
 
 ---
 
-# Key Takeaway
+## Key Takeaway
 
 The main thing I want to remember is:
 

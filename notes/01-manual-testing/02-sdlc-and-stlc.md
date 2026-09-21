@@ -100,7 +100,7 @@ QA continues testing new changes and making sure existing functionality isn't br
 
 ---
 
-# STLC — Software Testing Life Cycle
+## STLC — Software Testing Life Cycle
 
 STLC focuses specifically on the **testing activities** within the software development process.
 
@@ -122,7 +122,7 @@ Defect Reporting & Retesting
 Test Closure
 ```
 
-## 1. Requirement Analysis
+### 1. Requirement Analysis
 
 QA studies the requirements to understand what needs to be tested.
 
@@ -136,7 +136,7 @@ I should ask:
 
 ---
 
-## 2. Test Planning
+### 2. Test Planning
 
 The team decides how testing will be carried out.
 
@@ -152,7 +152,7 @@ This can include:
 
 ---
 
-## 3. Test Case Design
+### 3. Test Case Design
 
 QA creates test cases based on the requirements.
 
@@ -169,7 +169,7 @@ Each test case should have clear steps and expected results.
 
 ---
 
-## 4. Test Environment Setup
+### 4. Test Environment Setup
 
 The team prepares the environment where testing will happen.
 
@@ -193,7 +193,7 @@ Database: Test database
 
 ---
 
-## 5. Test Execution
+### 5. Test Execution
 
 QA executes the test cases and compares:
 
@@ -215,7 +215,7 @@ When a failure is caused by a defect, QA reports it.
 
 ---
 
-## 6. Defect Reporting & Retesting
+### 6. Defect Reporting & Retesting
 
 When QA finds a bug, it is documented and assigned to the appropriate person.
 
@@ -236,7 +236,7 @@ Failed → Reopened
 
 ---
 
-## 7. Test Closure
+### 7. Test Closure
 
 Testing is completed when the team meets the agreed testing criteria.
 
@@ -253,7 +253,7 @@ The goal is to capture what was learned and improve future testing.
 
 ---
 
-# SDLC vs STLC
+## SDLC vs STLC
 
 The easiest way I understand the difference is:
 
@@ -269,7 +269,7 @@ The easiest way I understand the difference is:
 
 ---
 
-# Where QA Fits
+## Where QA Fits
 
 One important thing I learned is that **QA isn't only involved when developers finish coding.**
 QA can contribute throughout the SDLC.
@@ -288,7 +288,7 @@ For example, QA can:
 
 ---
 
-# What clicked for me
+## What clicked for me
 
 Before learning about SDLC and STLC, I mostly thought of testing as:
 
@@ -299,7 +299,7 @@ The earlier a problem is discovered, the easier it can be to address.
 
 ---
 
-# Key Takeaway
+## Key Takeaway
 
 **SDLC tells me how software is developed.**
 

@@ -34,7 +34,7 @@ But a defect can take different paths depending on what happens.
 
 ---
 
-# What is a Bug?
+## What is a Bug?
 
 A **bug** is a problem or unexpected behavior in software that causes the application to behave differently from what is expected.
 
@@ -54,9 +54,9 @@ The terms **bug**, **defect**, and **issue** are often used interchangeably in e
 
 ---
 
-# The Defect Lifecycle
+## The Defect Lifecycle
 
-## 1. New
+### 1. New
 
 The tester discovers a problem and creates a defect report.
 
@@ -85,7 +85,7 @@ Actual:
 
 ---
 
-# 2. Assigned
+### 2. Assigned
 
 The defect is reviewed and assigned to a developer or appropriate team member.
 
@@ -95,7 +95,7 @@ The developer now knows:
 
 ---
 
-# 3. In Progress
+### 3. In Progress
 
 The developer starts investigating the defect.
 
@@ -111,7 +111,7 @@ The defect is now **In Progress**.
 
 ---
 
-# 4. Fixed
+### 4. Fixed
 
 The developer believes the defect has been fixed.
 
@@ -121,13 +121,13 @@ This is where QA comes back in.
 
 The developer may say:
 
-> "I've fixed BUG-001. Please retest."
+> "I have fixed BUG-001. Please retest."
 
 QA should test the exact scenario again.
 
 ---
 
-# 5. Retest
+### 5. Retest
 
 QA verifies whether the reported problem has actually been fixed.
 
@@ -155,7 +155,7 @@ If the problem still exists, it may be **Reopened**.
 
 ---
 
-# 6. Closed
+### 6. Closed
 
 If QA confirms that the defect has been successfully fixed, the defect can be marked **Closed**.
 
@@ -171,7 +171,7 @@ Closed ✅
 
 ---
 
-# 7. Reopened
+### 7. Reopened
 
 What happens if QA retests the bug and it still exists?
 
@@ -197,7 +197,7 @@ The tester needs to verify it.
 
 ---
 
-# Other Possible Defect States
+## Other Possible Defect States
 
 Not every defect follows the exact same path.
 
@@ -246,7 +246,7 @@ In this situation, QA may need to provide more information.
 
 ---
 
-# A More Complete Lifecycle
+## A More Complete Lifecycle
 
 A real project might look like:
 
@@ -272,7 +272,7 @@ A real project might look like:
                └────┬────┘
                     ↓
              ┌──────────────┐
-             │   Passed?   │
+             │   Passed?    │
              └──────┬───────┘
                 Yes │ No
                     │  └────────→ Reopened
@@ -284,7 +284,7 @@ Other paths such as **Rejected, Duplicate, Deferred,** or **Cannot Reproduce** c
 
 ---
 
-# Bug Report Example
+## Bug Report Example
 
 Suppose I'm testing a registration page.
 
@@ -336,7 +336,7 @@ This is much more useful than:
 
 ---
 
-# Retesting vs Regression Testing
+## Retesting vs Regression Testing
 
 One thing I need to understand clearly is that **retesting and regression testing are different**.
 
@@ -379,43 +379,33 @@ So:
 
 ---
 
-# What Makes a Good Bug Report?
+## What Makes a Good Bug Report?
 
 A good bug report should be:
 
-### Clear
-
-Someone should understand the problem quickly.
-
-### Reproducible
+- **Clear:** Someone should understand the problem quickly.
+- **Reproducible
 
 Another person should be able to follow the steps and experience the same issue.
-
-### Specific
-
-Avoid vague descriptions like:
+- **Specific:** Avoid vague descriptions like:
 
 > "It doesn't work."
 
 Explain exactly what happened.
-
-### Evidence-based
-
-When possible, include:
+- **Evidence-based:** When possible, include:
 
 * Screenshots
 * Screen recordings
 * Error messages
 * Logs
 * Relevant test data
-
-### Traceable
+- **Traceable
 
 Give the defect a unique ID so the team can easily discuss and track it.
 
 ---
 
-# What clicked for me
+## What clicked for me
 
 I initially thought finding a bug meant the testing work was finished.
 
@@ -433,7 +423,7 @@ I need to **retest it myself**.
 
 ---
 
-# Key Takeaway
+## Key Takeaway
 
 The defect lifecycle is the journey a bug takes from discovery to resolution.
 

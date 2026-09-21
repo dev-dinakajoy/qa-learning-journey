@@ -11,7 +11,7 @@ The simplest way I understand the difference is:
 
 ---
 
-# Test Scenario
+## Test Scenario
 
 A **test scenario** is a high-level description of something that needs to be tested.
 It focuses on **what functionality or behavior** we want to verify.
@@ -37,7 +37,7 @@ A scenario gives me the **testing direction** without going into detailed steps.
 
 ---
 
-# Test Case
+## Test Case
 
 A **test case** is a detailed set of steps used to verify a specific behavior.
 
@@ -88,7 +88,7 @@ Passed ✅
 
 ---
 
-# Test Scenario vs Test Case
+## Test Scenario vs Test Case
 
 Here's the difference in a simple table:
 
@@ -121,7 +121,7 @@ One scenario can therefore have many test cases.
 
 ---
 
-# Positive Testing
+## Positive Testing
 
 When writing test cases, I should test valid input and expected behavior.
 
@@ -142,7 +142,7 @@ The goal is to verify that the application works correctly when valid data is pr
 
 ---
 
-# Negative Testing
+## Negative Testing
 
 I also need to test invalid or unexpected input.
 
@@ -178,7 +178,7 @@ I should also ask:
 
 ---
 
-# Test Case Example: Registration
+## Test Case Example: Registration
 
 Imagine I'm testing a registration form:
 
@@ -223,7 +223,7 @@ From these scenarios, I can create detailed test cases.
 
 ---
 
-# Example Test Cases
+## Example Test Cases
 
 | ID    | Test Case                                     | Expected Result                 |
 | ----- | --------------------------------------------- | ------------------------------- |
@@ -237,41 +237,24 @@ From these scenarios, I can create detailed test cases.
 
 ---
 
-# What Makes a Good Test Case?
+## What Makes a Good Test Case?
 
 A good test case should be:
 
-### Clear
-
-Another tester should understand what I'm trying to test.
-
-### Specific
-
-The steps shouldn't be vague.
-
-Instead of:
-
+- **Clear:** Another tester should understand what I'm trying to test.
+- **Specific:** The steps shouldn't be vague. Instead of:
 > Test login.
 
 Write:
 
 > Enter a registered email and valid password, then click Login.
-
-### Reproducible
-
-Another tester should be able to follow the same steps and get the same result.
-
-### Traceable
-
-The test case should ideally relate back to a requirement or user story.
-
-### Independent
-
-Where possible, a test case shouldn't unnecessarily depend on another test case.
+- **Reproducible:** Another tester should be able to follow the same steps and get the same result.
+- **Traceable:** The test case should ideally relate back to a requirement or user story.
+- **Independent:** Where possible, a test case shouldn't unnecessarily depend on another test case.
 
 ---
 
-# Test Case Template
+## Test Case Template
 
 This is a basic template I can use for my practice:
 
@@ -299,7 +282,7 @@ For larger projects, test management tools can provide additional fields.
 
 ---
 
-# What I Should Test
+## What I Should Test
 
 When creating test cases, I shouldn't only test the **happy path**.
 
@@ -335,7 +318,7 @@ Does the application give a useful response when something goes wrong?
 
 ---
 
-# Example: Password Field
+## Example: Password Field
 
 Suppose the requirement says:
 
@@ -358,7 +341,7 @@ This introduces me to **Boundary Value Analysis**, which I'll learn in more deta
 
 ---
 
-# Test Scenario → Test Case → Test Result
+## Test Scenario → Test Case → Test Result
 
 I can think about the process like this:
 
@@ -416,7 +399,7 @@ This connects the things I've learned so far.
 
 ---
 
-# What clicked for me
+## What clicked for me
 
 I initially thought writing test cases was simply writing down a list of things to click.
 
@@ -428,7 +411,7 @@ The goal is to create **useful test cases that provide good coverage and help di
 
 ---
 
-# Key Takeaway
+## Key Takeaway
 
 The simplest distinction I want to remember is:
 
@@ -438,9 +421,7 @@ The simplest distinction I want to remember is:
 
 And a good QA tester doesn't just test what should work.
 
-I should also think about:
-
-> **What happens when things go wrong?**
+I should also think about what happens when things go wrong
 
 ---
 
