@@ -1,6 +1,6 @@
 # QA Learning Journey
 
-Welcome to my **QA Learning Journey**  - a hands-on repository documenting my transition from **Software Development to Software Quality Assurance**.
+Welcome to my **QA Learning Journey.** This is a hands-on repository documenting my transition from **Software Development to Software Quality Assurance**.
 
 After spending **over 4 years working as a Software Developer**, I’m expanding my perspective from building software to **testing, validating, and improving its quality**.
 
@@ -152,13 +152,7 @@ Learn the tools, processes, and collaboration practices used by modern QA teams.
 * [ ] Jira
 * [ ] Test case management
 * [ ] Bug tracking
-* [ ] User stories
-* [ ] Acceptance criteria
-* [ ] Definition of Done
-* [ ] Sprint planning
-* [ ] Daily stand-ups
-* [ ] Sprint reviews
-* [ ] Sprint retrospectives
+* [ ] Agile & Scrum practices (User stories, Acceptance criteria, Definition of Done, Sprint planning, Daily stand-ups, Sprint reviews, Sprint retrospectives)
 * [ ] Writing effective bug reports
 
 ---
@@ -167,23 +161,10 @@ Learn the tools, processes, and collaboration practices used by modern QA teams.
 
 Learn how to test application functionality beyond the user interface.
 
-* [ ] HTTP fundamentals
-* [ ] REST APIs
-* [ ] GET
-* [ ] POST
-* [ ] PUT
-* [ ] PATCH
-* [ ] DELETE
-* [ ] HTTP status codes
-* [ ] Request headers
-* [ ] Request body
-* [ ] Response body
-* [ ] JSON
-* [ ] Authentication
-* [ ] API validation
-* [ ] Postman
-* [ ] API test collections
-* [ ] Negative API testing
+* [ ] HTTP & REST API Fundamentals (HTTP fundamentals, REST APIs, HTTP methods — GET, POST, PUT, PATCH, DELETE, HTTP status codes)
+* [ ] API Requests & Responses (Request headers, Request body, Response body, JSON)
+* [ ] API Authentication & Validation (Authentication, API validation, Negative API testing)
+* [ ] Postman/REST Assured (API test collections)
 
 ---
 
@@ -191,19 +172,11 @@ Learn how to test application functionality beyond the user interface.
 
 Learn SQL to validate application data and investigate issues.
 
-* [ ] Databases and tables
-* [ ] SELECT
-* [ ] WHERE
-* [ ] ORDER BY
-* [ ] GROUP BY
-* [ ] HAVING
-* [ ] JOINs
-* [ ] INSERT
-* [ ] UPDATE
-* [ ] DELETE
-* [ ] Aggregate functions
-* [ ] Subqueries
-* [ ] Data validation
+* [ ] Database & SQL Fundamentals (Databases, tables, SELECT, WHERE, ORDER BY)
+* [ ] Data Aggregation & Grouping (GROUP BY, HAVING, aggregate functions)
+* [ ] Working with Multiple Tables (JOINs, subqueries)
+* [ ] Data Modification (INSERT, UPDATE, DELETE)
+* [ ] Data Validation for QA
 
 ---
 
