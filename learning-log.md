@@ -165,4 +165,3 @@ I also practiced documenting bugs found during test execution and linking them b
 ### Next
 
 Complete a practical QA project by creating and executing test documentation for a real-world application.
-
