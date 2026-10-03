@@ -38,6 +38,7 @@ As a developer, I learned how to:
 * Debug application issues
 * Work with APIs and databases
 * Use version control
+* CI/CD
 * Collaborate within development teams
 * Think about edge cases and application behavior
 
@@ -45,11 +46,11 @@ I'm now applying those skills to QA while developing deeper expertise in:
 
 * Manual Testing
 * Test Design
-* Functional Testing
+* Test Planning
+* Functional and Non-Functional Testing
 * API Testing
 * SQL and Database Testing
 * Test Automation
-* CI/CD
 * Quality Engineering
 
 ---
@@ -60,28 +61,7 @@ My goal is to become a capable **Software QA Engineer / Quality Engineer** who c
 
 I will start with a strong foundation in **Manual Testing and Test Design**, then progress into:
 
-**Manual QA → API Testing → SQL → Test Automation → CI/CD → Quality Engineering**
-
-This repository serves two purposes:
-
-* **Learning Journal** - documenting what I learn and the lessons I gain through practice.
-* **QA Portfolio** - demonstrating practical testing skills, projects, and my progression toward QA Engineering.
-
----
-
-## Learning Philosophy
-
-I don't want this repository to become a collection of copied tutorials.
-
-Instead, I want to:
-
-1. **Learn the concept**
-2. **Understand why it matters**
-3. **Practice it**
-4. **Make mistakes**
-5. **Document what I learned**
-6. **Apply it to a project**
-7. **Review and improve**
+**Test Planning → API Testing → SQL → Test Automation → CI/CD → Quality Engineering**
 
 My goal is not simply to complete a QA roadmap.
 
@@ -97,7 +77,7 @@ Build a strong foundation in software testing and quality assurance.
 
 * [x] What is Quality Assurance?
 * [x] What is Software Testing?
-* [x] QA vs QC vs Testing
+* [x] QA vs Testing
 * [x] Software Development Life Cycle (SDLC)
 * [x] Software Testing Life Cycle (STLC)
 * [x] Test scenarios
@@ -130,16 +110,16 @@ Build a strong foundation in software testing and quality assurance.
 
 Apply manual testing techniques to real-world applications.
 
-* [ ] Write test scenarios
-* [ ] Write detailed test cases
-* [ ] Execute test cases
-* [ ] Report bugs
-* [ ] Perform regression testing
-* [ ] Perform exploratory testing
-* [ ] Create test reports
-* [ ] Test web applications
-* [ ] Test responsive layouts
-* [ ] Test forms and validation
+* [x] Write test scenarios
+* [x] Write detailed test cases
+* [x] Execute test cases
+* [x] Report bugs
+* [x] Perform regression testing
+* [x] Perform exploratory testing
+* [x] Create test reports
+* [x] Test web applications
+* [x] Test responsive layouts
+* [x] Test forms and validation
 * [ ] Test authentication flows
 * [ ] Test user roles and permissions
 
@@ -152,8 +132,8 @@ Learn the tools, processes, and collaboration practices used by modern QA teams.
 * [ ] Jira
 * [ ] Test case management
 * [ ] Bug tracking
-* [ ] Agile & Scrum practices (User stories, Acceptance criteria, Definition of Done, Sprint planning, Daily stand-ups, Sprint reviews, Sprint retrospectives)
-* [ ] Writing effective bug reports
+* [x] Agile & Scrum practices (User stories, Acceptance criteria, Definition of Done, Sprint planning, Daily stand-ups, Sprint reviews, Sprint retrospectives)
+* [x] Writing effective bug reports
 
 ---
 
@@ -161,8 +141,8 @@ Learn the tools, processes, and collaboration practices used by modern QA teams.
 
 Learn how to test application functionality beyond the user interface.
 
-* [ ] HTTP & REST API Fundamentals (HTTP fundamentals, REST APIs, HTTP methods — GET, POST, PUT, PATCH, DELETE, HTTP status codes)
-* [ ] API Requests & Responses (Request headers, Request body, Response body, JSON)
+* [x] HTTP & REST API Fundamentals (HTTP fundamentals, REST APIs, HTTP methods — GET, POST, PUT, PATCH, DELETE, HTTP status codes)
+* [x] API Requests & Responses (Request headers, Request body, Response body, JSON)
 * [ ] API Authentication & Validation (Authentication, API validation, Negative API testing)
 * [ ] Postman/REST Assured (API test collections)
 

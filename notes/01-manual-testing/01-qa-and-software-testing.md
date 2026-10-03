@@ -27,9 +27,9 @@ QA also focuses on improving the process used to build the product and preventin
 
 ### The difference I understand
 
-> **Testing:** Find problems in the software.
+**Testing:** Find problems in the software.
 
-> **QA:** Help prevent and detect problems throughout the development process.
+**QA:** Help prevent and detect problems throughout the development process.
 
 ## What surprised me
 

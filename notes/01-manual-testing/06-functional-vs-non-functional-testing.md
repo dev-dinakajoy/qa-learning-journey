@@ -14,7 +14,7 @@ Both are important because an application can have all the right features and st
 
 ---
 
-## Functional Testing
+### Functional Testing
 
 Functional testing checks whether the software's **features and functions work according to the requirements**.
 
@@ -32,23 +32,17 @@ For example, in an e-commerce application, I might test:
 * Order confirmation
 * Logout
 
-If the requirement says:
-
-> Users should be able to add products to their cart.
+If the requirement says: Users should be able to add products to their cart.
 
 I should verify that the feature actually works.
 
----
+Example: Login
 
-### Example: Login
-
-Suppose the requirement is:
-
-> A registered user should be able to log in using a valid email and password.
+Suppose the requirement is: A registered user should be able to log in using a valid email and password.
 
 I can test:
 
-```text id="2vuw0m"
+```text
 Valid email + valid password
         ↓
 Login successful ✅
@@ -56,129 +50,100 @@ Login successful ✅
 
 I can also test:
 
-```text id="gk0a3n"
+```text
 Valid email + wrong password
         ↓
 Login rejected ✅
 ```
 
-```text id="8s9s8h"
+```text
 Empty email + valid password
         ↓
 Validation message ✅
 ```
 
-These are functional tests because I'm checking whether the login functionality behaves as required.
-
----
+These are functional tests because I am checking whether the login functionality behaves as required.
 
 ### Types of Functional Testing
 
 There are different approaches to functional testing.
 
-Some of the important ones I will encounter include:
+Some of the important ones include:
 
 #### Unit Testing
 
 Testing individual pieces of code, usually done by developers.
 
-Example:
-
-> Testing a function that calculates the total price.
+Example: Testing a function that calculates the total price.
 
 #### Integration Testing
 
 Testing whether different components work correctly together.
 
-Example:
-
-> Checking that the checkout system correctly communicates with the payment service.
+Example: Checking that the checkout system correctly communicates with the payment service.
 
 #### System Testing
 
 Testing the complete application as a whole.
 
-Example:
-
-> Testing the complete flow from login → product selection → checkout → payment.
+Example: Testing the complete flow from login → product selection → checkout → payment.
 
 #### Acceptance Testing
 
 Checking whether the system meets the business requirements and is acceptable for release.
 
-Example:
+Example: A customer should be able to successfully complete an order from start to finish.
 
-> A customer should be able to successfully complete an order from start to finish.
-
-As a manual QA tester, I'll often work heavily with **system and acceptance-level testing**, although the exact responsibilities depend on the team.
+As a manual QA tester, I will often work heavily with **system and acceptance-level testing**, although the exact responsibilities depend on the team.
 
 ---
 
-## Non-functional Testing
+### Non-functional Testing
 
 Non-functional testing focuses on **how the system performs** rather than simply whether a feature exists.
 
 It answers questions like:
+- Is it fast enough?
+- Is it secure?
+- Is it easy to use?
+- Can it handle many users?
+- Does it work across different environments?
 
-> Is it fast enough?
-
-> Is it secure?
-
-> Is it easy to use?
-
-> Can it handle many users?
-
-> Does it work across different environments?
-
----
-
-### Example: Performance
+Example: Performance
 
 Suppose an e-commerce application allows users to search for products.
 
-Functionally:
-
-> The search works. ✅
+Functionally: The search works. ✅
 
 But imagine every search takes **15 seconds**.
 
 The feature works, but the performance is poor.
 
 So I might test:
-
 * Response time
 * Load handling
 * Performance under different conditions
 * Resource usage
 
----
-
-### Example: Usability
+Example: Usability
 
 Suppose the checkout process technically works.
 
 But users can't figure out how to complete payment because the **Pay Now** button is difficult to find.
 
-Functionally:
+Functionally: Payment works.
 
-> Payment works.
-
-From a usability perspective:
-
-> The experience is poor.
+From a usability perspective: The experience is poor.
 
 That's a non-functional concern.
 
----
-
-### Example: Compatibility
+Example: Compatibility
 
 Suppose an application works perfectly in Chrome.
 
 But on another supported browser, the layout is broken.
 
 I might test:
-
 * Different browsers
 * Different operating systems
 * Different screen sizes
@@ -186,18 +151,13 @@ I might test:
 
 This is **compatibility testing**.
 
----
-
-### Example: Security
+Example: Security
 
 Suppose a user logs into their account.
 
-I should consider:
-
-> Can this user access another user's account or private information?
+I should consider: Can this user access another user's account or private information?
 
 Security testing can involve checking things such as:
-
 * Authentication
 * Authorization
 * Access control
@@ -208,9 +168,9 @@ Security testing can become a specialized field on its own, but QA testers shoul
 
 ---
 
-## Functional vs Non-functional
+### Functional vs Non-functional
 
-Here's the comparison:
+Here is the comparison:
 
 | Functional Testing                       | Non-functional Testing                        |
 | ---------------------------------------- | --------------------------------------------- |
@@ -220,21 +180,15 @@ Here's the comparison:
 | Example: Login works                     | Example: Login responds quickly               |
 | Example: Payment succeeds                | Example: Payment remains reliable under load  |
 
----
+A Simple Example: Testing a food delivery application.
 
-### A Simple Example
+The requirement says: Users should be able to place an order.
 
-Imagine I'm testing a food delivery application.
-
-The requirement says:
-
-> Users should be able to place an order.
-
-#### Functional testing
+- Functional testing
 
 I check:
 
-```text id="gqf4ec"
+```text
 Select restaurant
       ↓
 Select food
@@ -250,7 +204,7 @@ Order confirmed ✅
 
 The functionality works.
 
-#### Non-functional testing
+- Non-functional testing
 
 Now I ask:
 
@@ -266,9 +220,7 @@ Now I ask:
 
 These are non-functional concerns.
 
----
-
-## Why Both Matter
+### Why Both Matter
 
 Imagine a banking application.
 
@@ -290,13 +242,11 @@ That's why QA needs to consider both functional and non-functional aspects.
 
 ---
 
-## Functional + Non-functional Example
+### Functional + Non-functional Example
 
-Let's say the requirement is:
+Let's say the requirement is: Users should be able to upload a profile picture.
 
-> Users should be able to upload a profile picture.
-
-### Functional tests
+- Functional tests
 
 * Upload a valid image
 * Upload an unsupported file type
@@ -305,45 +255,33 @@ Let's say the requirement is:
 * Cancel an upload
 * Replace an existing image
 
-### Non-functional tests
+- Non-functional tests
 
-**Performance:**
+**Performance:** How long does the upload take?
 
-> How long does the upload take?
+**Usability:** Is it obvious how to upload the image?
 
-**Usability:**
+**Compatibility:** Does the upload work across supported browsers?
 
-> Is it obvious how to upload the image?
-
-**Compatibility:**
-
-> Does the upload work across supported browsers?
-
-**Security:**
-
-> Can a malicious file be uploaded?
+**Security:** Can a malicious file be uploaded?
 
 This shows how the same feature can have **both functional and non-functional tests**.
 
 ---
 
-## A Useful Mental Model
+### A Useful Mental Model
 
 When I see a feature, I can ask two questions:
 
-### Question 1
-
-> **Does it work?**
+- Question 1: **Does it work?**
 
 That's primarily functional testing.
 
-### Question 2
-
-> **How well does it work?**
+- Question 2: **How well does it work?**
 
 That's primarily non-functional testing.
 
-```text id="t2q9zi"
+```text
                   FEATURE
                      │
           ┌──────────┴──────────┐
@@ -362,7 +300,6 @@ I initially thought testing was mostly about checking whether features worked.
 Now I understand that **software quality goes beyond functionality**.
 
 A feature can work correctly and still be:
-
 * Too slow
 * Difficult to use
 * Incompatible with supported devices
@@ -371,31 +308,19 @@ A feature can work correctly and still be:
 
 So testing should look at both **what the software does** and **the quality of that behavior**.
 
----
-
 ## Key Takeaway
 
 The simplest way I want to remember this is:
 
-> **Functional testing:** Does it do what it should?
+**Functional testing:** Does it do what it should?
 
-> **Non-functional testing:** Does it do it well?
+**Non-functional testing:** Does it do it well?
 
-A good QA tester shouldn't stop at:
+A good QA tester shouldn't stop at: "The feature works."
 
-> "The feature works."
-
-I should also think:
-
-> "Is it fast enough, usable, reliable, secure, and compatible with the environments we support?"
-
----
+I should also think: "Is it fast enough, usable, reliable, secure, and compatible with the environments we support?"
 
 ## Related
 
-* [QA and Software Testing](01-qa-and-software-testing.md)
-* [SDLC and STLC](02-sdlc-and-stlc.md)
-* [Test Scenarios and Test Cases](03-test-scenarios-and-test-cases.md)
-* [Bug/Defect Lifecycle](04-bug-defect-lifecycle.md)
 * [Severity vs Priority](05-severity-vs-priority.md)
 * [Smoke, Sanity and Regression Testing](07-smoke-sanity-regression-testing.md)

@@ -11,7 +11,7 @@ Understanding both helps me know **where QA fits into the software development p
 
 ---
 
-## SDLC — Software Development Life Cycle
+### SDLC — Software Development Life Cycle
 
 SDLC is the process a software product goes through from an initial idea to development, release, and maintenance.
 
@@ -31,13 +31,11 @@ Deployment
 Maintenance
 ```
 
-### 1. Requirements
+#### 1. Requirements
 
 The team defines what the software should do.
 
-For example:
-
-> Users should be able to create an account using their email and password.
+For example: Users should be able to create an account using their email and password.
 
 As a QA tester, I can review the requirements and ask questions like:
 
@@ -48,7 +46,7 @@ As a QA tester, I can review the requirements and ask questions like:
 
 Finding unclear requirements early can prevent bugs later.
 
-### 2. Design
+#### 2. Design
 
 The team decides how the application will look and work.
 
@@ -61,7 +59,7 @@ This can include:
 
 QA can review the design and identify possible usability or functional issues before development begins.
 
-### 3. Development
+#### 3. Development
 
 Developers write the code based on the requirements and design.
 
@@ -74,7 +72,7 @@ QA can start preparing:
 
 Testing doesn't have to wait until development is completely finished.
 
-### 4. Testing
+#### 4. Testing
 
 The developed features are tested to verify that they work as expected.
 
@@ -86,13 +84,13 @@ QA may:
 * Retest fixes
 * Perform regression testing
 
-### 5. Deployment
+#### 5. Deployment
 
 Once the software meets the team's release criteria, it is deployed to users.
 
 QA may perform final checks before or after deployment depending on the team's process.
 
-### 6. Maintenance
+#### 6. Maintenance
 
 After release, new bugs, changes, and improvements may come up.
 
@@ -100,7 +98,7 @@ QA continues testing new changes and making sure existing functionality isn't br
 
 ---
 
-## STLC — Software Testing Life Cycle
+### STLC — Software Testing Life Cycle
 
 STLC focuses specifically on the **testing activities** within the software development process.
 
@@ -122,11 +120,9 @@ Defect Reporting & Retesting
 Test Closure
 ```
 
-### 1. Requirement Analysis
+#### 1. Requirement Analysis
 
-QA studies the requirements to understand what needs to be tested.
-
-I should ask:
+QA studies the requirements to understand what needs to be tested and should ask:
 
 > What should the system do?
 
@@ -134,9 +130,7 @@ I should ask:
 
 > Are the requirements clear and testable?
 
----
-
-### 2. Test Planning
+#### 2. Test Planning
 
 The team decides how testing will be carried out.
 
@@ -150,30 +144,24 @@ This can include:
 * Risks
 * Test environment
 
----
-
-### 3. Test Case Design
+#### 3. Test Case Design
 
 QA creates test cases based on the requirements.
 
 For example, for a login feature:
 
 ```text
-TC001 → Login with valid credentials
-TC002 → Login with invalid password
-TC003 → Login with invalid email
-TC004 → Login with empty fields
+TC001: Login with valid credentials
+TC002: Login with invalid password
+TC003: Login with invalid email
+TC004: Login with empty fields
 ```
 
 Each test case should have clear steps and expected results.
 
----
+#### 4. Test Environment Setup
 
-### 4. Test Environment Setup
-
-The team prepares the environment where testing will happen.
-
-This could include:
+The team prepares the environment where testing will happen. This could include:
 
 * Application build
 * Database
@@ -191,31 +179,17 @@ Device: Desktop
 Database: Test database
 ```
 
----
+#### 5. Test Execution
 
-### 5. Test Execution
+QA executes the test cases and compares **Actual Result** with **Expected Result**
 
-QA executes the test cases and compares:
+If they match: Test Passed ✅
 
-**Actual Result**
-
-with
-
-**Expected Result**
-
-If they match:
-
-> Test Passed ✅
-
-If they don't:
-
-> Test Failed ❌
+If they don't: Test Failed ❌
 
 When a failure is caused by a defect, QA reports it.
 
----
-
-### 6. Defect Reporting & Retesting
+#### 6. Defect Reporting & Retesting
 
 When QA finds a bug, it is documented and assigned to the appropriate person.
 
@@ -234,9 +208,7 @@ Passed → Closed
 Failed → Reopened
 ```
 
----
-
-### 7. Test Closure
+#### 7. Test Closure
 
 Testing is completed when the team meets the agreed testing criteria.
 
@@ -253,23 +225,15 @@ The goal is to capture what was learned and improve future testing.
 
 ---
 
-## SDLC vs STLC
+### SDLC vs STLC
 
 The easiest way I understand the difference is:
 
-> **SDLC = The complete software development process.**
+**SDLC:** The complete software development process.
 
-> **STLC = The testing process within software development.**
+**STLC:** The testing process within software development.
 
-| SDLC                                                                         | STLC                                                                      |
-| ---------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
-| Covers the entire software lifecycle                                         | Focuses on testing                                                        |
-| Includes requirements, design, development, testing, deployment, maintenance | Includes test planning, test design, execution, defect reporting, closure |
-| Involves the whole development team                                          | Mainly focuses on QA/testing activities                                   |
-
----
-
-## Where QA Fits
+### Where QA Fits
 
 One important thing I learned is that **QA isn't only involved when developers finish coding.**
 QA can contribute throughout the SDLC.
@@ -297,8 +261,6 @@ Before learning about SDLC and STLC, I mostly thought of testing as:
 Now I understand that QA can be involved much earlier.
 The earlier a problem is discovered, the easier it can be to address.
 
----
-
 ## Key Takeaway
 
 **SDLC tells me how software is developed.**
@@ -306,8 +268,6 @@ The earlier a problem is discovered, the easier it can be to address.
 **STLC tells me how testing is planned and performed.**
 
 As a QA tester, understanding both helps me know **where I fit into the team and what I should be doing at each stage.**
-
----
 
 ## Related
 

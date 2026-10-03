@@ -22,10 +22,9 @@ The goal is to build and test software continuously while working closely with t
 
 ---
 
-## What is Agile?
+### What is Agile?
 
 **Agile** is an approach to software development that focuses on:
-
 * Collaboration
 * Frequent feedback
 * Continuous improvement
@@ -66,33 +65,25 @@ Build → Test → Review
 
 This allows the team to get feedback earlier.
 
----
-
-## What is Scrum?
+### What is Scrum?
 
 **Scrum** is one framework teams can use to work in an Agile way.
 
 Scrum organizes work into short, fixed periods called **Sprints**.
 
-A Sprint might last:
-
-> 1–2 weeks
+A Sprint might last 1–2 weeks
 
 The team selects a group of work to complete during the Sprint.
 
----
-
-### Scrum Team
+#### Scrum Team
 
 A typical Scrum team has three key accountabilities:
 
-#### Product Owner
+- Product Owner
 
 The Product Owner focuses on the product and business needs.
 
-They help answer:
-
-> What should we build?
+They help answer: What should we build?
 
 They may:
 
@@ -102,9 +93,7 @@ They may:
 * Clarify acceptance criteria
 * Represent customer/business needs
 
----
-
-#### Scrum Master
+- Scrum Master
 
 The Scrum Master helps the team use Scrum effectively.
 
@@ -117,9 +106,7 @@ They may:
 
 The Scrum Master isn't simply the team's manager.
 
----
-
-#### Developers
+- Developers
 
 Developers build the product.
 
@@ -131,9 +118,7 @@ They:
 * Perform technical work
 * Collaborate with QA and other team members
 
----
-
-## QA / Testers
+- QA / Testers
 
 QA helps the team ensure that the product meets its requirements and provides the expected quality.
 
@@ -153,12 +138,9 @@ QA may:
 * Help verify acceptance criteria
 
 One important thing I learned is:
+**QA is part of the team, not a gatekeeper who appears only after development.**
 
-> **QA is part of the team, not a gatekeeper who appears only after development.**
-
----
-
-## The Product Backlog
+### The Product Backlog
 
 The **Product Backlog** is a prioritized list of work that may need to be done on the product.
 
@@ -186,9 +168,7 @@ Product Backlog
 
 The Product Owner helps prioritize the backlog.
 
----
-
-## User Stories
+### User Stories
 
 Agile teams often describe features using **user stories**.
 
@@ -200,26 +180,18 @@ I want [something],
 so that [reason/benefit].
 ```
 
-For example:
-
-> As a customer, I want to reset my password so that I can regain access to my account if I forget it.
+For example: As a customer, I want to reset my password so that I can regain access to my account if I forget it.
 
 This describes the feature from the user's perspective.
 
----
-
-## Acceptance Criteria
+### Acceptance Criteria
 
 User stories usually have **acceptance criteria** that describe the conditions the feature must satisfy.
 
 For example:
 
-### User Story
-
-> As a user, I want to reset my password so that I can regain access to my account.
-
-### Acceptance Criteria
-
+- User Story: As a user, I want to reset my password so that I can regain access to my account.
+- Acceptance Criteria
 ```text
 1. User can enter their registered email.
 2. The system sends a password reset email.
@@ -230,38 +202,31 @@ For example:
 
 As a QA tester, these criteria are extremely useful.
 
-They help me determine:
+They help me determine: **What exactly should I test?**
 
-> **What exactly should I test?**
-
----
-
-## QA During Sprint Planning
+### QA During Sprint Planning
 
 Before a Sprint starts, the team discusses the work they want to complete.
 
 QA can contribute by asking questions such as:
 
-> What happens if the email doesn't exist?
+- What happens if the email doesn't exist?
 
-> What is the minimum password length?
+- What is the minimum password length?
 
-> What happens when the reset link expires?
+- What happens when the reset link expires?
 
-> What browsers/devices are supported?
+- What browsers/devices are supported?
 
-> What should happen if the email service is unavailable?
+- What should happen if the email service is unavailable?
 
 These questions can expose gaps in requirements before development starts.
 
----
-
-## QA During Development
+### QA During Development
 
 While developers are working, QA doesn't necessarily sit and wait.
 
 I can prepare:
-
 * Test scenarios
 * Test cases
 * Test data
@@ -284,9 +249,7 @@ Duplicate submission
 
 Then I'm ready when the feature becomes available.
 
----
-
-## QA During Testing
+### QA During Testing
 
 Once the feature is available in the test environment, QA executes the planned tests.
 
@@ -306,7 +269,7 @@ If a test fails because of a defect, I create a bug report.
 
 ---
 
-## QA and Developers Working Together
+### QA and Developers Working Together
 
 Suppose I find a bug.
 
@@ -318,35 +281,23 @@ For example:
 
 The developer can investigate and fix it.
 
-After the fix:
+After the fix: QA retests.
 
-> QA retests.
+If it passes: Close the defect.
 
-If it passes:
+If it fails: Reopen the defect.
 
-> Close the defect.
-
-If it fails:
-
-> Reopen the defect.
-
----
-
-## Scrum Events
+### Scrum Events
 
 Scrum has several important events.
 
-### Sprint Planning
+- Sprint Planning
 
-The team decides:
-
-> What work will we focus on during this Sprint?
+The team decides:  What work will we focus on during this Sprint?
 
 QA participates by helping understand the testing requirements, risks, and effort.
 
----
-
-### Daily Scrum
+- Daily Scrum
 
 This is a short daily synchronization meeting.
 
@@ -362,27 +313,19 @@ As a QA tester, I might say:
 
 Keep it short and relevant.
 
----
-
-### Sprint Review
+- Sprint Review
 
 At the end of the Sprint, the team demonstrates completed work to stakeholders.
 
 QA can help ensure that the demonstrated features meet the agreed requirements.
 
----
+- Sprint Retrospective
 
-### Sprint Retrospective
+The team reflects on the Sprint. Questions might include:
 
-The team reflects on the Sprint.
-
-Questions might include:
-
-> What went well?
-
-> What didn't go well?
-
-> What can we improve?
+What went well?  
+What didn't go well?  
+hat can we improve?  
 
 QA can contribute observations such as:
 
@@ -390,9 +333,7 @@ QA can contribute observations such as:
 
 This is one way QA contributes to **process improvement**, not just product testing.
 
----
-
-## Backlog Refinement
+### Backlog Refinement
 
 Teams often spend time refining upcoming backlog items.
 
@@ -406,15 +347,11 @@ The team may:
 
 QA can be very valuable here.
 
-For example:
-
-> "The story says users can upload a profile image. What's the maximum file size?"
+For example: The story says users can upload a profile image. What's the maximum file size?
 
 That question might prevent ambiguity before development begins.
 
----
-
-## Definition of Done
+### Definition of Done
 
 A Scrum team may have a **Definition of Done (DoD)**.
 
@@ -436,13 +373,9 @@ Definition of Done
 
 The exact Definition of Done varies by team.
 
-The important thing is:
+The important thing is: **"Developer says it's coded" does not necessarily mean "the work is done."**
 
-> **"Developer says it's coded" does not necessarily mean "the work is done."**
-
----
-
-## A Complete Sprint Example
+### A Complete Sprint Example
 
 Imagine we're building a food delivery application.
 
@@ -469,14 +402,9 @@ QA reviews the stories and asks questions about:
 * Payment failures
 * Order confirmation
 
-### During development
+During development, QA prepares test cases.
 
-QA prepares test cases.
-
-### Feature becomes available
-
-QA tests:
-
+Feature becomes available, QA tests:
 ```text
 Browse restaurant
       ↓
@@ -489,17 +417,15 @@ Enter address
 Place order
 ```
 
-### Bug found
-
-> Order can be placed without a delivery address.
+Bug found: "Order can be placed without a delivery address."
 
 QA reports it.
 
-### Developer fixes it
+Developer fixes it
 
 QA retests.
 
-### Retest passes
+Retest passes
 
 QA performs relevant regression testing.
 
@@ -557,26 +483,20 @@ Before learning about Agile and Scrum, I thought QA mainly happened **after deve
 
 Now I understand that QA can be involved from the beginning:
 
-> **Requirements → Planning → Development → Testing → Release → Improvement**
+**Requirements → Planning → Development → Testing → Release → Improvement**
 
 I also learned that QA and developers should work together rather than treating testing as a separate phase where QA simply "checks the developer's work."
-
----
 
 ## Key Takeaway
 
 The main thing I want to remember is:
-
-> **Agile is about delivering and improving software incrementally.**
-
-> **Scrum is a framework that helps teams organize that work.**
-
-> **QA is involved throughout the process.**
+- **Agile is about delivering and improving software incrementally.**
+- **Scrum is a framework that helps teams organize that work.**
+- **QA is involved throughout the process.**
 
 As a QA tester, my job isn't simply to find bugs.
 
 I should:
-
 * Ask questions
 * Understand requirements
 * Think about risks
@@ -588,14 +508,7 @@ I should:
 
 Good QA is a **team responsibility**, and QA helps make that responsibility visible throughout the development process.
 
----
-
 ## Related
 
-* [QA and Software Testing](01-qa-and-software-testing.md)
-* [SDLC and STLC](02-sdlc-and-stlc.md)
-* [Test Scenarios and Test Cases](03-test-scenarios-and-test-cases.md)
-* [Bug/Defect Lifecycle](04-bug-defect-lifecycle.md)
-* [Severity vs Priority](05-severity-vs-priority.md)
 * [Functional vs Non-functional Testing](06-functional-vs-non-functional-testing.md)
 * [Smoke, Sanity, Regression & Exploratory Testing](07-smoke-sanity-regression-exploratory.md)

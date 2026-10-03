@@ -165,3 +165,74 @@ I also practiced documenting bugs found during test execution and linking them b
 ### Next
 
 Complete a practical QA project by creating and executing test documentation for a real-world application.
+
+## October 2, 2026
+
+### What I learned
+
+Today I learned the fundamentals of **Test Planning**:
+
+* What is Test Planning?
+* Purpose of a Test Plan
+* Test Plan structure
+* Test objectives
+* Test scope
+* In-scope and out-of-scope features
+* Testing types
+* Test environment
+* Test data
+* Roles and responsibilities
+* Test schedule
+* Entry and exit criteria
+* Risks and assumptions
+* Deliverables
+
+### What clicked for me
+
+I understood that testing should not begin with simply opening the application and looking for bugs.
+
+**Test planning helps define what we are going to test, how we will test it, who will do the testing, what resources we need, and when the testing should happen.**
+
+I also learned that defining the **scope** is important because we cannot necessarily test everything.
+
+A good test plan sets clear expectations for the testing process and helps the team understand what is covered and what is not.
+
+### What I practiced
+
+I created a **Test Plan for a Food Delivery Web Application**.
+
+I defined:
+
+* Test Plan ID
+* Test objectives
+* Scope
+* In-scope features
+* Out-of-scope features
+* Testing types
+* Test environment
+* Test roles and responsibilities
+* Test schedule
+* Entry and exit criteria
+* Risks and assumptions
+* Test deliverables
+
+The application features included:
+
+* User Registration
+* User Login
+* Restaurant Search
+* Menu Viewing
+* Adding Food to Cart
+* Placing Orders
+* Order History
+
+### What I still need to understand
+
+* How to identify testing risks more effectively
+* How to define realistic entry and exit criteria
+* How to estimate testing effort and timelines
+* How Test Plans are used in real QA teams
+
+### Next
+
+Continue practicing Test Planning and learn how to create a complete, professional test plan for a real-world application.
