@@ -79,63 +79,44 @@ The team selects a group of work to complete during the Sprint.
 
 A typical Scrum team has three key accountabilities:
 
-- Product Owner
-
+- Product Owner  
 The Product Owner focuses on the product and business needs.
+They help answer: What should we build? They may:
+  * Define product requirements
+  * Manage the product backlog
+  * Prioritize work
+  * Clarify acceptance criteria
+  * Represent customer/business needs
 
-They help answer: What should we build?
-
+- Scrum Master  
+The Scrum Master helps the team use Scrum effectively. The Scrum Master isn't simply the team's manager. 
 They may:
+  * Facilitate Scrum events
+  * Help remove blockers
+  * Encourage collaboration
+  * Help the team improve its process
 
-* Define product requirements
-* Manage the product backlog
-* Prioritize work
-* Clarify acceptance criteria
-* Represent customer/business needs
+- Developers  
+Developers build the product. They:
+  * Write code
+  * Implement features
+  * Fix defects
+  * Perform technical work
+  * Collaborate with QA and other team members
 
-- Scrum Master
-
-The Scrum Master helps the team use Scrum effectively.
-
-They may:
-
-* Facilitate Scrum events
-* Help remove blockers
-* Encourage collaboration
-* Help the team improve its process
-
-The Scrum Master isn't simply the team's manager.
-
-- Developers
-
-Developers build the product.
-
-They:
-
-* Write code
-* Implement features
-* Fix defects
-* Perform technical work
-* Collaborate with QA and other team members
-
-- QA / Testers
-
-QA helps the team ensure that the product meets its requirements and provides the expected quality.
-
-QA may:
-
-* Review requirements
-* Ask questions
-* Identify risks
-* Create test scenarios
-* Write test cases
-* Prepare test data
-* Execute tests
-* Report defects
-* Retest fixes
-* Perform regression testing
-* Perform exploratory testing
-* Help verify acceptance criteria
+- QA / Testers  
+QA helps the team ensure that the product meets its requirements and provides the expected quality. QA may:
+  * Ask questions
+  * Identify risks
+  * Create test scenarios
+  * Write test cases
+  * Prepare test data
+  * Execute tests
+  * Report defects
+  * Retest fixes
+  * Perform regression testing
+  * Perform exploratory testing
+  * Help verify acceptance criteria  
 
 One important thing I learned is:
 **QA is part of the team, not a gatekeeper who appears only after development.**
@@ -277,7 +258,7 @@ Instead of simply creating a ticket and walking away, I can communicate with the
 
 For example:
 
-> "I found an issue with registration. When I use a valid email and leave the password empty, the form submits instead of displaying the required-field validation. I've added the reproduction steps and a screen recording."
+> "I found an issue with registration. When I use a valid email and leave the password empty, the form submits instead of displaying the required-field validation. I have added the reproduction steps and a screen recording."
 
 The developer can investigate and fix it.
 
@@ -309,7 +290,7 @@ Team members usually discuss:
 
 As a QA tester, I might say:
 
-> "Yesterday I tested the registration feature and reported two defects. Today I'll retest the fixes and continue testing password reset. My blocker is that the QA environment is currently unavailable."
+> "Yesterday I tested the registration feature and reported two defects. Today I will retest the fixes and continue testing password reset. My blocker is that the QA environment is currently unavailable."
 
 Keep it short and relevant.
 
@@ -325,7 +306,7 @@ The team reflects on the Sprint. Questions might include:
 
 What went well?  
 What didn't go well?  
-hat can we improve?  
+What can we improve?  
 
 QA can contribute observations such as:
 
@@ -373,11 +354,11 @@ Definition of Done
 
 The exact Definition of Done varies by team.
 
-The important thing is: **"Developer says it's coded" does not necessarily mean "the work is done."**
+The important thing is: **Developer says "it's coded" does not necessarily mean "the work is done".**
 
 ### A Complete Sprint Example
 
-Imagine we're building a food delivery application.
+Imagine we are building a food delivery application.
 
 The Sprint goal is:
 
@@ -392,15 +373,13 @@ The team selects these stories:
 4. Place order
 ```
 
-### Sprint Planning
+- Sprint Planning: QA reviews the stories and asks questions about:
 
-QA reviews the stories and asks questions about:
-
-* Maximum cart quantity
-* Out-of-stock items
-* Invalid addresses
-* Payment failures
-* Order confirmation
+  * Maximum cart quantity
+  * Out-of-stock items
+  * Invalid addresses
+  * Payment failures
+  * Order confirmation
 
 During development, QA prepares test cases.
 
@@ -429,13 +408,9 @@ Retest passes
 
 QA performs relevant regression testing.
 
-### Sprint Review
+- Sprint Review: The team demonstrates the completed feature.
 
-The team demonstrates the completed feature.
-
-### Retrospective
-
-The team discusses what went well and what could improve.
+- Retrospective: The team discusses what went well and what could improve.
 
 This is Agile/Scrum with QA in practice.
 
@@ -443,7 +418,7 @@ This is Agile/Scrum with QA in practice.
 
 ## QA Is Not Just "The Bug Finder"
 
-One of the biggest things I'm learning is that QA isn't just:
+One of the biggest things I am learning is that QA isn't just:
 
 > Find bugs → send bugs to developers.
 

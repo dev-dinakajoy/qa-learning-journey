@@ -8,8 +8,6 @@ This repository documents that transition through learning notes, testing exerci
 
 My goal is to combine my existing **software development experience** with strong **quality assurance and testing practices** to become a well-rounded **QA Engineer / Quality Engineer**.
 
----
-
 ## About Me
 
 I'm a **Software Developer with 4+ years of experience** who is transitioning into **Software Quality Assurance**.
@@ -25,9 +23,7 @@ Working as a developer has given me practical experience with how software is de
 * How automation can improve testing efficiency
 * How QA can contribute to building better software
 
----
-
-## Why I'm Transitioning from Development to QA
+## Why I'm Transitioning from Development to QA and Eventually SDET
 
 My background in software development has shaped how I think about software quality.
 
@@ -53,8 +49,6 @@ I'm now applying those skills to QA while developing deeper expertise in:
 * Test Automation
 * Quality Engineering
 
----
-
 ## Goal
 
 My goal is to become a capable **Software QA Engineer / Quality Engineer** who can contribute throughout the software development lifecycle.
@@ -66,8 +60,6 @@ I will start with a strong foundation in **Manual Testing and Test Design**, the
 My goal is not simply to complete a QA roadmap.
 
 I want to become capable of **thinking like a tester, finding meaningful problems, communicating them clearly, and helping development teams deliver better software.**
-
----
 
 ## Learning Roadmap
 
@@ -104,8 +96,6 @@ Build a strong foundation in software testing and quality assurance.
 * [x] Scrum
 * [x] QA's role in an Agile development team
 
----
-
 ### Phase 2 — Practical Manual Testing
 
 Apply manual testing techniques to real-world applications.
@@ -123,8 +113,6 @@ Apply manual testing techniques to real-world applications.
 * [ ] Test authentication flows
 * [ ] Test user roles and permissions
 
----
-
 ### Phase 3 — Test Management & Collaboration
 
 Learn the tools, processes, and collaboration practices used by modern QA teams.
@@ -135,8 +123,6 @@ Learn the tools, processes, and collaboration practices used by modern QA teams.
 * [x] Agile & Scrum practices (User stories, Acceptance criteria, Definition of Done, Sprint planning, Daily stand-ups, Sprint reviews, Sprint retrospectives)
 * [x] Writing effective bug reports
 
----
-
 ### Phase 4 — API Testing
 
 Learn how to test application functionality beyond the user interface.
@@ -145,8 +131,6 @@ Learn how to test application functionality beyond the user interface.
 * [x] API Requests & Responses (Request headers, Request body, Response body, JSON)
 * [ ] API Authentication & Validation (Authentication, API validation, Negative API testing)
 * [ ] Postman/REST Assured (API test collections)
-
----
 
 ### Phase 5 — SQL for QA
 
@@ -157,8 +141,6 @@ Learn SQL to validate application data and investigate issues.
 * [ ] Working with Multiple Tables (JOINs, subqueries)
 * [ ] Data Modification (INSERT, UPDATE, DELETE)
 * [ ] Data Validation for QA
-
----
 
 ### Phase 6 — Test Automation
 
@@ -177,8 +159,6 @@ Use my software development background to build a strong foundation in automated
 * [ ] Automated regression testing
 * [ ] Test reporting
 
----
-
 ### Phase 7 — CI/CD & Advanced QA
 
 Learn how QA integrates with modern software delivery pipelines.
@@ -192,8 +172,6 @@ Learn how QA integrates with modern software delivery pipelines.
 * [ ] Docker fundamentals
 * [ ] Quality gates
 * [ ] Continuous testing
-
----
 
 ## Tools & Technologies
 
@@ -210,14 +188,10 @@ Learn how QA integrates with modern software delivery pipelines.
 | Containers       | Docker                  |
 | Documentation    | Markdown                |
 
----
 
-
-### Testing Projects
+## Testing Practicals
 
 Practical projects demonstrating how I apply testing concepts to real applications and workflows.
-
----
 
 ## Projects
 

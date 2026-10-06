@@ -209,22 +209,12 @@ Regression testing is usually **broader and deeper**, depending on the project's
 
 Another important distinction is between **sanity testing and retesting**.
 
-- Retesting
+- Retesting: I test the **specific defect** again to verify that the reported bug was fixed.
 
-I test the **specific defect** again to verify that the reported bug was fixed.
+- Sanity testing: I perform a focused check around the changed functionality to make sure the change appears reasonable before broader testing.
 
-Example: Login previously failed with valid credentials.
-
-I test that exact scenario after the fix.
-
-- Sanity testing
-
-I perform a focused check around the changed functionality to make sure the change appears reasonable before broader testing.
-
-So:
-
-- **Retesting = Verify the specific bug fix.**
-- **Sanity = Quickly check the affected area/change.**
+Retesting verifies the specific bug fix.
+Sanity quickly check the affected area/change.
 
 They can overlap in practice, and different teams may use these terms differently.
 
@@ -254,7 +244,7 @@ Exploratory testing gives me freedom to investigate things I didn't anticipate w
 
 ### Example: Testing a Registration Page
 
-egistration form:
+Registration form:
 
 ```text
 --------------------------------
@@ -273,46 +263,29 @@ Password: [____________]
 
 I can use all four approaches.
 
-- Smoke Testing
-
-Quickly check:
-
-- Registration page loads
-- Fields are visible
-- Register button works
-- Basic registration flow starts
-
-* Sanity Testing
-
-Suppose the developer just fixed email validation.
-
-I focus on:
-
-- Valid email
-- Invalid email
-- Empty email
-
-* Regression Testing
-
-After the email validation change, I check other existing functionality:
-
-- Login
-- Registration
-- Password reset
-- Profile functionality
-
-* Exploratory Testing
-
-I start experimenting:
-
-- Very long names
-- Spaces
-- Special characters
-- Copy/paste
-- Multiple clicks
-- Refreshing during registration
-- Browser Back button
-- Unusual email formats
+* Smoke Testing: Quickly check: 
+  - Registration page loads
+  - Fields are visible
+  - Register button works
+  - Basic registration flow starts
+* Sanity Testing: Suppose the developer just fixed email validation. I focus on:
+  - Valid email
+  - Invalid email
+  - Empty email
+* Regression Testing: After the email validation change, I check other existing functionality:
+  - Login
+  - Registration
+  - Password reset
+  - Profile functionality
+* Exploratory Testing: I start experimenting:
+  - Very long names
+  - Spaces
+  - Special characters
+  - Copy/paste
+  - Multiple clicks
+  - Refreshing during registration
+  - Browser Back button
+  - Unusual email formats
 
 This gives me much broader coverage.
 

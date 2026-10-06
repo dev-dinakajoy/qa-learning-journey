@@ -6,9 +6,9 @@ Today I learned about **functional** and **non-functional testing**.
 
 The easiest way I understand the difference is:
 
-> **Functional testing = Does the software do what it is supposed to do?**
+> **Functional testing: Does the software do what it is supposed to do?**
 
-> **Non-functional testing = How well does the software do it?**
+> **Non-functional testing: How well does the software do it?**
 
 Both are important because an application can have all the right features and still provide a poor experience.
 
@@ -94,8 +94,6 @@ Checking whether the system meets the business requirements and is acceptable fo
 
 Example: A customer should be able to successfully complete an order from start to finish.
 
-As a manual QA tester, I will often work heavily with **system and acceptance-level testing**, although the exact responsibilities depend on the team.
-
 ---
 
 ### Non-functional Testing
@@ -109,7 +107,11 @@ It answers questions like:
 - Can it handle many users?
 - Does it work across different environments?
 
-Example: Performance
+### Types of Non-Functional Testing
+There are different approaches to non-functional testing. 
+Some of the important ones include:
+
+#### Performance
 
 Suppose an e-commerce application allows users to search for products.
 
@@ -125,19 +127,19 @@ So I might test:
 * Performance under different conditions
 * Resource usage
 
-Example: Usability
+#### Usability
 
 Suppose the checkout process technically works.
 
 But users can't figure out how to complete payment because the **Pay Now** button is difficult to find.
 
-Functionally: Payment works.
+Functionally: Payment works. ✅
 
 From a usability perspective: The experience is poor.
 
 That's a non-functional concern.
 
-Example: Compatibility
+#### Compatibility
 
 Suppose an application works perfectly in Chrome.
 
@@ -151,7 +153,7 @@ I might test:
 
 This is **compatibility testing**.
 
-Example: Security
+#### Security
 
 Suppose a user logs into their account.
 
@@ -222,11 +224,7 @@ These are non-functional concerns.
 
 ### Why Both Matter
 
-Imagine a banking application.
-
-It allows users to transfer money correctly.
-
-That's good functional behavior.
+Imagine a banking application. It allows users to transfer money correctly. That's good functional behavior.
 
 But suppose:
 
@@ -246,24 +244,19 @@ That's why QA needs to consider both functional and non-functional aspects.
 
 Let's say the requirement is: Users should be able to upload a profile picture.
 
-- Functional tests
-
-* Upload a valid image
-* Upload an unsupported file type
-* Upload an empty file
-* Upload a file larger than the allowed size
-* Cancel an upload
-* Replace an existing image
+- Functional tests  
+  * Upload a valid image
+  * Upload an unsupported file type
+  * Upload an empty file
+  * Upload a file larger than the allowed size
+  * Cancel an upload
+  * Replace an existing image
 
 - Non-functional tests
-
-**Performance:** How long does the upload take?
-
-**Usability:** Is it obvious how to upload the image?
-
-**Compatibility:** Does the upload work across supported browsers?
-
-**Security:** Can a malicious file be uploaded?
+  * **Performance:** How long does the upload take?
+  * **Usability:** Is it obvious how to upload the image?
+  * **Compatibility:** Does the upload work across supported browsers?
+  * **Security:** Can a malicious file be uploaded?
 
 This shows how the same feature can have **both functional and non-functional tests**.
 

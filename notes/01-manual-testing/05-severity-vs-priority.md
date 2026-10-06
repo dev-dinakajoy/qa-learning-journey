@@ -52,8 +52,7 @@ In other words:
 
 > "How soon should we address this?"
 
-A common classification is:
-
+Common Priority levels:
 * High
 * Medium
 * Low
@@ -208,9 +207,7 @@ Just because I want the developer to fix it quickly.
 
 ### Example Bug Report
 
-Suppose I'm testing a banking application.
-
-I discover:
+Suppose I am testing a banking application, and I discover:
 
 > Users can transfer money without entering a recipient account number.
 

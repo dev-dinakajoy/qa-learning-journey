@@ -7,7 +7,6 @@ Today I learned about the **bug/defect lifecycle** — the different stages a de
 Finding a bug is only part of the job.
 
 As a QA tester, I also need to:
-
 * Report it clearly
 * Track its progress
 * Retest the fix
@@ -15,7 +14,6 @@ As a QA tester, I also need to:
 * Reopen it if the problem still exists
 
 A simple defect lifecycle looks like this:
-
 ```text
 New
  ↓
@@ -315,11 +313,11 @@ A good bug report should be:
 - **Reproducible:** Another person should be able to follow the steps and experience the same issue.
 - **Specific:** Avoid vague descriptions like: "It doesn't work." Explain exactly what happened.
 - **Evidence-based:** When possible, include:
-* Screenshots
-* Screen recordings
-* Error messages
-* Logs
-* Relevant test data
+  * Screenshots
+  * Screen recordings
+  * Error messages
+  * Logs
+  * Relevant test data
 - **Traceable:** Give the defect a unique ID so the team can easily discuss and track it.
 
 ---

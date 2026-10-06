@@ -4,10 +4,9 @@
 
 Today I learned about **test scenarios** and **test cases**.
 They are both used to make sure we test the right things, but they are not the same.
-The simplest way I understand the difference is:
-**Test Scenario:** What to test
-
-**Test Case:** How to test it**
+The simplest way I understand the difference is:  
+**Test Scenario:** What to test  
+**Test Case:** How to test it
 
 ---
 
@@ -43,10 +42,12 @@ A test case normally contains:
 * Actual result
 * Status
 
-For example: TC001 — Login with valid credentials
+For example:  
+**ID:** TC001 
 
-**Precondition:**
-A registered user account exists.
+**Title:** Login with valid credentials
+
+**Precondition:** A registered user account exists.
 
 **Test data:**
 ```text
@@ -60,14 +61,11 @@ Password: Password123
 3. Enter the correct password.
 4. Click **Login**.
 
-**Expected result:**
-The user should be successfully logged in and redirected to the dashboard.
+**Expected result:** The user should be successfully logged in and redirected to the dashboard.
 
-**Actual result:**
-The user is redirected to the dashboard.
+**Actual result:** The user is redirected to the dashboard.
 
-**Status:**
-Passed ✅
+**Status:** Passed ✅
 
 ### Test Scenario vs Test Case
 
@@ -169,12 +167,12 @@ Password: [____________]
 --------------------------------
 ```
 
-Possible Test Ccenarios:
-TS_REG_001: Verify user registration with valid information.
-TS_REG_002: Verify registration with an existing email.
-TS_REG_003: Verify registration with an invalid email.
-TS_REG_004: Verify registration with empty required fields.
-TS_REG_005: Verify password validation.
+Possible Test Scenarios:  
+TS_REG_001: Verify user registration with valid information.  
+TS_REG_002: Verify registration with an existing email.  
+TS_REG_003: Verify registration with an invalid email.  
+TS_REG_004: Verify registration with empty required fields.  
+TS_REG_005: Verify password validation.  
 
 From these scenarios, I can create detailed test cases.
 
