@@ -12,8 +12,6 @@ The idea is:
 
 This allows testers to achieve good test coverage with fewer test cases.
 
----
-
 ## Why Use Equivalence Partitioning?
 
 Testing every possible input is often impractical.
@@ -46,8 +44,6 @@ Then select one representative value from each partition:
 
 Three tests can give us useful coverage of the three equivalence classes.
 
----
-
 ## Equivalence Partitions
 
 An **equivalence partition** is a group of input values that should produce the same type of result.
@@ -57,11 +53,9 @@ Partitions can generally be:
 * **Valid partitions** — inputs the system should accept.
 * **Invalid partitions** — inputs the system should reject or handle appropriately.
 
-### Example
+**Example**
 
-Requirement:
-
-> A customer can transfer between **₦5,000 and ₦500,000 inclusive**.
+Requirement: A customer can transfer between **₦5,000 and ₦500,000 inclusive**.
 
 We can identify three partitions:
 
@@ -75,17 +69,13 @@ We don't need to test every amount.
 
 One representative value from each partition gives us basic equivalence-partition coverage.
 
----
-
 ## How to Apply Equivalence Partitioning
 
 ### Step 1 — Identify the requirement
 
 Start by understanding what the system accepts and rejects.
 
-Example:
-
-> Username must contain between 5 and 20 characters.
+Example: Username must contain between 5 and 20 characters.
 
 ### Step 2 — Identify the partitions
 
@@ -102,8 +92,8 @@ We can divide the inputs into:
 Choose one or more values from each partition:
 
 ```text
-"Joy"                 → Invalid
-"JoyOdinaka"          → Valid
+"Joy"                      → Invalid
+"JoyOdinaka"               → Valid
 "JoyOdinakaQA123456789012" → Invalid
 ```
 
@@ -111,15 +101,14 @@ Choose one or more values from each partition:
 
 Document the selected values as test cases and define the expected behavior.
 
----
+## Examples
+### Example 1 — Age Validation
 
-# Example 1 — Age Validation
-
-### Requirement
+#### Requirement
 
 > Users must be between **18 and 60 years old**.
 
-### Partitions
+#### Partitions
 
 ```text
 Partition 1:
@@ -135,7 +124,7 @@ Partition 3:
 Invalid
 ```
 
-### Representative test values
+#### Representative test values
 
 ```text
 17 → ❌ Invalid
@@ -159,15 +148,13 @@ to establish basic EP coverage.
 
 Those values belong to the same valid partition.
 
----
+### Example 2 — Transfer Amount
 
-# Example 2 — Transfer Amount
-
-### Requirement
+#### Requirement
 
 > Users can transfer between **₦5,000 and ₦500,000 inclusive**.
 
-### Partitions
+#### Partitions
 
 ```text
 Partition 1:
@@ -183,7 +170,7 @@ Partition 3:
 Invalid
 ```
 
-### Representative values
+#### Representative values
 
 ```text
 ₦4,999  → ❌
@@ -193,15 +180,13 @@ Invalid
 
 The important point is that **₦8,000 represents the entire valid partition**, not just ₦8,000.
 
----
+### Example 3 — Phone Number
 
-# Example 3 — Phone Number
-
-### Requirement
+#### Requirement
 
 > A phone number must contain exactly **11 digits**.
 
-Possible partitions include:
+#### Possible partitions include:
 
 ```text
 < 11 digits       → Invalid
@@ -209,7 +194,7 @@ Exactly 11 digits  → Valid
 > 11 digits       → Invalid
 ```
 
-Example representatives:
+#### Example representatives:
 
 ```text
 0809754673       → ❌
@@ -233,7 +218,7 @@ This is why understanding the **complete requirement** is important.
 
 ---
 
-# Multiple Equivalence Partitions
+## Multiple Equivalence Partitions
 
 Sometimes a requirement contains more than one input condition.
 
@@ -288,20 +273,15 @@ Therefore:
 
 This is where other techniques, particularly **Decision Table Testing**, can become useful.
 
----
-
-# Equivalence Partitioning and Boundary Value Analysis
+## Equivalence Partitioning and Boundary Value Analysis
 
 Equivalence Partitioning and Boundary Value Analysis are closely related, but they serve different purposes.
 
 ### Equivalence Partitioning
 
-Focuses on:
-
-> **Groups of inputs**
+Focuses on: **Groups of inputs**
 
 Example:
-
 ```text
 < 18
 18–60
@@ -318,12 +298,9 @@ A representative value might be:
 
 ### Boundary Value Analysis
 
-Focuses on:
-
-> **The edges of those groups**
+Focuses on: **The edges of those groups**
 
 For the same requirement:
-
 ```text
 17 → ❌
 18 → ✅
@@ -336,19 +313,13 @@ For the same requirement:
 
 ### Together
 
-EP tells us:
+EP tells us: **Which groups should we test?**
 
-> **Which groups should we test?**
-
-BVA tells us:
-
-> **Which values around the boundaries should we test?**
+BVA tells us: **Which values around the boundaries should we test?**
 
 Using both gives stronger coverage.
 
----
-
-# Equivalence Partitioning Is Not Random Testing
+## Equivalence Partitioning Is Not Random Testing
 
 It's important to understand this distinction.
 
@@ -376,9 +347,7 @@ You deliberately select values because they represent specific partitions:
 
 The selection is **systematic and justified**.
 
----
-
-# Positive and Negative Testing With EP
+## Positive and Negative Testing With EP
 
 Equivalence Partitioning naturally helps identify positive and negative tests.
 
@@ -416,15 +385,11 @@ Examples:
 
 So EP helps us identify both valid and invalid test data.
 
----
-
-# Important QA Consideration: Don't Assume Partitions
+## Important QA Consideration: Don't Assume Partitions
 
 Partitions must come from the **requirements or known system behavior**.
 
-Suppose the requirement says:
-
-> Phone number must contain 11 digits.
+Suppose the requirement says: Phone number must contain 11 digits.
 
 We can confidently identify:
 
@@ -446,15 +411,11 @@ If the requirement doesn't say, this may be a **requirement clarification**, not
 
 A good QA tester should avoid turning assumptions into requirements.
 
-Instead, ask:
+Instead, ask: **"Does the phone number field support international formats such as +234...?"**
 
-> **"Does the phone number field support international formats such as +234...?"**
+## Common Mistakes When Using EP
 
----
-
-# Common Mistakes When Using EP
-
-## 1. Testing too many values from the same partition
+### 1. Testing too many values from the same partition
 
 If:
 
@@ -477,9 +438,7 @@ doesn't necessarily provide additional EP coverage.
 
 Other techniques such as BVA may justify additional values.
 
----
-
-## 2. Missing an invalid partition
+### 2. Missing an invalid partition
 
 For:
 
@@ -502,33 +461,21 @@ You should also identify:
 
 and test representative values.
 
----
+### 3. Confusing EP with BVA
 
-## 3. Confusing EP with BVA
+EP: Groups inputs.
 
-EP:
-
-> Groups inputs.
-
-BVA:
-
-> Tests values around boundaries.
+BVA: Tests values around boundaries.
 
 They are related, but they aren't the same technique.
 
----
-
-## 4. Assuming an unstated rule
+### 4. Assuming an unstated rule
 
 Don't create an invalid partition simply because you think something should be invalid.
 
-Always ask:
+Always ask: **What does the requirement actually say?**
 
-> **What does the requirement actually say?**
-
----
-
-# Advantages of Equivalence Partitioning
+## Advantages of Equivalence Partitioning
 
 EP helps testers:
 
@@ -539,9 +486,7 @@ EP helps testers:
 * Avoid unnecessary duplication
 * Create a clear justification for test-data selection
 
----
-
-# Limitations of Equivalence Partitioning
+## Limitations of Equivalence Partitioning
 
 EP alone may not find every defect.
 
@@ -568,9 +513,7 @@ That's why **Boundary Value Analysis** is often combined with EP.
 
 Similarly, EP doesn't necessarily cover complex combinations of conditions. **Decision Table Testing** can help with those situations.
 
----
-
-# Quick Example
+## Quick Example
 
 ### Requirement
 
@@ -614,9 +557,7 @@ Then BVA can be used to investigate:
 ₦100,001
 ```
 
----
-
-# Key Takeaways
+## Key Takeaways
 
 * **Equivalence Partitioning (EP)** divides input data into groups that should behave similarly.
 * Each group is called an **equivalence partition**.
@@ -629,4 +570,9 @@ Then BVA can be used to investigate:
 * EP identifies **groups**, while BVA focuses on **boundaries**.
 * EP can also help identify positive and negative test cases.
 
-> **Think in groups, choose representatives, and test the boundaries separately.**
+**Think in groups, choose representatives, and test the boundaries separately.**
+
+## Related
+
+* [What Is Test Design](01-what-is-test-design.md)
+* [Boundary Value Analysis](03-boundary-value-analysis.md)

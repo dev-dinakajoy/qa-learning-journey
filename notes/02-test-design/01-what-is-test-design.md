@@ -8,8 +8,6 @@ Instead of testing every possible input and scenario, test design helps QA teste
 
 Test design is an important part of software testing because the quality of the tests depends heavily on how well they are designed.
 
----
-
 ## Why Is Test Design Important?
 
 A software application can have a huge number of possible inputs, actions, and user interactions. It is usually impossible to test every possible combination.
@@ -29,9 +27,7 @@ Test design techniques help testers:
 ### Example
 
 Suppose a field accepts an age between **18 and 60**.
-
 Testing every possible age would be unnecessary.
-
 Instead, test design techniques can help us select meaningful values:
 
 ```text
@@ -46,8 +42,6 @@ Instead, test design techniques can help us select meaningful values:
 
 These values provide useful coverage without testing every possible age.
 
----
-
 ## Test Design Techniques
 
 The main test design techniques covered in this level are:
@@ -57,7 +51,6 @@ The main test design techniques covered in this level are:
 Divides possible inputs into groups (partitions) that are expected to behave similarly.
 
 Example:
-
 ```text
 Age: 18–60
 
@@ -68,14 +61,11 @@ Age: 18–60
 
 Instead of testing every age, we select representative values from each partition.
 
----
-
 ### 2. Boundary Value Analysis
 
 Focuses on values at and around the boundaries of an input range.
 
 Example:
-
 ```text
 17 → Invalid
 18 → Valid
@@ -88,14 +78,11 @@ Example:
 
 Boundary Value Analysis is often used together with Equivalence Partitioning.
 
----
-
 ### 3. Decision Table Testing
 
 Used when the expected behavior depends on **multiple conditions or combinations of conditions**.
 
 Example:
-
 ```text
 Logged in?
 Has sufficient balance?
@@ -106,14 +93,11 @@ The different combinations of these conditions can produce different results.
 
 Decision tables help ensure that important combinations are not missed.
 
----
-
 ### 4. State Transition Testing
 
 Used when the behavior of a system depends on its **current state** and the actions or events that occur.
 
 Example:
-
 ```text
 Pending
    ↓
@@ -128,14 +112,11 @@ Delivered
 
 State Transition Testing verifies both valid and invalid transitions between states.
 
----
-
 ### 5. Error Guessing
 
 Uses the tester's **experience, knowledge, and intuition** to predict where defects might occur.
 
 Examples include testing:
-
 * Empty input
 * Spaces
 * Invalid characters
@@ -147,14 +128,11 @@ Examples include testing:
 
 Error Guessing is less formal than techniques such as Equivalence Partitioning or Boundary Value Analysis, but it can uncover defects that structured techniques may miss.
 
----
-
 ### 6. Positive Testing
 
 Verifies that the application works correctly when provided with **valid input or valid actions**.
 
 Example:
-
 ```text
 Requirement:
 Age must be 18–60.
@@ -165,8 +143,6 @@ Input:
 Expected:
 Age accepted
 ```
-
----
 
 ### 7. Negative Testing
 
@@ -187,8 +163,6 @@ Age rejected with appropriate validation
 
 Negative testing does not mean that we expect the application to crash or fail. We expect the application to **handle the invalid situation correctly**.
 
----
-
 ## How the Techniques Work Together
 
 Test design techniques are not necessarily used in isolation.
@@ -201,7 +175,7 @@ For example:
 
 We could use:
 
-### Equivalence Partitioning
+- Equivalence Partitioning
 
 ```text
 < ₦5,000          → Invalid
@@ -209,7 +183,7 @@ We could use:
 > ₦500,000        → Invalid
 ```
 
-### Boundary Value Analysis
+- Boundary Value Analysis
 
 ```text
 ₦4,999     → Invalid
@@ -221,19 +195,19 @@ We could use:
 ₦500,001   → Invalid
 ```
 
-### Positive Testing
+- Positive Testing
 
 ```text
 ₦20,000 → Accepted
 ```
 
-### Negative Testing
+- Negative Testing
 
 ```text
 ₦3,000 → Rejected
 ```
 
-### Error Guessing
+- Error Guessing
 
 We could additionally consider:
 
@@ -248,17 +222,13 @@ Extremely large amount
 
 Each technique gives us a different way of looking at the same requirement.
 
----
-
 ## Test Design vs Test Execution
 
 It is important to distinguish **test design** from **test execution**.
 
 ### Test Design
 
-Determines:
-
-> **What should we test and how should we test it?**
+Determines **What we should test and how we should test it**
 
 For example:
 
@@ -274,9 +244,7 @@ Select test cases
 
 ### Test Execution
 
-Determines:
-
-> **What actually happens when we run the test?**
+Determines: **What actually happens when we run the test**
 
 For example:
 
@@ -287,8 +255,6 @@ Result: FAIL
 ```
 
 We will cover test execution and documentation in a later level.
-
----
 
 ## Quick Reference
 
@@ -301,8 +267,6 @@ We will cover test execution and documentation in a later level.
 | **Error Guessing**           | Where do I think the system might break?               |
 | **Positive Testing**         | Does valid input/action work correctly?                |
 | **Negative Testing**         | Does the system handle invalid input/action correctly? |
-
----
 
 ## Key Takeaways
 
@@ -318,4 +282,9 @@ We will cover test execution and documentation in a later level.
 * **Positive and Negative Testing** verify valid and invalid behavior.
 * Multiple test design techniques can be combined to improve coverage.
 
-> **Good test design is about testing smarter, not simply testing more.**
+**Good test design is about testing smarter, not simply testing more.**
+
+## Related
+
+* [Equivalence Partitioning](02-equivalence-partitioning.md)
+* [Boundary Value Analysis](03-boundary-value-analysis.md)

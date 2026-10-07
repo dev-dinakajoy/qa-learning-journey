@@ -11,17 +11,13 @@ They help me answer two questions:
 
 The goal is not just to prove that the system works. I also want to know that it **handles incorrect usage properly**.
 
----
-
 ## ✅ Positive Testing
 
 Positive testing checks whether the application behaves as expected with **valid inputs and valid actions**.
 
 ### Example: Phone Number
 
-Requirement:
-
-> Phone number must contain exactly 11 digits.
+Requirement: Phone number must contain exactly 11 digits.
 
 | Test Input    | Expected Result |
 | ------------- | --------------- |
@@ -30,15 +26,13 @@ Requirement:
 
 These are positive tests because the inputs satisfy the requirement.
 
-### Another example: Login
+### Example: Login
 
 | Email   | Password | Expected Result  |
 | ------- | -------- | ---------------- |
 | Correct | Correct  | Login succeeds ✅ |
 
 The user is providing valid credentials, so the expected behavior is successful login.
-
----
 
 ## ❌ Negative Testing
 
@@ -65,13 +59,11 @@ For example:
 
 The test **passes** if the application correctly rejects the invalid input.
 
----
-
 ## An important distinction
 
 I initially thought:
 
-> Positive test = test passes
+> Positive test = test passes  
 > Negative test = test fails
 
 That's not correct.
@@ -90,8 +82,6 @@ Result: PASS ✅
 
 This is a **negative test that passed**.
 
----
-
 ## Positive vs Negative Testing
 
 | Positive Testing                    | Negative Testing                    |
@@ -103,8 +93,6 @@ This is a **negative test that passed**.
 | Example: valid amount               | Example: negative amount            |
 
 Both are necessary.
-
----
 
 ## Example: Transfer Amount
 
@@ -141,11 +129,9 @@ For example:
 
 ---
 
-## Positive and Negative Testing with Login
+## Example: Login
 
-Consider:
-
-> A user must provide a valid email and password to log in.
+Consider: A user must provide a valid email and password to log in.
 
 ### Positive tests
 
@@ -164,8 +150,6 @@ Consider:
 | Correct   | Empty     | Validation error ❌ |
 
 This can also be combined with **Decision Table Testing** because multiple conditions affect the outcome.
-
----
 
 ## Positive and Negative Testing in Real Applications
 
@@ -217,8 +201,6 @@ I can apply these ideas to almost any feature.
 * Try to cancel an already cancelled order
 * Try to cancel a completed order
 
----
-
 ## How I use Positive and Negative Testing
 
 When I receive a requirement, I can ask:
@@ -253,63 +235,16 @@ Use **State Transition Testing**.
 
 This is why I don't have to rely on only one test design technique.
 
----
-
-## Practice Exercise
-
-Consider this requirement:
-
-> A product quantity must be between **1 and 10**.
-
-Create:
-
-### Positive tests
-
-Write at least **3 valid test cases**.
-
-Example:
-
-```text
-1
-5
-10
-```
-
-### Negative tests
-
-Write at least **5 invalid test cases**.
-
-Think about:
-
-```text
-0
-11
--1
-"abc"
-empty
-```
-
-Then apply:
-
-* **Equivalence Partitioning**
-* **Boundary Value Analysis**
-* **Positive Testing**
-* **Negative Testing**
-
----
-
 ## What clicked for me
 
 Positive and negative testing aren't separate complicated techniques.
 
 They are ways of looking at my tests:
 
-> **"What should work?"** → Positive testing
+> **"What should work?"** → Positive testing  
 > **"What should happen when things go wrong?"** → Negative testing
 
 The real strength comes from combining them with other test design techniques.
-
----
 
 ## Key Takeaway
 
@@ -317,7 +252,7 @@ A good test suite should not only verify that **valid inputs work**.
 
 It should also verify that the application **handles invalid inputs and unexpected situations correctly**.
 
-**Positive testing checks what should work.
+**Positive testing checks what should work.   
 Negative testing checks how the system handles what shouldn't work.**
 
 Together, they help me build more complete and realistic test coverage.
@@ -326,8 +261,5 @@ Together, they help me build more complete and realistic test coverage.
 
 ## Related
 
-* [Equivalence Partitioning](02-equivalence-partitioning.md)
-* [Boundary Value Analysis](03-boundary-value-analysis.md)
-* [Decision Table Testing](04-decision-table-testing.md)
 * [State Transition Testing](05-state-transition-testing.md)
 * [Error Guessing](06-error-guessing.md)

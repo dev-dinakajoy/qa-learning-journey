@@ -14,8 +14,6 @@ The main question is:
 
 > **"What should the system do for each combination of conditions?"**
 
----
-
 ## Why Use Decision Table Testing?
 
 Many software requirements contain business rules involving multiple conditions.
@@ -26,7 +24,7 @@ For example:
 
 There are two conditions:
 
-```text id="2lgl8t"
+```text
 Is the customer a premium member?
 Is the order ≥ ₦50,000?
 ```
@@ -44,9 +42,7 @@ Decision tables help us:
 * Reduce ambiguity
 * Create systematic test cases
 
----
-
-# Basic Structure of a Decision Table
+## Basic Structure of a Decision Table
 
 A decision table commonly contains four parts:
 
@@ -62,26 +58,20 @@ The columns represent **rules**.
 
 Each rule describes one combination of conditions and the expected action.
 
----
+## Example: Free Delivery
 
-# Example: Free Delivery
-
-### Requirement
-
-> Premium members receive free delivery when their order is **₦50,000 or more**.
+Requirement: Premium members receive free delivery when their order is **₦50,000 or more**.
 
 We have two conditions:
 
 1. Premium member?
 2. Order ≥ ₦50,000?
 
-And one action:
-
-> Free delivery.
+And one action: Free delivery.
 
 Because each condition can be Yes or No:
 
-```text id="m8z3ql"
+```text
 2² = 4 possible combinations
 ```
 
@@ -95,13 +85,11 @@ Because each condition can be Yes or No:
 
 This gives us four rules to consider.
 
----
+### Understanding the Rules
 
-# Understanding the Rules
+- Rule 1
 
-### Rule 1
-
-```text id="k4x7zm"
+```text
 Premium member: Yes
 Order ≥ ₦50,000: Yes
 
@@ -110,11 +98,9 @@ Order ≥ ₦50,000: Yes
 
 Both conditions are satisfied.
 
----
+- Rule 2
 
-### Rule 2
-
-```text id="q5m6t1"
+```text
 Premium member: Yes
 Order ≥ ₦50,000: No
 
@@ -123,11 +109,9 @@ Order ≥ ₦50,000: No
 
 The customer is premium, but the order doesn't meet the minimum.
 
----
+- Rule 3
 
-### Rule 3
-
-```text id="r6h3wb"
+```text
 Premium member: No
 Order ≥ ₦50,000: Yes
 
@@ -136,11 +120,9 @@ Order ≥ ₦50,000: Yes
 
 The order meets the amount requirement, but the customer isn't premium.
 
----
+- Rule 4
 
-### Rule 4
-
-```text id="n3p8yj"
+```text
 Premium member: No
 Order ≥ ₦50,000: No
 
@@ -149,20 +131,18 @@ Order ≥ ₦50,000: No
 
 Neither condition is satisfied.
 
----
-
-# How Many Rules Do We Need?
+## How Many Rules Do We Need?
 
 When conditions are binary, meaning each condition has two possible values:
 
-```text id="m4p7k1"
+```text
 Yes / No
 True / False
 ```
 
 the number of possible combinations is:
 
-```text id="h5j6x2"
+```text
 2ⁿ
 ```
 
@@ -180,7 +160,7 @@ where **n = number of binary conditions**.
 
 For example:
 
-```text id="6y0gqf"
+```text
 3 conditions
 2³ = 8 combinations
 ```
@@ -196,13 +176,9 @@ Some combinations may be:
 
 The requirements and business rules determine what actually needs to be tested.
 
----
+## Example: Online Checkout
 
-# Example: Online Checkout
-
-### Requirement
-
-A customer can checkout only if:
+Requirement: A customer can checkout only if:
 
 1. They are logged in.
 2. Their cart contains at least one item.
@@ -210,7 +186,7 @@ A customer can checkout only if:
 
 We have three binary conditions:
 
-```text id="g8g9q2"
+```text
 Logged in?
 Has items?
 Address valid?
@@ -218,7 +194,7 @@ Address valid?
 
 Therefore:
 
-```text id="q1t4rv"
+```text
 2³ = 8 possible combinations
 ```
 
@@ -233,9 +209,7 @@ Therefore:
 
 Only the first rule satisfies all three conditions.
 
----
-
-# Conditions vs Actions
+## Conditions vs Actions
 
 It's important not to confuse the two.
 
@@ -245,7 +219,7 @@ Something the system evaluates.
 
 Examples:
 
-```text id="b6s0fl"
+```text
 User logged in?
 Balance sufficient?
 Restaurant open?
@@ -258,7 +232,7 @@ What the system does as a result.
 
 Examples:
 
-```text id="4n8z8v"
+```text
 Allow checkout
 Reject transaction
 Grant discount
@@ -268,7 +242,7 @@ Show error
 
 A useful way to think about it is:
 
-```text id="3u6e6f"
+```text
 Conditions
      ↓
 Decision
@@ -276,19 +250,15 @@ Decision
 Action
 ```
 
----
-
-# Decision Tables and AND Conditions
+## Decision Tables and AND Conditions
 
 Decision tables are especially useful when requirements contain **AND** conditions.
 
-Example:
-
-> A transfer is allowed when the user is logged in **AND** has sufficient balance.
+Example: A transfer is allowed when the user is logged in **AND** has sufficient balance.
 
 Conditions:
 
-```text id="4a5c9u"
+```text
 Logged in?
 Balance sufficient?
 ```
@@ -304,19 +274,15 @@ Decision table:
 
 This makes the business rule very clear.
 
----
-
-# Decision Tables and OR Conditions
+## Decision Tables and OR Conditions
 
 Decision tables can also represent **OR** conditions.
 
-Example:
-
-> A user can reset their password if they provide either a registered email **OR** a verified phone number.
+Example: A user can reset their password if they provide either a registered email **OR** a verified phone number.
 
 Conditions:
 
-```text id="2x5tq5"
+```text
 Registered email provided?
 Verified phone provided?
 ```
@@ -332,19 +298,15 @@ Possible combinations:
 
 The decision table makes the OR relationship easy to see.
 
----
-
-# Decision Tables and Negative Testing
+## Decision Tables and Negative Testing
 
 Decision tables naturally help us identify negative tests.
 
-For example:
-
-> Checkout requires login, items, and a valid address.
+For example: Checkout requires login, items, and a valid address.
 
 Positive:
 
-```text id="8j7c3p"
+```text
 Logged in: Yes
 Items: Yes
 Address: Valid
@@ -353,7 +315,7 @@ Address: Valid
 
 Negative:
 
-```text id="m8n4p7"
+```text
 Logged in: No
 Items: Yes
 Address: Valid
@@ -362,7 +324,7 @@ Address: Valid
 
 Another:
 
-```text id="0j6w2k"
+```text
 Logged in: Yes
 Items: No
 Address: Valid
@@ -371,7 +333,7 @@ Address: Valid
 
 Another:
 
-```text id="7m2q4f"
+```text
 Logged in: Yes
 Items: Yes
 Address: Invalid
@@ -380,42 +342,35 @@ Address: Invalid
 
 The decision table helps ensure we don't forget these combinations.
 
----
-
-# Decision Tables and Test Design Techniques
+## Decision Tables and Test Design Techniques
 
 Decision Table Testing can work together with other techniques.
 
-## Decision Table + Equivalence Partitioning
+### Decision Table + Equivalence Partitioning
 
-Suppose:
-
-> Transfer amount must be ₦5,000–₦500,000.
+Suppose: Transfer amount must be ₦5,000 – ₦500,000.
 
 EP can determine whether the amount is:
 
-```text id="1o4k4v"
+```text
 Valid
 Invalid
 ```
 
 The decision table can then combine that condition with other conditions:
 
-```text id="8a7p6f"
+```text
 Logged in?
 Amount valid?
 Balance sufficient?
 ```
-
----
-
-## Decision Table + Boundary Value Analysis
+### Decision Table + Boundary Value Analysis
 
 BVA can be used to determine specific amounts for the "valid amount" or "invalid amount" condition.
 
 For example:
 
-```text id="g9z3e1"
+```text
 ₦4,999  → Invalid
 ₦5,000  → Valid
 ₦5,001  → Valid
@@ -423,15 +378,11 @@ For example:
 
 The decision table determines how those conditions interact with other conditions.
 
----
-
-# Decision Tables Can Reveal Missing Requirements
+## Decision Tables Can Reveal Missing Requirements
 
 This is one of the most useful benefits.
 
-Suppose a requirement says:
-
-> Free delivery is available to premium members when the order is at least ₦50,000.
+Suppose a requirement says: Free delivery is available to premium members when the order is at least ₦50,000.
 
 We create:
 
@@ -442,17 +393,13 @@ We create:
 | No      | Yes             | No            |
 | No      | No              | No            |
 
-Now imagine the business later says:
-
-> "Actually, non-premium customers also get free delivery for orders over ₦100,000."
+Now imagine the business later says: "Actually, non-premium customers also get free delivery for orders over ₦100,000."
 
 The decision table helps us see that the original business rule needs to be expanded.
 
 This makes decision tables useful not only for testing, but also for **reviewing requirements**.
 
----
-
-# Decision Tables Can Reveal Contradictions
+## Decision Tables Can Reveal Contradictions
 
 Suppose two requirements say:
 
@@ -466,27 +413,23 @@ These rules conflict for a premium member ordering ₦50,000.
 
 A decision table can expose this contradiction.
 
-The tester can then ask:
-
-> **Which rule takes priority?**
+The tester can then ask: **Which rule takes priority?**
 
 This is an example of how QA can identify problems **before testing even begins**.
 
----
-
-# Don't Automatically Test Every Combination
+## Don't Automatically Test Every Combination
 
 Although `2ⁿ` gives us the number of possible combinations, real systems can have many conditions.
 
 For example:
 
-```text id="2v7g8q"
+```text
 6 binary conditions
 ```
 
 would produce:
 
-```text id="u4b3k7"
+```text
 2⁶ = 64 combinations
 ```
 
@@ -503,15 +446,13 @@ We may reduce the set based on:
 
 The important thing is to ensure that the selected tests provide appropriate coverage.
 
----
+## Common Mistakes
 
-# Common Mistakes
-
-## 1. Forgetting a condition
+### 1. Forgetting a condition
 
 If the requirement has:
 
-```text id="k2j5r6"
+```text
 Logged in?
 Account active?
 Balance sufficient?
@@ -521,13 +462,11 @@ don't accidentally create a table with only two conditions.
 
 Missing a condition can mean missing important business rules.
 
----
-
-## 2. Confusing conditions with actions
+### 2. Confusing conditions with actions
 
 For example:
 
-```text id="j8g3k1"
+```text
 "Transfer successful"
 ```
 
@@ -535,35 +474,27 @@ is usually an **action/result**, not a condition.
 
 A condition might be:
 
-```text id="5y9r4p"
+```text
 Balance sufficient?
 ```
 
----
-
-## 3. Assuming unspecified behavior
+### 3. Assuming unspecified behavior
 
 If a combination isn't explained by the requirement, don't simply invent the expected result.
 
-For example:
-
-> What happens when payment is Pending?
+For example: What happens when payment is Pending?
 
 If the requirement doesn't say, flag it:
 
 > **Requirement clarification needed.**
 
----
-
-## 4. Treating every theoretical combination as mandatory
+### 4. Treating every theoretical combination as mandatory
 
 `2ⁿ` tells us the possible combinations, but not automatically the final number of test cases.
 
 Always consider the actual business rules.
 
----
-
-# Quick Reference
+## Quick Reference
 
 | Concept            | Meaning                                                      |
 | ------------------ | ------------------------------------------------------------ |
@@ -573,9 +504,7 @@ Always consider the actual business rules.
 | **Decision Table** | A table showing conditions, combinations, and actions        |
 | **2ⁿ**             | Theoretical combinations for n binary conditions             |
 
----
-
-# When Should I Think "Decision Table"?
+## When Should I Think "Decision Table"?
 
 Look for requirements containing:
 
@@ -592,17 +521,13 @@ Look for requirements containing:
 * Checkout conditions
 * Approval/rejection logic
 
-For example:
-
-> "A customer receives a discount if they are a premium member **AND** spend at least ₦50,000."
+For example: "A customer receives a discount if they are a premium member **AND** spend at least ₦50,000."
 
 Think:
 
 > **Decision Table Testing.**
 
----
-
-# Key Takeaways
+## Key Takeaways
 
 * **Decision Table Testing** is used when system behavior depends on multiple conditions.
 * A decision table contains **conditions, rules, and actions**.
@@ -614,4 +539,9 @@ Think:
 * They can expose **missing, ambiguous, or contradictory requirements**.
 * Always distinguish between what the requirement explicitly says and what you are assuming.
 
-> **When multiple conditions determine the outcome, turn the business rules into a table.**
+**When multiple conditions determine the outcome, turn the business rules into a table.**
+
+## Related
+
+* [Boundary Value Analysis](03-boundary-value-analysis.md)
+* [State Transition Testing](05-state-transition-testing.md)

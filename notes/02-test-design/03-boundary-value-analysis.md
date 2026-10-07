@@ -8,20 +8,18 @@ The idea is that defects often occur at the **edges of valid and invalid ranges*
 
 Instead of testing many values within a range, BVA selects values close to the boundaries.
 
----
-
 ## Why Use Boundary Value Analysis?
 
 Developers can make mistakes when implementing conditions such as:
 
-```text id="v3nqf4"
+```text
 Age >= 18
 Age <= 60
 ```
 
 A small mistake could accidentally result in:
 
-```text id="czg8i8"
+```text
 Age > 18
 Age < 60
 ```
@@ -30,13 +28,11 @@ This could cause valid boundary values such as `18` or `60` to be rejected.
 
 BVA helps us detect these kinds of defects by deliberately testing values around the limits.
 
----
-
-# Basic BVA Pattern
+## Basic BVA Pattern
 
 For a range with a minimum and maximum value, a common BVA approach is to test:
 
-```text id="o9n3xr"
+```text
 Minimum - 1
 Minimum
 Minimum + 1
@@ -52,7 +48,7 @@ For example:
 
 The boundary values are:
 
-```text id="gk8m7h"
+```text
 17 → Invalid
 18 → Valid
 19 → Valid
@@ -64,29 +60,25 @@ The boundary values are:
 
 These six values give us strong coverage around both boundaries.
 
----
+## BVA Example: Transfer Amount
 
-# BVA Example: Transfer Amount
-
-### Requirement
-
-> Users can transfer between **₦5,000 and ₦500,000 inclusive**.
+Requirement: Users can transfer between **₦5,000 and ₦500,000 inclusive**.
 
 The minimum boundary is:
 
-```text id="bq8w8b"
+```text
 ₦5,000
 ```
 
 The maximum boundary is:
 
-```text id="3f6x7y"
+```text
 ₦500,000
 ```
 
 Using BVA:
 
-```text id="e4k6z8"
+```text
 ₦4,999     → ❌ Invalid
 ₦5,000     → ✅ Valid
 ₦5,001     → ✅ Valid
@@ -100,21 +92,17 @@ Notice that we aren't randomly choosing these values.
 
 Each value has a specific reason for being tested.
 
----
-
-# BVA and Equivalence Partitioning
+## BVA and Equivalence Partitioning
 
 BVA and EP are closely related and are often used together.
 
-Consider:
-
-> A customer can purchase between **1 and 10 units**.
+Consider this: A customer can purchase between **1 and 10 units**.
 
 ### Equivalence Partitioning
 
 First, divide the input into groups:
 
-```text id="l2j5g6"
+```text
 < 1       → Invalid
 1–10      → Valid
 > 10      → Invalid
@@ -124,7 +112,7 @@ First, divide the input into groups:
 
 Then test around the boundaries:
 
-```text id="k7ly3g"
+```text
 0  → ❌
 1  → ✅
 2  → ✅
@@ -136,17 +124,11 @@ Then test around the boundaries:
 
 ### The difference
 
-**EP asks:**
+**EP asks:** What groups of values should behave similarly?
 
-> What groups of values should behave similarly?
+**BVA asks:** What happens at and around the edges of those groups?
 
-**BVA asks:**
-
-> What happens at and around the edges of those groups?
-
----
-
-# Why Boundaries Are Important
+## Why Boundaries Are Important
 
 Imagine the requirement:
 
@@ -154,7 +136,7 @@ Imagine the requirement:
 
 A tester might choose:
 
-```text id="6jv6i8"
+```text
 "JoyQA123" → Valid
 ```
 
@@ -162,7 +144,7 @@ This tests the middle of the valid partition.
 
 But bugs may occur specifically at:
 
-```text id="m9f3vp"
+```text
 4 characters
 5 characters
 6 characters
@@ -174,113 +156,95 @@ But bugs may occur specifically at:
 
 BVA focuses our attention on these areas.
 
----
-
-# BVA for a Single Boundary
+## BVA for a Single Boundary
 
 Not every requirement has both a minimum and maximum.
 
-For example:
-
-> A customer must be at least **18 years old**.
+For example: A customer must be at least **18 years old**.
 
 There is a lower boundary but no specified upper boundary.
 
 The boundary is:
 
-```text id="e7t5f0"
+```text
 18
 ```
 
 BVA can focus on:
 
-```text id="k5r9pu"
+```text
 17 → ❌
 18 → ✅
 19 → ✅
 ```
 
----
+### BVA for Maximum Values
 
-# BVA for Maximum Values
-
-Suppose:
-
-> A customer can enter a maximum of **500 characters**.
+Suppose: A customer can enter a maximum of **500 characters**.
 
 The boundary is:
 
-```text id="b3r3bx"
+```text
 500
 ```
 
 Test:
 
-```text id="1q75t9"
+```text
 499 → ✅
 500 → ✅
 501 → ❌
 ```
 
----
+### BVA for Minimum Values
 
-# BVA for Minimum Values
-
-Suppose:
-
-> A password must contain at least **8 characters**.
+Suppose: A password must contain at least **8 characters**.
 
 The boundary is:
 
-```text id="h5x1xw"
+```text
 8
 ```
 
 Test:
 
-```text id="f3h7dk"
+```text
 7 → ❌
 8 → ✅
 9 → ✅
 ```
 
----
-
-# Inclusive vs Exclusive Boundaries
+### Inclusive vs Exclusive Boundaries
 
 This is very important.
 
-Consider:
-
-> Age must be **18 or older**.
+Consider: Age must be **18 or older**.
 
 This means:
 
-```text id="a9n8ll"
+```text
 Age >= 18
 ```
 
 Therefore:
 
-```text id="w8w3pa"
+```text
 17 → ❌
 18 → ✅
 19 → ✅
 ```
 
-But suppose the requirement says:
-
-> Age must be **greater than 18**.
+But suppose the requirement says: Age must be **greater than 18**.
 
 Now:
 
-```text id="7k4xwt"
+```text
 Age > 18
 ```
 
 Therefore:
 
-```text id="w9a7sn"
+```text
 17 → ❌
 18 → ❌
 19 → ✅
@@ -288,39 +252,35 @@ Therefore:
 
 The word **"inclusive"** matters.
 
-### Inclusive
+- Inclusive
 
-> Between 18 and 60 **inclusive**
+Requirnment: Between 18 and 60 **inclusive**
 
-```text id="h8hx7p"
+```text
 18 → Valid
 60 → Valid
 ```
 
-### Exclusive
+- Exclusive
 
-> Greater than 18 and less than 60
+Requirnment: Greater than 18 and less than 60
 
-```text id="b8z5qj"
+```text
 18 → Invalid
 60 → Invalid
 ```
 
 A tester must understand the exact requirement before selecting boundary values.
 
----
-
-# BVA for Decimal Values
+## BVA for Decimal Values
 
 BVA isn't limited to integers.
 
-Suppose:
-
-> A product discount can be between **0% and 100%**.
+Suppose: A product discount can be between **0% and 100%**.
 
 Depending on the system's precision, we might test:
 
-```text id="u5c5ag"
+```text
 -0.01% → ❌
 0%     → ✅
 0.01%  → ✅
@@ -334,19 +294,15 @@ The exact values around the boundary depend on the system's allowed precision.
 
 This is another reason to understand the input format and requirements.
 
----
-
-# BVA for Dates
+## BVA for Dates
 
 BVA can also be used with dates.
 
-Suppose:
-
-> A promotion is valid from **September 1 to September 30**.
+Suppose: A promotion is valid from **September 1 to September 30**.
 
 Important boundary dates include:
 
-```text id="qv9o4q"
+```text
 August 31  → ❌
 September 1 → ✅
 September 2 → ✅
@@ -358,17 +314,13 @@ October 1 → ❌
 
 Dates are particularly useful for BVA because off-by-one-day errors can easily occur.
 
----
+## BVA for String Length
 
-# BVA for String Length
-
-Suppose:
-
-> Username must be **5–20 characters**.
+Suppose: Username must be **5–20 characters**.
 
 Test:
 
-```text id="tq2c0n"
+```text
 4 characters  → ❌
 5 characters  → ✅
 6 characters  → ✅
@@ -378,11 +330,11 @@ Test:
 21 characters → ❌
 ```
 
-The actual characters used should be valid so that we're testing **length**, rather than accidentally testing another rule.
+The actual characters used should be valid so that we are testing **length**, rather than accidentally testing another rule.
 
 For example, if special characters aren't allowed, don't use:
 
-```text id="h0gqpc"
+```text
 "@@@@@"
 ```
 
@@ -390,29 +342,25 @@ for a length test.
 
 Use valid characters:
 
-```text id="c1m9n6"
+```text
 "JoyQA"
 ```
 
-This isolates the condition we're testing.
+This isolates the condition we are testing.
 
----
-
-# BVA and Test Isolation
+## BVA and Test Isolation
 
 A useful testing principle is:
 
 > **When testing a particular boundary, avoid introducing unrelated invalid conditions unless you intend to test their combination.**
 
-Suppose:
+Suppose: Password must contain 8–20 characters and only letters/numbers.
 
-> Password must contain 8–20 characters and only letters/numbers.
-
-If you're testing the **length boundary**, use valid characters.
+If you are testing the **length boundary**, use valid characters.
 
 For example:
 
-```text id="q4fhqf"
+```text
 7 valid characters → ❌
 8 valid characters → ✅
 9 valid characters → ✅
@@ -420,28 +368,24 @@ For example:
 
 Don't use:
 
-```text id="w5z1xk"
+```text
 7 characters containing @
 ```
 
-because now you're testing both:
+because now you are testing both:
 
 * Length
 * Invalid character
 
 That may be useful for another test, but it makes the purpose of the boundary test less clear.
 
----
+## BVA for Quantity
 
-# BVA for Quantity
-
-Requirement:
-
-> Customer can purchase **1–10 units**.
+Requirement: Customer can purchase **1–10 units**.
 
 ### Lower boundary
 
-```text id="5t2q7n"
+```text
 0 → ❌
 1 → ✅
 2 → ✅
@@ -449,23 +393,19 @@ Requirement:
 
 ### Upper boundary
 
-```text id="v2g5m0"
+```text
 9  → ✅
 10 → ✅
 11 → ❌
 ```
 
-This is exactly the kind of BVA exercise you've already practiced.
+## Common BVA Mistakes
 
----
-
-# Common BVA Mistakes
-
-## 1. Testing only the boundaries
+### 1. Testing only the boundaries
 
 Some testers might test:
 
-```text id="j3v3s6"
+```text
 18
 60
 ```
@@ -474,7 +414,7 @@ But that's incomplete.
 
 We also want values immediately outside and inside the boundaries:
 
-```text id="b2d9wh"
+```text
 17
 18
 19
@@ -484,9 +424,7 @@ We also want values immediately outside and inside the boundaries:
 61
 ```
 
----
-
-## 2. Ignoring whether boundaries are inclusive
+### 2. Ignoring whether boundaries are inclusive
 
 Don't assume:
 
@@ -498,13 +436,11 @@ means the same thing as:
 
 Always check the requirement.
 
----
-
-## 3. Using the wrong increment
+### 3. Using the wrong increment
 
 For integers:
 
-```text id="c9dr9m"
+```text
 minimum - 1
 minimum
 minimum + 1
@@ -516,7 +452,7 @@ But for decimals, dates, currency, or other data types, the appropriate incremen
 
 For example, if a currency field accepts two decimal places:
 
-```text id="d8v8z3"
+```text
 ₦4,999.99
 ₦5,000.00
 ₦5,000.01
@@ -524,17 +460,13 @@ For example, if a currency field accepts two decimal places:
 
 may be more appropriate than simply adding ₦1.
 
----
+### 4. Testing unrelated rules accidentally
 
-## 4. Testing unrelated rules accidentally
-
-If you're testing an age boundary, don't accidentally use invalid formatting or another invalid condition unless that's intentional.
+If you are testing an age boundary, don't accidentally use invalid formatting or another invalid condition unless that's intentional.
 
 Keep the test focused.
 
----
-
-# BVA in Real QA Work
+## BVA in Real QA Work
 
 When you see words such as:
 
@@ -560,7 +492,7 @@ For example:
 
 Think:
 
-```text id="zj5p6f"
+```text
 9
 10
 11
@@ -570,7 +502,7 @@ Think:
 
 Think:
 
-```text id="8z7f2c"
+```text
 ₦4,999
 ₦5,000
 ₦5,001
@@ -580,15 +512,13 @@ Think:
 
 Think about both sides:
 
-```text id="y6y0r5"
+```text
 10 digits
 11 digits
 12 digits
 ```
 
----
-
-# BVA + Other Test Design Techniques
+## BVA + Other Test Design Techniques
 
 BVA is often combined with other techniques.
 
@@ -596,14 +526,14 @@ BVA is often combined with other techniques.
 
 For numeric ranges:
 
-```text id="9g7zxy"
+```text
 EP → Identify partitions
 BVA → Identify boundary values
 ```
 
 ### BVA + Positive/Negative Testing
 
-```text id="k3x6m0"
+```text
 17 → Negative
 18 → Positive
 19 → Positive
@@ -615,7 +545,7 @@ BVA → Identify boundary values
 
 After identifying the formal boundaries, a tester might also consider unusual values such as:
 
-```text id="8g2qv4"
+```text
 0
 -1
 very large number
@@ -630,9 +560,7 @@ depending on the application's requirements and data type.
 
 When a boundary condition interacts with other conditions, a decision table can help test the combinations.
 
----
-
-# Quick Reference
+## Quick Reference
 
 | Requirement              | Boundary Tests                                       |
 | ------------------------ | ---------------------------------------------------- |
@@ -643,9 +571,7 @@ When a boundary condition interacts with other conditions, a decision table can 
 | Maximum 500 chars        | 499, 500, 501                                        |
 | Minimum 18               | 17, 18, 19                                           |
 
----
-
-# Key Takeaways
+## Key Takeaways
 
 * **Boundary Value Analysis** focuses on values at and around input boundaries.
 * Defects frequently occur at boundaries because of incorrect conditions or **off-by-one errors**.
@@ -659,8 +585,13 @@ When a boundary condition interacts with other conditions, a decision table can 
   * Maximum + 1
 * Always determine whether boundaries are **inclusive or exclusive**.
 * BVA can be applied to numbers, strings, dates, currency, quantities, and other data types.
-* When testing a specific boundary, avoid introducing unrelated invalid conditions unless you're deliberately testing their combination.
+* When testing a specific boundary, avoid introducing unrelated invalid conditions unless you are deliberately testing their combination.
 * **EP identifies partitions; BVA focuses on their boundaries.**
 * BVA is often combined with EP, positive/negative testing, error guessing, and decision tables.
 
-> **When you see a limit, look at the edge—and one step on either side.**
+> **When you see a limit, look at the edge, and one step on either side.**
+
+## Related
+
+* [Equivalence Partitioning](02-equivalence-partitioning.md)
+* [Decision Table Testing](04-decision-table-testing.md)

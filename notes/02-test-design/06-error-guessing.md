@@ -4,15 +4,11 @@
 
 **Error Guessing** is a software testing technique where the tester uses their **experience, knowledge, intuition, and understanding of common mistakes** to predict where defects are likely to occur.
 
-Instead of relying only on formal test design rules, the tester asks:
-
-> **"What could go wrong here?"**
+Instead of relying only on formal test design rules, the tester asks: **"What could go wrong here?"**
 
 The tester then creates tests specifically to expose those potential problems.
 
 Error Guessing is an **experience-based test design technique**.
-
----
 
 ## Why Use Error Guessing?
 
@@ -37,15 +33,11 @@ It can help us:
 * Use knowledge from previous defects
 * Complement other test design techniques
 
----
-
-# The Basic Idea
+## The Basic Idea
 
 Suppose we have a phone number field.
 
-The requirement says:
-
-> Phone number must contain exactly 11 digits.
+The requirement says: Phone number must contain exactly 11 digits.
 
 A structured approach might give us:
 
@@ -55,9 +47,7 @@ A structured approach might give us:
 12 digits → Invalid
 ```
 
-With Error Guessing, we ask:
-
-> **"What else might go wrong?"**
+With Error Guessing, we ask: **"What else might go wrong?"**
 
 We might test:
 
@@ -75,13 +65,11 @@ Copy and paste
 
 These tests come from thinking about **likely mistakes and failure points**.
 
----
-
-# Common Error Guessing Areas
+## Common Error Guessing Areas
 
 There are certain types of inputs and situations that testers commonly investigate.
 
-## 1. Empty Values
+### 1. Empty Values
 
 Test what happens when a required field is left empty.
 
@@ -99,9 +87,7 @@ Questions:
 * Does the application crash?
 * Is the error message clear?
 
----
-
-## 2. Spaces
+### 2. Spaces
 
 Test:
 
@@ -117,9 +103,7 @@ Questions:
 * Are leading/trailing spaces removed?
 * Is an input containing only spaces treated as empty?
 
----
-
-## 3. Invalid Characters
+### 3. Invalid Characters
 
 If a field expects numbers:
 
@@ -139,9 +123,7 @@ If it expects letters:
 
 The goal is to see whether the application correctly handles unexpected characters.
 
----
-
-## 4. Special Characters
+### 4. Special Characters
 
 Depending on the requirement, test:
 
@@ -169,9 +151,7 @@ This can reveal:
 
 The exact characters to test should depend on what the field is expected to accept.
 
----
-
-## 5. Zero
+### 5. Zero
 
 Zero can be an important value.
 
@@ -197,9 +177,7 @@ Test:
 
 Zero is easy to overlook if the tester only considers positive and negative numbers.
 
----
-
-## 6. Negative Numbers
+### 6. Negative Numbers
 
 For fields that normally accept positive values:
 
@@ -209,9 +187,7 @@ For fields that normally accept positive values:
 -₦5,000
 ```
 
-Ask:
-
-> **Should negative values be accepted?**
+Ask: **Should negative values be accepted?**
 
 For example, a product quantity of:
 
@@ -221,9 +197,7 @@ For example, a product quantity of:
 
 should normally be rejected.
 
----
-
-## 7. Extremely Large Values
+### 7. Extremely Large Values
 
 Test values much larger than expected.
 
@@ -241,9 +215,7 @@ Questions:
 * Does the application crash?
 * Is an appropriate validation message displayed?
 
----
-
-## 8. Unexpected Data Types
+### 8. Unexpected Data Types
 
 If a field expects a number, try:
 
@@ -258,9 +230,7 @@ If it expects text, consider whether numeric or other unexpected input is possib
 
 This is particularly useful when testing APIs.
 
----
-
-## 9. Copy and Paste
+### 9. Copy and Paste
 
 Users don't always type data manually.
 
@@ -274,9 +244,7 @@ Try:
 
 Sometimes validation behaves differently for pasted input than for typed input.
 
----
-
-## 10. Repeated Actions
+### 10. Repeated Actions
 
 Error Guessing isn't limited to input fields.
 
@@ -297,9 +265,7 @@ Questions:
 * Does the application process the action twice?
 * Does the state become inconsistent?
 
----
-
-# Error Guessing From Previous Defects
+## Error Guessing From Previous Defects
 
 One of the strongest uses of Error Guessing is learning from **previous bugs**.
 
@@ -321,9 +287,7 @@ This is experience-based testing.
 
 A previous defect can become a clue for finding similar defects elsewhere.
 
----
-
-# Error Guessing and Requirements
+## Error Guessing and Requirements
 
 Error Guessing does **not** mean randomly entering nonsense into the application.
 
@@ -331,9 +295,7 @@ The tests should still have a reason.
 
 For example:
 
-### Requirement
-
-> Product quantity must be between 1 and 10.
+Requirement: Product quantity must be between 1 and 10.
 
 Structured techniques give us:
 
@@ -371,9 +333,7 @@ Why?
 
 Because these are common ways input validation can fail.
 
----
-
-# Error Guessing vs Boundary Value Analysis
+## Error Guessing vs Boundary Value Analysis
 
 These techniques can overlap, but their reasoning is different.
 
@@ -408,9 +368,7 @@ null
 
 The selection comes from tester experience and likely failure points.
 
----
-
-# Error Guessing vs Equivalence Partitioning
+## Error Guessing vs Equivalence Partitioning
 
 ### EP
 
@@ -426,9 +384,7 @@ Example:
 
 ### Error Guessing
 
-Asks:
-
-> What unusual inputs might break the application?
+Asks: What unusual inputs might break the application?
 
 For example:
 
@@ -441,9 +397,7 @@ null
 
 Both techniques can be used together.
 
----
-
-# Error Guessing vs Positive and Negative Testing
+## Error Guessing vs Positive and Negative Testing
 
 These concepts are related but not identical.
 
@@ -470,13 +424,9 @@ Therefore:
 
 > **Error Guessing can be used to identify negative tests.**
 
----
+## Practical Example — Phone Number
 
-# Practical Example — Phone Number
-
-### Requirement
-
-> Phone number must contain exactly 11 digits.
+Requirement: Phone number must contain exactly 11 digits.
 
 ### Structured tests
 
@@ -515,13 +465,9 @@ Decimal value
 
 Each test should have a reason based on the requirement, system behavior, or common failure patterns.
 
----
+## Practical Example — Login
 
-# Practical Example — Login
-
-Suppose the requirement says:
-
-> Users must provide a valid email and password to log in.
+Suppose the requirement says: Users must provide a valid email and password to log in.
 
 A basic test might be:
 
@@ -574,19 +520,13 @@ Submitting with both fields empty
 
 These tests can reveal defects that basic positive testing might miss.
 
----
-
-# Practical Example — Payment
+## Practical Example — Payment
 
 Payment systems are particularly good candidates for Error Guessing.
 
-Suppose:
+Suppose: A customer can pay for an order.
 
-> A customer can pay for an order.
-
-We might ask:
-
-> **What could go wrong?**
+We might ask: **What could go wrong?**
 
 Potential tests:
 
@@ -607,9 +547,7 @@ Some of these may also involve **State Transition Testing**.
 
 This demonstrates that test design techniques can complement each other.
 
----
-
-# Error Guessing Questions
+## Error Guessing Questions
 
 When testing a feature, ask yourself:
 
@@ -647,9 +585,7 @@ When testing a feature, ask yourself:
 * What if the data changes during the process?
 * What if two users try to use the same resource?
 
----
-
-# Error Guessing Checklist
+## Error Guessing Checklist
 
 A simple checklist can help during exploratory testing:
 
@@ -682,9 +618,7 @@ Not every item applies to every feature.
 
 The tester should select the relevant ones.
 
----
-
-# Advantages of Error Guessing
+## Advantages of Error Guessing
 
 Error Guessing can:
 
@@ -696,37 +630,29 @@ Error Guessing can:
 * Be useful when requirements are incomplete
 * Encourage testers to think like real users and potential failure sources
 
----
-
-# Limitations of Error Guessing
+## Limitations of Error Guessing
 
 Error Guessing also has limitations.
 
-## 1. Depends on experience
+### 1. Depends on experience
 
 A beginner may not know which unusual situations are common sources of defects.
 
 Experience improves this skill over time.
 
----
-
-## 2. Not systematic by itself
+### 2. Not systematic by itself
 
 Two testers may come up with completely different error guesses.
 
 Unlike BVA or Decision Tables, there isn't always a fixed formula for selecting tests.
 
----
-
-## 3. Can miss important scenarios
+### 3. Can miss important scenarios
 
 If the tester doesn't think of a particular failure, it may never be tested.
 
 This is why Error Guessing should **complement**, rather than replace, structured techniques.
 
----
-
-# Building an Error Guessing Mindset
+## Building an Error Guessing Mindset
 
 As you gain experience, start asking:
 
@@ -734,9 +660,7 @@ As you gain experience, start asking:
 
 For example:
 
-### Requirement
-
-> Users cannot cancel an order once it is **Out for Delivery**.
+Requirement: Users cannot cancel an order once it is **Out for Delivery**.
 
 Think:
 
@@ -752,17 +676,12 @@ What if the order is already Delivered?
 
 These questions help uncover scenarios beyond the obvious happy path.
 
----
-
-# Key Takeaways
+## Key Takeaways
 
 * **Error Guessing** is an experience-based test design technique.
 * It uses tester knowledge, intuition, previous defects, and common failure patterns.
-* The key question is:
-
-  > **"What could go wrong?"**
+* The key question is: **"What could go wrong?"**
 * Common areas include:
-
   * Empty values
   * Null
   * Spaces
@@ -778,4 +697,9 @@ These questions help uncover scenarios beyond the obvious happy path.
 * It is not random testing; there should be a reason behind the test.
 * It depends heavily on tester experience, so building a personal list of common failure patterns is valuable.
 
-> **Good testers don't only ask, "Does it work?" They also ask, "How could this fail?"**
+**Good testers don't only ask, "Does it work?" They also ask, "How could this fail?"**
+
+## Related
+
+* [State Transition Testing](05-state-transition-testing.md)
+* [Positive and Negative Testing](07-positive-and-negative-testing.md)
