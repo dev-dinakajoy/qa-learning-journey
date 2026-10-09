@@ -20,32 +20,25 @@ A high-quality bug report should answer:
 
 > **How serious or urgent is it?**
 
----
-
-# 1. What Is a Bug Report?
+## What Is a Bug Report?
 
 A **bug report** is a structured record of a software defect or unexpected behavior.
 
 For example:
 
 ```text
-BUG-LOGIN-001
+ID: BUG-LOGIN-001
 
-Title:
-Login rejects valid credentials and keeps the user on the Login page.
+Title: Login rejects valid credentials and keeps the user on the Login page.
 
-Expected:
-The user should be logged in and redirected to the dashboard.
+Expected: The user should be logged in and redirected to the dashboard.
 
-Actual:
-The system displays "Invalid email or password" and keeps the user on the Login page.
+Actual: The system displays "Invalid email or password" and keeps the user on the Login page.
 ```
 
 A developer reading this should be able to understand the problem and attempt to reproduce it.
 
----
-
-# 2. Why Bug Reports Matter
+## Why Bug Reports Matter
 
 A poor bug report can create unnecessary back-and-forth between QA and developers.
 
@@ -77,9 +70,7 @@ Good bug reports help teams:
 * Retest fixes
 * Maintain a history of defects
 
----
-
-# 3. Basic Bug Report Structure
+## Basic Bug Report Structure
 
 A typical manual QA bug report can contain:
 
@@ -104,7 +95,7 @@ The exact structure is less important than providing enough useful information.
 
 ---
 
-# 4. Bug ID
+### 1. Bug ID
 
 The **Bug ID** uniquely identifies the defect.
 
@@ -127,9 +118,7 @@ is much clearer than:
 
 > "Please check that login issue."
 
----
-
-# 5. Bug Title
+### 2. Bug Title
 
 The title should summarize the defect clearly and concisely.
 
@@ -139,17 +128,11 @@ A useful bug title often follows this pattern:
 [Feature] + [Problem] + [Condition]
 ```
 
-### Weak
+Weak: Login broken
 
-> Login broken
+Better: Login fails with valid credentials
 
-### Better
-
-> Login fails with valid credentials
-
-### Stronger
-
-> Login rejects valid credentials and keeps the user on the Login page
+Stronger: Login rejects valid credentials and keeps the user on the Login page
 
 The stronger title tells us:
 
@@ -157,9 +140,7 @@ The stronger title tells us:
 * Problem: Valid credentials are rejected
 * Result: User remains on Login page
 
----
-
-# 6. What Makes a Good Bug Title?
+#### What Makes a Good Bug Title?
 
 A good title should be:
 
@@ -171,29 +152,21 @@ A good title should be:
 
 Avoid emotional or subjective language.
 
-### Avoid
+Avoid - Terrible login bug!!!
 
-> Terrible login bug!!!
-
-### Prefer
-
-> Login rejects valid credentials for registered users
+Prefer - Login rejects valid credentials for registered users
 
 Avoid conclusions that have not been established.
 
-### Avoid
-
-> Database authentication query is broken
+Avoid - Database authentication query is broken
 
 Unless you have evidence that the database query is actually the cause.
 
 Prefer describing the observable behavior:
 
-> Login rejects valid credentials and displays an authentication error
+**Login rejects valid credentials and displays an authentication error**
 
----
-
-# 7. Environment
+### 3. Environment
 
 The **Environment** describes where the defect was observed.
 
@@ -229,9 +202,7 @@ Pixel device
 
 The exact information required depends on the project.
 
----
-
-# 8. Preconditions
+### 4. Preconditions
 
 The **Preconditions** describe what must be true before reproducing the defect.
 
@@ -258,9 +229,7 @@ The user is logged in and a product is available.
 
 Clear preconditions make reproduction easier.
 
----
-
-# 9. Test Data
+### 5. Test Data
 
 The **Test Data** identifies the data used when the defect occurred.
 
@@ -284,15 +253,13 @@ Product: Smartphone X
 Quantity: 2
 ```
 
-### Important
+**Important**
 
 Never expose real user passwords, payment information, API keys, or other sensitive credentials in public bug reports.
 
 Use dedicated test accounts and safe test data.
 
----
-
-# 10. Steps to Reproduce
+### 6. Steps to Reproduce
 
 The **Steps to Reproduce** explain exactly how another person can reproduce the defect.
 
@@ -314,17 +281,14 @@ Example:
 
 Another tester or developer should be able to follow these steps without guessing.
 
----
+#### Poor vs Good Reproduction Steps
 
-# 11. Poor vs Good Reproduction Steps
-
-### Poor
-
-> Try logging in and see what happens.
+- Poor  
+Try logging in and see what happens.
 
 Too vague.
 
-### Better
+- Better
 
 ```text
 1. Open the Login page.
@@ -335,9 +299,7 @@ Too vague.
 
 The second version provides a reproducible procedure.
 
----
-
-# 12. Expected Result
+### 7. Expected Result
 
 The Expected Result describes what should have happened.
 
@@ -353,9 +315,7 @@ The Expected Result should normally come from:
 * Approved business behavior
 * Established application behavior
 
----
-
-# 13. Actual Result
+### 8. Actual Result
 
 The Actual Result describes what actually happened.
 
@@ -367,36 +327,13 @@ The Actual Result should be factual and observable.
 
 Avoid unsupported assumptions.
 
-### Avoid
+Avoid: The backend authentication service is broken.
 
-> The backend authentication service is broken.
-
-### Prefer
-
-> The application displays "Invalid email or password" even though valid credentials were provided.
+Prefer: The application displays "Invalid email or password" even though valid credentials were provided.
 
 The second statement describes what the tester actually observed.
 
----
-
-# 14. Expected vs Actual in a Bug Report
-
-A useful bug report makes the difference obvious.
-
-```text
-Expected:
-User is logged in and redirected to the dashboard.
-
-Actual:
-User remains on the Login page and receives
-an "Invalid email or password" message.
-```
-
-This difference is the core of many defect reports.
-
----
-
-# 15. Severity
+### 9. Severity
 
 **Severity** describes the impact of the defect on the system, functionality, users, or business.
 
@@ -404,7 +341,7 @@ A project may define its own severity levels.
 
 A simple example:
 
-### Critical
+- Critical
 
 The defect causes a severe system or business impact.
 
@@ -415,7 +352,7 @@ Examples may include:
 * Critical security failure
 * Core functionality completely unusable
 
-### High
+- High
 
 The defect seriously affects important functionality.
 
@@ -425,7 +362,7 @@ Examples:
 * Important functionality is unusable
 * A major workflow is significantly affected
 
-### Medium
+- Medium
 
 The defect affects functionality but has a workaround or limited impact.
 
@@ -434,7 +371,7 @@ Examples:
 * A secondary feature does not work
 * Some functionality behaves incorrectly but core operations remain available
 
-### Low
+- Low
 
 The defect has relatively limited impact.
 
@@ -446,9 +383,7 @@ Examples:
 
 The exact definitions should always follow the team's agreed severity matrix.
 
----
-
-# 16. Priority
+### 10. Priority
 
 **Priority** describes how urgently the team should address the defect.
 
@@ -472,9 +407,7 @@ Priority can be influenced by:
 
 Severity and priority are related, but they are **not the same thing**.
 
----
-
-# 17. Severity vs Priority
+#### Severity vs Priority
 
 Remember:
 
@@ -490,7 +423,7 @@ How urgently should the team address it?
 
 Example:
 
-### Defect A
+- Defect A
 
 A spelling mistake appears on the checkout page.
 
@@ -505,7 +438,7 @@ Why might priority be high?
 
 Because the text could be customer-facing and need correction before a release.
 
-### Defect B
+- Defect B
 
 A rarely used administrative feature has a significant technical problem.
 
@@ -524,17 +457,14 @@ Do not assume that:
 
 They can be different.
 
----
-
-# 18. Reproducibility
+### 11. Reproducibility
 
 **Reproducibility** indicates how consistently the defect can be reproduced.
 
 Example:
 
 ```text
-Reproducibility:
-5/5 attempts
+Reproducibility: 5/5 attempts
 ```
 
 This means the tester reproduced the problem five times out of five attempts.
@@ -558,17 +488,14 @@ A defect that occurs intermittently may require additional information such as:
 * Logs
 * Screen recording
 
----
-
-# 19. Related Test Case
+### 12. Related Test Case
 
 Linking a bug to the test case that exposed it provides traceability.
 
 Example:
 
 ```text
-Related Test Case:
-TC_LOGIN_001
+Related Test Case: TC_LOGIN_001
 ```
 
 This creates a relationship:
@@ -597,9 +524,7 @@ BUG-LOGIN-001
 
 This is useful for both defect tracking and the Requirements Traceability Matrix.
 
----
-
-# 20. Evidence
+### 13. Evidence
 
 Evidence can help demonstrate and reproduce a defect.
 
@@ -624,16 +549,12 @@ Evidence should support the defect rather than replace the written description.
 
 ---
 
-# 21. Complete Bug Report Example
-
-Let's use the Easy Buy login defect we previously practiced.
+## Complete Bug Report Example: Login
 
 ```text
-Bug ID:
-BUG-LOGIN-001
+Bug ID: BUG-LOGIN-001
 
-Title:
-Login rejects valid credentials and keeps the registered user on the Login page.
+Title: Login rejects valid credentials and keeps the registered user on the Login page.
 
 Environment:
 QA
@@ -641,8 +562,7 @@ Chrome 154
 macOS
 Desktop
 
-Precondition:
-A registered user account exists with valid credentials.
+Precondition: A registered user account exists with valid credentials.
 
 Test Data:
 Email: user1@test.com
@@ -654,42 +574,32 @@ Steps to Reproduce:
 3. Enter the correct password.
 4. Click Login.
 
-Expected Result:
-The user is successfully logged in and redirected to the dashboard.
+Expected Result: The user is successfully logged in and redirected to the dashboard.
 
-Actual Result:
-The system displays "Invalid email or password" and the user remains on the Login page.
+Actual Result: The system displays "Invalid email or password" and the user remains on the Login page.
 
-Severity:
-Critical
+Severity: Critical
 
-Priority:
-High
+Priority: High
 
-Reproducibility:
-5/5 attempts
+Reproducibility: 5/5 attempts
 
-Related Test Case:
-TC_LOGIN_001
+Related Test Case: TC_LOGIN_001
 
-Evidence:
-Screenshot attached.
+Evidence: Screenshot attached.
 
-Notes:
-The issue occurs consistently with valid test credentials.
+Notes: The issue occurs consistently with valid test credentials.
 ```
 
 This is a much more useful report than:
 
 > Login doesn't work.
 
----
-
-# 22. Another Example — Product Search
+## Complete Bug Report Example: Product Search
 
 Consider this defect:
 
-### Test Case
+Test Case
 
 ```text
 TC_SEARCH_001
@@ -697,22 +607,17 @@ TC_SEARCH_001
 Verify that users can search for products using valid keywords.
 ```
 
-### Expected
+Expected: Products matching the keyword are displayed.
 
-> Products matching the keyword are displayed.
-
-### Actual
-
-> No products are displayed even though matching products exist.
+Actual: No products are displayed even though matching products exist.
+```
 
 A bug report could be:
 
 ```text
-Bug ID:
-BUG-SEARCH-001
+Bug ID: BUG-SEARCH-001
 
-Title:
-Product search returns no results for a valid keyword.
+Title: Product search returns no results for a valid keyword.
 
 Environment:
 QA
@@ -720,8 +625,7 @@ Chrome 154
 macOS
 Desktop
 
-Precondition:
-The Products page is accessible and products matching the search keyword exist.
+Precondition: The Products page is accessible and products matching the search keyword exist.
 
 Test Data:
 Keyword: phone
@@ -731,33 +635,24 @@ Steps to Reproduce:
 2. Enter "phone" in the search field.
 3. Click Search.
 
-Expected Result:
-Products matching "phone" are displayed.
+Expected Result: Products matching "phone" are displayed.
 
-Actual Result:
-No products are displayed and no error message appears.
+Actual Result: No products are displayed and no error message appears.
 
-Severity:
-High
+Severity: High
 
-Priority:
-Medium
+Priority: Medium
 
-Reproducibility:
-5/5 attempts
+Reproducibility: 5/5 attempts
 
-Related Test Case:
-TC_SEARCH_001
+Related Test Case: TC_SEARCH_001
 
-Evidence:
-Screenshot attached.
+Evidence: Screenshot attached.
 ```
 
 Notice that the report describes **what happened** rather than guessing why it happened.
 
----
-
-# 23. Bug Lifecycle
+## Bug Lifecycle
 
 After a bug is reported, it normally moves through different states.
 
@@ -794,9 +689,7 @@ Won't Fix
 
 Different organizations may use different names and transitions.
 
----
-
-# 24. Re-testing a Fixed Bug
+### Re-testing a Fixed Bug
 
 Suppose `BUG-LOGIN-001` is marked as fixed.
 
@@ -824,38 +717,29 @@ Pass
 
 The bug can then be moved to the appropriate verification/closed state according to the team's workflow.
 
----
-
-# 25. Reopened Bugs
+## Reopened Bugs
 
 A bug may be reopened if the defect still exists after the fix.
 
 Example:
 
 ```text
-Bug:
-BUG-LOGIN-001
+Bug: BUG-LOGIN-001
 
-Developer:
-Fixed
+Developer: Fixed
 
-QA Retest:
-Login still rejects valid credentials.
+QA Retest: Login still rejects valid credentials.
 
-Result:
-Fail
+Result: Fail
 
-Bug Status:
-Reopened
+Bug Status: Reopened
 ```
 
 This is why retesting is important.
 
----
+## Common Bug Reporting Mistakes
 
-# 26. Common Bug Reporting Mistakes
-
-## Mistake 1 — Vague title
+### Mistake 1 — Vague title
 
 ```text
 Login issue
@@ -867,9 +751,7 @@ Better:
 Login rejects valid credentials and keeps the user on the Login page
 ```
 
----
-
-## Mistake 2 — Missing steps
+### Mistake 2 — Missing steps
 
 ```text
 Search doesn't work.
@@ -879,35 +761,23 @@ A developer cannot reliably reproduce the issue.
 
 Include the exact steps.
 
----
-
-## Mistake 3 — Missing expected result
+### Mistake 3 — Missing expected result
 
 Without an Expected Result, it may be unclear why the behavior is considered incorrect.
 
----
-
-## Mistake 4 — Missing actual result
+### Mistake 4 — Missing actual result
 
 The report needs to explain what actually happened.
 
----
+### Mistake 5 — Mixing assumptions with observations
 
-## Mistake 5 — Mixing assumptions with observations
-
-Avoid:
-
-> The database is broken.
+Avoid: The database is broken.
 
 Unless you have evidence.
 
-Prefer:
+Prefer: Search returns no results when matching products are available.
 
-> Search returns no results when matching products are available.
-
----
-
-## Mistake 6 — Combining unrelated defects
+### Mistake 6 — Combining unrelated defects
 
 Don't create one report such as:
 
@@ -926,17 +796,13 @@ BUG-CHECKOUT-001
 
 This makes tracking and fixing easier.
 
----
-
-## Mistake 7 — Including sensitive information
+### Mistake 7 — Including sensitive information
 
 Never put real passwords, payment card numbers, API keys, or other sensitive information into bug reports.
 
 Use safe test data.
 
----
-
-# 27. Bug Report Quality Checklist
+## Bug Report Quality Checklist
 
 Before submitting a bug report, check:
 
@@ -984,9 +850,7 @@ Before submitting a bug report, check:
 
 * [ ] Is sensitive information excluded?
 
----
-
-# 28. The QA Bug Reporting Flow
+## The QA Bug Reporting Flow
 
 The complete process can be visualized as:
 
@@ -1025,9 +889,7 @@ Pass           Fail
 Verify/Close   Reopen
 ```
 
----
-
-# 29. Key Takeaways
+## Key Takeaways
 
 A high-quality bug report should be:
 

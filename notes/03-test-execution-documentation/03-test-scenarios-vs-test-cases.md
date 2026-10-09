@@ -1,20 +1,18 @@
 # Test Scenarios vs Test Cases
 
-Test scenarios and test cases are both used to plan and document software testing, but they serve different purposes.
+Test scenarios and Test cases are both used to plan and document software testing, but they serve different purposes.
 
 A simple way to remember the difference is:
 
 > **A test scenario tells us what to test. A test case tells us how to test it.**
 
----
-
-# What is a Test Scenario?
+## What is a Test Scenario?
 
 A **test scenario** is a high-level description of a functionality, behavior, or condition that needs to be tested.
 
 It identifies **what we want to verify** without describing every step or test value.
 
-### Example
+Example:
 
 ```text
 TS_LOGIN_001:
@@ -33,15 +31,13 @@ It does not specify:
 
 Those details belong in the test case.
 
----
-
-# What is a Test Case?
+## What is a Test Case?
 
 A **test case** is a detailed set of instructions and conditions used to verify a specific behavior.
 
 It describes **how to perform the test** and what result is expected.
 
-### Example
+Example:
 
 ```text
 Test Case ID:
@@ -81,9 +77,7 @@ Not Run
 
 This test case provides everything needed to execute the scenario.
 
----
-
-# Scenario vs Test Case
+## Scenario vs Test Case
 
 | Test Scenario                        | Test Case                                         |
 | ------------------------------------ | ------------------------------------------------- |
@@ -106,9 +100,7 @@ Test Case
 "Exactly how will we test it?"
 ```
 
----
-
-# Example: Login
+## Example: Login
 
 Suppose we have this requirement:
 
@@ -116,7 +108,7 @@ Suppose we have this requirement:
 
 We could create:
 
-### Test Scenario
+Test Scenario
 
 ```text
 TS_LOGIN_001:
@@ -143,9 +135,7 @@ Expected Result:
 The user is logged in and redirected to the dashboard.
 ```
 
----
-
-# One Scenario Can Have Multiple Test Cases
+## One Scenario Can Have Multiple Test Cases
 
 This is one of the most important concepts to understand.
 
@@ -177,15 +167,11 @@ The scenario identifies the general area:
 
 The test cases explore specific conditions within that area.
 
----
+## Test Design Techniques Help Create Test Cases
 
-# Test Design Techniques Help Create Test Cases
+This is where our **Lesson 2 — Test Design** knowledge becomes useful.
 
-This is where our **Level 2 — Test Design** knowledge becomes useful.
-
-Suppose the requirement says:
-
-> The password must contain at least 8 characters.
+Suppose the requirement says: The password must contain at least 8 characters.
 
 We could create a scenario:
 
@@ -216,13 +202,9 @@ Test Cases
 
 This prevents us from creating test cases randomly.
 
----
+**Another Example:** Product Search
 
-# Another Example: Product Search
-
-Suppose we have:
-
-> **R5 — Users should be able to search for products using keywords, and matching products should be displayed.**
+Suppose we have: **R5 — Users should be able to search for products using keywords, and matching products should be displayed.**
 
 A scenario could be:
 
@@ -246,13 +228,11 @@ Search using a keyword with different letter casing.
 
 The scenario is broad enough to describe the area, while the test cases verify individual conditions.
 
----
-
-# Test Scenario Types
+## Test Scenario Types
 
 Test scenarios can come from different sources.
 
-## 1. Requirement-Based Scenarios
+### 1. Requirement-Based Scenarios
 
 These are directly derived from documented requirements.
 
@@ -268,9 +248,7 @@ Verify that users can search for products using valid keywords.
 
 These are commonly called **requirement-based test scenarios**.
 
----
-
-## 2. Exploratory / Error-Guessing Scenarios
+### 2. Exploratory / Error-Guessing Scenarios
 
 Some scenarios are created from the tester's experience and understanding of potential failures rather than directly from a requirement.
 
@@ -294,9 +272,7 @@ Verify how the system handles a search containing numbers only.
 
 These scenarios can help discover unexpected behavior that requirements did not explicitly describe.
 
----
-
-# Don't Make Every Test Condition a Separate Scenario
+## Don't Make Every Test Condition a Separate Scenario
 
 Consider this requirement:
 
@@ -330,26 +306,23 @@ TC_LOGIN_010 → 9 characters
 
 This keeps test planning organized and avoids unnecessarily large numbers of scenarios.
 
----
-
-# Scenario vs Test Case vs Test Step
+## Scenario vs Test Case vs Test Step
 
 These three concepts should not be confused.
 
 ### Test Scenario
 
-> Verify that a registered user can log in with valid credentials.
+Verify that a registered user can log in with valid credentials.
 
 ### Test Case
 
-> TC_LOGIN_001 — detailed test for valid login.
+TC_LOGIN_001 — detailed test for valid login.
 
 ### Test Step
 
-> Enter the registered email address.
+Enter the registered email address.
 
 The hierarchy is:
-
 ```text
 Test Scenario
       ↓
@@ -358,9 +331,7 @@ Test Scenario
  Test Steps
 ```
 
----
-
-# Relationship With Requirements
+## Relationship With Requirements
 
 Test scenarios and test cases can be traced back to requirements.
 
@@ -382,9 +353,7 @@ Pass / Fail / Blocked / Not Run
 
 This traceability later becomes important when creating an **RTM — Requirements Traceability Matrix**.
 
----
-
-# Test Scenarios and Test Cases in a QA Workflow
+## Test Scenarios and Test Cases in a QA Workflow
 
 A simplified QA workflow looks like this:
 
@@ -410,15 +379,11 @@ RTM
 
 Each stage has a different purpose.
 
----
+## Common Mistakes
 
-# Common Mistakes
+### Mistake 1: Treating a scenario as a test case
 
-## Mistake 1: Treating a scenario as a test case
-
-Example:
-
-> Verify login functionality.
+Example: Verify login functionality.
 
 This is too high-level to execute.
 
@@ -429,23 +394,15 @@ A test case needs details such as:
 * Steps
 * Expected result
 
----
+### Mistake 2: Making scenarios too detailed
 
-## Mistake 2: Making scenarios too detailed
-
-Example:
-
-> Verify that entering `user1@test.com`, entering the password, and clicking Login redirects the user to the dashboard.
+Example: Verify that entering `user1@test.com`, entering the password, and clicking Login redirects the user to the dashboard.
 
 This contains test-case-level information.
 
-A cleaner scenario is:
+A cleaner scenario is: Verify that a registered user can log in with valid credentials.
 
-> Verify that a registered user can log in with valid credentials.
-
----
-
-## Mistake 3: Creating a scenario for every test value
+### Mistake 3: Creating a scenario for every test value
 
 For a minimum password length of 8:
 
@@ -466,9 +423,7 @@ Scenario → Password validation
           7 / 8 / 9 characters
 ```
 
----
-
-# Quick Comparison
+## Quick Comparison
 
 | Question                    | Test Scenario                | Test Case                           |
 | --------------------------- | ---------------------------- | ----------------------------------- |
@@ -480,9 +435,7 @@ Scenario → Password validation
 | Used during execution?      | Helps plan                   | Yes                                 |
 | Can produce multiple tests? | Yes                          | No, it is itself an executable test |
 
----
-
-# Key Takeaways
+## Key Takeaways
 
 Remember these three statements:
 

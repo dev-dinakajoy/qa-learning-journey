@@ -6,9 +6,7 @@ After test cases are designed, QA testers need to **execute them**, record what 
 
 This process is called **Test Execution**.
 
----
-
-# 1. What Is Test Execution?
+## What Is Test Execution?
 
 **Test Execution** is the process of running test cases against the software and recording the results.
 
@@ -43,17 +41,11 @@ Assign Status
 Report Defect if Necessary
 ```
 
----
+## Test Execution Is Different From Test Design
 
-# 2. Test Execution Is Different From Test Design
+Test design answers: **What should we test?**
 
-Test design answers:
-
-> **What should we test?**
-
-Test execution answers:
-
-> **What happened when we tested it?**
+Test execution answers: **What happened when we tested it?**
 
 For example:
 
@@ -62,18 +54,12 @@ For example:
 You create:
 
 ```text
-TC_LOGIN_001
+ID: TC_LOGIN_001
 
-Verify that a registered user can log in with valid credentials.
-```
+Title: Verify that a registered user can log in with valid credentials.
 
-Expected:
+Expected: The user is successfully logged in and redirected to the dashboard.
 
-> The user is successfully logged in and redirected to the dashboard.
-
-At this point:
-
-```text
 Status: Not Run
 ```
 
@@ -81,25 +67,19 @@ Status: Not Run
 
 You actually open the application, enter the credentials, and click Login.
 
-Suppose the application displays:
-
-> "Invalid email or password"
+Suppose the application displays: "Invalid email or password"
 
 and keeps the user on the Login page.
 
 You record:
 
 ```text
-Actual Result:
-The system displays "Invalid email or password" and the user remains on the Login page.
+Actual Result: The system displays "Invalid email or password" and the user remains on the Login page.
 
-Status:
-Fail
+Status: Fail
 ```
 
----
-
-# 3. Before Executing a Test
+## Before Executing a Test
 
 Before starting execution, verify that the test can actually be performed.
 
@@ -134,163 +114,109 @@ Check:
 
 If something essential is missing, you may not be able to execute the test.
 
----
-
-# 4. Test Execution Statuses
+## Test Execution Statuses
 
 The most common statuses we will use are:
 
-* **Not Run**
-* **Pass**
-* **Fail**
-* **Blocked**
+* Not Run
+* Pass
+* Fail
+* Blocked
 
 These statuses tell the team what happened to each test case.
 
----
-
-# 5. Not Run
+- **Not Run**
 
 **Not Run** means the test case has not yet been executed.
 
 Example:
-
 ```text
-Test Case:
-TC_CHECKOUT_001
+Test Case: TC_CHECKOUT_001
 
-Status:
-Not Run
+Status: Not Run
 ```
 
 This might happen because:
+    * Testing has not started yet.
+    * The test is scheduled for a later phase.
+    * There was not enough time to execute it.
+    * The tester prioritized other tests.
+    * The test is outside the current execution scope.
 
-* Testing has not started yet.
-* The test is scheduled for a later phase.
-* There was not enough time to execute it.
-* The tester prioritized other tests.
-* The test is outside the current execution scope.
+Not Run does **not** mean the test passed or failed. We simply don't have an execution result yet.
 
-### Important
-
-Not Run does **not** mean the test passed or failed.
-
-We simply don't have an execution result yet.
-
----
-
-# 6. Pass
+- **Pass**
 
 A test is **Pass** when the actual behavior satisfies the expected behavior.
 
-Example:
-
-### Expected
-
-> The user is successfully logged in and redirected to the dashboard.
-
-### Actual
-
-> The user is successfully logged in and redirected to the dashboard.
-
-### Status
-
+Example:  
 ```text
-Pass
+Expected: The user is successfully logged in and redirected to the dashboard.
+
+Actual: The user is successfully logged in and redirected to the dashboard.
+
+Status: Pass
 ```
 
 Another example:
-
-### Expected
-
-> Invalid email format is rejected and an appropriate validation message is displayed.
-
-### Actual
-
-> The system rejects the invalid email and displays the email validation message.
-
-### Status
-
 ```text
-Pass
+Expected: Invalid email format is rejected and an appropriate validation message is displayed.
+
+Actual: The system rejects the invalid email and displays the email validation message.
+
+Status: Pass
 ```
 
-Remember:
-
-> **Pass means the software behaved as expected.**
+Remember: dff**Pass means the software behaved as expected.**
 
 It does not necessarily mean that the user successfully completed an action.
 
 For a negative test, correctly rejecting invalid input is a **Pass**.
 
----
-
-# 7. Fail
+- **Fail**
 
 A test is **Fail** when the actual behavior does not satisfy the expected behavior.
 
 Example:
-
-### Expected
-
-> Matching products are displayed.
-
-### Actual
-
-> No products are displayed even though matching products exist.
-
-### Status
-
 ```text
-Fail
+Expected: Matching products are displayed.
+
+Actual: No products are displayed even though matching products exist.
+
+Status: Fail
 ```
 
 Another example:
-
-### Expected
-
-> A user with valid credentials is redirected to the dashboard.
-
-### Actual
-
-> The system displays "Invalid email or password" and keeps the user on the Login page.
-
-### Status
-
 ```text
-Fail
+Expected: A user with valid credentials is redirected to the dashboard.
+
+Actual: The system displays "Invalid email or password" and keeps the user on the Login page.
+
+Status: Fail
 ```
 
 A failed test should normally be investigated to determine the cause.
 
 If the failure is confirmed to be a software defect, a bug report should be created.
 
----
-
-# 8. Blocked
+- **Blocked**
 
 A test is **Blocked** when it cannot be executed because something required for execution is unavailable.
 
 Example:
-
 ```text
-Test Case:
-TC_CHECKOUT_005
+Test Case: TC_CHECKOUT_005
 
-Precondition:
-Payment service is available.
+Precondition: Payment service is available.
 
-Situation:
-Payment service is unavailable.
+Situation: Payment service is unavailable.
 
-Status:
-Blocked
+Status: Blocked
 ```
 
 The tester cannot meaningfully complete the test because a required dependency is unavailable.
 
-### Common reasons for Blocked
-
+Common reasons for Blocked
 * Application is unavailable.
 * Required environment is down.
 * Test data cannot be created.
@@ -299,115 +225,7 @@ The tester cannot meaningfully complete the test because a required dependency i
 * External service is unavailable.
 * Required configuration is missing.
 
----
-
-# 9. Blocked vs Failed
-
-This distinction is very important.
-
-### Failed
-
-You **executed the test**, and the software produced the wrong result.
-
-```text
-Test executed
-      ↓
-Actual ≠ Expected
-      ↓
-FAIL
-```
-
-### Blocked
-
-You **could not properly execute the test** because something prevented execution.
-
-```text
-Cannot execute test
-        ↓
-Required dependency unavailable
-        ↓
-BLOCKED
-```
-
-### Example
-
-Suppose you are testing checkout.
-
-#### Situation A — Fail
-
-The checkout page opens.
-
-You enter valid information.
-
-You click **Place Order**.
-
-Expected:
-
-> Order is successfully placed.
-
-Actual:
-
-> The application displays "Something went wrong" and the order is not placed.
-
-Result:
-
-> **Fail**
-
-The test was executed.
-
-#### Situation B — Blocked
-
-You cannot even reach the checkout page because the application is unavailable.
-
-Result:
-
-> **Blocked**
-
-The test could not be executed.
-
----
-
-# 10. Blocked vs Not Run
-
-These can also be confused.
-
-### Not Run
-
-The test simply hasn't been executed.
-
-Example:
-
-> Checkout testing is scheduled for tomorrow.
-
-```text
-Status: Not Run
-```
-
-### Blocked
-
-The tester attempted or was ready to execute the test, but a dependency prevented execution.
-
-Example:
-
-> Checkout testing was planned for today, but the checkout environment is unavailable.
-
-```text
-Status: Blocked
-```
-
-A simple way to remember:
-
-```text
-NOT RUN
-"Nobody has executed this yet."
-
-BLOCKED
-"We cannot execute this because something is preventing us."
-```
-
----
-
-# 11. Status Decision Flow
+## Status Decision Flow
 
 Use this simple decision process:
 
@@ -418,15 +236,13 @@ Has the test been executed?
      No      Yes
      │         │
      ↓         ↓
- Not Run   Could it be
-           executed properly?
+ Not Run   Could it be executed properly?
                 │
           ┌─────┴─────┐
          No          Yes
          │             │
          ↓             ↓
-     Blocked      Compare Actual
-                  vs Expected
+     Blocked      Compare Actual vs Expected
                        │
                  ┌─────┴─────┐
                 Match     Doesn't Match
@@ -435,29 +251,20 @@ Has the test been executed?
                 Pass          Fail
 ```
 
----
+## Executing a Test Case Step by Step
 
-# 12. Executing a Test Case Step by Step
-
-Let's execute one of our Easy Buy test cases.
-
-## Test Case
+### Test Case
 
 ```text
-Test Case ID:
-TC_LOGIN_001
+Test Case ID: TC_LOGIN_001
 
-Title:
-Verify that a registered user can log in with valid credentials.
+Title: Verify that a registered user can log in with valid credentials.
 
-Requirement:
-R1
+Requirement: R1
 
-Priority:
-High
+Priority: High
 
-Precondition:
-A registered user account exists with valid credentials.
+Precondition: A registered user account exists with valid credentials.
 
 Test Data:
 Email: user1@test.com
@@ -469,45 +276,32 @@ Steps:
 3. Enter the correct password.
 4. Click Login.
 
-Expected Result:
-The user is successfully logged in and redirected to the dashboard.
+Expected Result: The user is successfully logged in and redirected to the dashboard.
 
-Actual Result:
--
+Actual Result: -
 
-Status:
-Not Run
+Status: Not Run
 ```
 
----
+### Step 1 — Review Preconditions
 
-## Step 1 — Review Preconditions
-
-Check:
-
-> Does the registered user account exist?
+Check: Does the registered user account exist?
 
 Yes.
 
 Proceed.
 
----
-
-## Step 2 — Prepare Test Data
+### Step 2 — Prepare Test Data
 
 Use:
-
 ```text
 Email: user1@test.com
 Password: <test account password>
 ```
 
----
-
-## Step 3 — Execute Steps
+### Step 3 — Execute Steps
 
 Perform:
-
 ```text
 1. Open Login page.
 2. Enter email.
@@ -515,85 +309,56 @@ Perform:
 4. Click Login.
 ```
 
----
-
-## Step 4 — Observe the Application
+### Step 4 — Observe the Application
 
 Suppose the application redirects the user to the dashboard.
 
----
-
-## Step 5 — Record Actual Result
-
+### Step 5 — Record Actual Result
 ```text
 Actual Result:
 The user is successfully logged in and redirected to the dashboard.
 ```
 
----
+### Step 6 — Compare Results
 
-## Step 6 — Compare Results
+Expected: User is successfully logged in and redirected to the dashboard.
 
-Expected:
-
-> User is successfully logged in and redirected to the dashboard.
-
-Actual:
-
-> User is successfully logged in and redirected to the dashboard.
+Actual: User is successfully logged in and redirected to the dashboard.
 
 They match.
 
----
-
-## Step 7 — Assign Status
+### Step 7 — Assign Status
 
 ```text
-Status:
-Pass
+Status: Pass
 ```
 
 The executed test now looks like:
 
 ```text
-Test Case ID:
-TC_LOGIN_001
+Test Case ID: TC_LOGIN_001
 
-Expected Result:
-The user is successfully logged in and redirected to the dashboard.
+Expected Result: The user is successfully logged in and redirected to the dashboard.
 
-Actual Result:
-The user is successfully logged in and redirected to the dashboard.
+Actual Result: The user is successfully logged in and redirected to the dashboard.
 
-Status:
-Pass
+Status: Pass
 ```
 
----
-
-# 13. Executing a Failed Test
+## Executing a Failed Test
 
 Now suppose the application behaves differently.
-
-### Expected
-
-> The user is successfully logged in and redirected to the dashboard.
-
-### Actual
-
-> The system displays "Invalid email or password" and the user remains on the Login page.
-
-### Status
-
 ```text
-Fail
+Expected: The user is successfully logged in and redirected to the dashboard.
+
+Actual: The system displays "Invalid email or password" and the user remains on the Login page.
+
+Status: Fail
 ```
 
 At this point, the tester should investigate and, if the behavior is confirmed to be a defect, create a bug report.
 
----
-
-# 14. Recording Evidence
+## Recording Evidence
 
 When a test fails, collect useful evidence where possible.
 
@@ -609,18 +374,14 @@ Examples:
 For example:
 
 ```text
-Actual Result:
-The system displays "Invalid email or password" and the user remains on the Login page.
+Actual Result: The system displays "Invalid email or password" and the user remains on the Login page.
 
-Evidence:
-Screenshot attached.
+Evidence: Screenshot attached.
 ```
 
 Evidence helps developers reproduce and investigate the issue.
 
----
-
-# 15. Test Execution and Defect Reporting
+## Test Execution and Defect Reporting
 
 The relationship between test execution and bug reporting is:
 
@@ -654,9 +415,7 @@ For example, a test might fail because:
 
 The tester should investigate the failure before creating a defect.
 
----
-
-# 16. Re-testing a Failed Test
+## Re-testing a Failed Test
 
 After a developer fixes a reported defect, QA may execute the failed test again.
 
@@ -692,9 +451,7 @@ Status: Fail
 
 The exact workflow may vary between teams.
 
----
-
-# 17. Regression Testing After a Fix
+## Regression Testing After a Fix
 
 A fix can potentially affect other functionality.
 
@@ -714,9 +471,7 @@ Run relevant regression tests
 
 This helps determine whether the change introduced unintended problems elsewhere.
 
----
-
-# 18. Updating Test Cases During Execution
+## Updating Test Cases During Execution
 
 Sometimes execution reveals that a test case needs clarification.
 
@@ -738,9 +493,7 @@ However, don't change the Expected Result simply to make a failing test pass.
 
 The test case should remain aligned with the approved requirement or intended behavior.
 
----
-
-# 19. Test Execution Records
+## Test Execution Records
 
 A simple execution table might look like this:
 
@@ -756,9 +509,7 @@ A simple execution table might look like this:
 
 This table provides a quick view of the current execution state.
 
----
-
-# 20. Execution Status Summary
+## Execution Status Summary
 
 Once several tests have been executed, the team can summarize the results.
 
@@ -783,11 +534,9 @@ These metrics become useful when creating a **Test Execution Report** or **Test 
 
 We will cover that in more detail later.
 
----
+## Common Test Execution Mistakes
 
-# 21. Common Test Execution Mistakes
-
-## Mistake 1 — Marking an unexecuted test as Pass
+### Mistake 1 — Marking an unexecuted test as Pass
 
 Incorrect:
 
@@ -805,9 +554,7 @@ Test was not executed
 Status: Not Run
 ```
 
----
-
-## Mistake 2 — Marking an unexecutable test as Fail
+### Mistake 2 — Marking an unexecutable test as Fail
 
 Suppose the environment is completely unavailable.
 
@@ -827,9 +574,7 @@ Depending on the circumstances:
 Status: Blocked
 ```
 
----
-
-## Mistake 3 — Marking every failure as a bug immediately
+### Mistake 3 — Marking every failure as a bug immediately
 
 A failed test needs investigation.
 
@@ -842,17 +587,13 @@ Ask:
 * Can the problem be reproduced?
 * Is the behavior actually a defect?
 
----
-
-## Mistake 4 — Changing Expected Result after execution
+### Mistake 4 — Changing Expected Result after execution
 
 Never do this just because the application behaved differently.
 
 The Expected Result should represent the required behavior.
 
----
-
-## Mistake 5 — Not recording Actual Results
+### Mistake 5 — Not recording Actual Results
 
 Avoid:
 
@@ -865,19 +606,14 @@ without documenting what happened.
 Better:
 
 ```text
-Actual Result:
-The user remains on the Login page and an "Invalid email or password"
-message is displayed.
+Actual Result: The user remains on the Login page and an "Invalid email or password" message is displayed.
 
-Status:
-Fail
+Status: Fail
 ```
 
 The Actual Result provides the evidence behind the status.
 
----
-
-# 22. Practical Execution Checklist
+## Practical Execution Checklist
 
 Before execution:
 
@@ -902,9 +638,7 @@ After execution:
 * [ ] Create a bug report when a defect is confirmed.
 * [ ] Update execution records.
 
----
-
-# 23. Key Takeaways
+## Key Takeaways
 
 Test execution is where the test case becomes an actual test.
 

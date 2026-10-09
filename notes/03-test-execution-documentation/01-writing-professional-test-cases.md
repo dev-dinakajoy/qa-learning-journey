@@ -6,8 +6,6 @@ A **test case** is a documented set of conditions, test data, steps, and expecte
 
 A test case should allow another tester to execute the same test and reach an objective conclusion about whether the software passed or failed.
 
----
-
 ## Why Write Professional Test Cases?
 
 Professional test cases help QA teams:
@@ -30,8 +28,6 @@ A good test case should be:
 * **Traceable** — it should be linked to a requirement or test scenario.
 * **Objective** — the result should be measurable as Pass, Fail, Blocked, or another defined status.
 
----
-
 ## Test Case Structure
 
 A professional test case commonly contains:
@@ -50,8 +46,6 @@ A professional test case commonly contains:
 | Status          | Result of execution                       |
 | Postcondition   | State of the system after execution       |
 | Notes           | Additional information                    |
-
----
 
 ### Example
 
@@ -96,23 +90,19 @@ Notes:
 -
 ```
 
----
-
 ## Writing Good Test Case Titles
 
 A test case title should describe the behavior being verified.
 
-### Good
+- Good
 
 > Verify that a registered user can log in with valid credentials.
 
-### Less useful
+- Less useful
 
 > Login test
 
 The first title tells us exactly what behavior is being tested.
-
----
 
 ## Test Cases Should Be Traceable
 
@@ -137,13 +127,11 @@ TC_LOGIN_001 — Detailed steps for verifying the behavior.
 
 This relationship becomes particularly important when creating a **Requirements Traceability Matrix (RTM)**.
 
----
-
 ## Test Cases and Test Design Techniques
 
 Test cases should not be created randomly.
 
-The test design techniques learned in Level 2 help determine which conditions and values should be tested.
+The test design techniques learned in Lesson 2 help determine which conditions and values should be tested.
 
 For example, suppose:
 
@@ -159,21 +147,19 @@ Using **Boundary Value Analysis**, we can test:
 
 The requirement gives us the rule, while the test design technique helps us select useful test values.
 
----
-
-## Example: Login Test Suite
+### Example: Login Test Suite
 
 A single login requirement can result in multiple test cases.
 
 ```text
 R3 — Password must contain at least 8 characters.
-              ↓
-       TS_LOGIN_003
-              ↓
-       ┌──────┼──────┐
-       ↓      ↓      ↓
-      TC008  TC009  TC010
-       7      8      9
+                 ↓
+             TS_LOGIN_003
+                 ↓
+       ┌─────────┼─────────┐
+       ↓         ↓         ↓
+      TC008    TC009     TC010
+     7 chars  8 chars   9 chars
 ```
 
 This demonstrates an important principle:
@@ -181,8 +167,6 @@ This demonstrates an important principle:
 > One requirement does not necessarily equal one test case.
 
 A requirement may require multiple test cases to adequately verify its behavior.
-
----
 
 ## Good Test Case Practices
 
@@ -267,8 +251,6 @@ Use techniques such as:
 
 These techniques help create meaningful test coverage instead of simply generating large numbers of similar test cases.
 
----
-
 ## Test Case Quality Checklist
 
 Before considering a test case complete, ask:
@@ -286,8 +268,6 @@ Before considering a test case complete, ask:
 * [ ] Is the postcondition documented where useful?
 * [ ] Can another tester execute the test without clarification?
 * [ ] Can the result objectively be classified as Pass or Fail?
-
----
 
 ## Key Takeaways
 

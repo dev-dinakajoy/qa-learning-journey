@@ -19,13 +19,11 @@ A typical test case contains:
 
 Not every organization uses exactly the same fields, but these provide a useful structure for manual QA testing.
 
----
-
-# 1. Test Case ID
+## 1. Test Case ID
 
 The **Test Case ID** is a unique identifier assigned to a test case.
 
-### Example
+Example
 
 ```text
 TC_LOGIN_001
@@ -59,23 +57,15 @@ Test Case IDs allow QA teams to:
 * Build an RTM
 * Discuss specific tests with developers and other testers
 
----
-
-# 2. Title
+## 2. Title
 
 The title briefly describes what the test verifies.
 
-### Good
+**Good:** Verify that a registered user can log in with valid credentials.
 
-> Verify that a registered user can log in with valid credentials.
+**Too vague:** Login test
 
-### Too vague
-
-> Login test
-
-### Too detailed
-
-> Open the login page, enter email, enter password, click login, and check if the dashboard appears.
+**Too detailed:** Open the login page, enter email, enter password, click login, and check if the dashboard appears.
 
 The detailed actions belong in the **Steps** field.
 
@@ -83,7 +73,7 @@ The detailed actions belong in the **Steps** field.
 
 A useful pattern is:
 
-> **Verify that [actor/system] can/cannot [behavior] under [condition].**
+**Verify that [actor/system] can/cannot [behavior] under [condition].**
 
 Examples:
 
@@ -95,21 +85,17 @@ Verify that a user cannot log in with an incorrect password.
 Verify that users can search for products using valid keywords.
 ```
 
----
-
-# 3. Requirement
+## 3. Requirement
 
 The **Requirement** identifies the requirement that the test case verifies.
 
-### Example
+Example
 
 ```text
 Requirement: R1
 ```
 
-Where R1 might be:
-
-> A registered user who enters valid credentials should be successfully logged in and redirected to the dashboard.
+Where R1 might be: A registered user who enters valid credentials should be successfully logged in and redirected to the dashboard.
 
 ### Why it matters
 
@@ -125,21 +111,17 @@ Test Case
 
 It also allows the QA team to determine whether requirements have been adequately tested.
 
----
-
-# 4. Priority
+## 4. Priority
 
 **Priority** indicates how important it is to execute the test case.
 
 A simple scale might be:
 
-* **High**
-* **Medium**
-* **Low**
+* High
+* Medium
+* Low
 
-### High
-
-Tests important functionality or functionality that should be tested early.
+- **High:** ests important functionality or functionality that should be tested early.
 
 Examples:
 
@@ -148,9 +130,7 @@ Examples:
 * Order placement
 * Payment-related functionality
 
-### Medium
-
-Important functionality that is not necessarily the highest risk.
+- **Medium:** Important functionality that is not necessarily the highest risk.
 
 Examples:
 
@@ -158,9 +138,7 @@ Examples:
 * Product filtering
 * Cart quantity updates
 
-### Low
-
-Less critical functionality.
+- **Low*:* Less critical functionality.
 
 Examples:
 
@@ -170,13 +148,11 @@ Examples:
 
 Priority is about **how urgently the test should be executed**, not how severe a defect would be if the test failed.
 
----
-
-# 5. Precondition
+## 5. Precondition
 
 A **precondition** describes what must be true before the test can be executed.
 
-### Example
+Example
 
 ```text
 Precondition:
@@ -201,9 +177,7 @@ The user is logged in and has at least one product in the cart.
 
 Without clear preconditions, a tester may not know what needs to be prepared before execution.
 
----
-
-# 6. Test Data
+## 6. Test Data
 
 **Test Data** is the information required to execute the test.
 
@@ -228,9 +202,7 @@ Password length: 7 characters
 
 Test data should correspond to the condition being tested.
 
----
-
-# 7. Steps
+## 7. Steps
 
 The **Steps** describe the actions the tester performs.
 
@@ -241,7 +213,7 @@ Good steps should be:
 * Specific
 * Easy to reproduce
 
-### Example
+Example
 
 ```text
 1. Open the Login page.
@@ -256,9 +228,7 @@ Avoid vague steps such as:
 
 Another tester should not have to guess what "normally" means.
 
----
-
-# 8. Expected Result
+## 8. Expected Result
 
 The **Expected Result** describes what the system should do when the test is executed successfully.
 
@@ -283,9 +253,7 @@ Avoid:
 
 That is too vague.
 
----
-
-# 9. Actual Result
+## 9. Actual Result
 
 The **Actual Result** records what actually happened when the test was executed.
 
@@ -302,7 +270,7 @@ Actual Result:
 The system displays "Invalid email or password" and the user remains on the Login page.
 ```
 
-### Important rule
+**Important rule**
 
 Never modify the Expected Result to match the Actual Result.
 
@@ -310,15 +278,13 @@ The Expected Result represents the **required behavior**.
 
 The Actual Result represents the **observed behavior**.
 
----
-
-# 10. Status
+## 10. Status
 
 The **Status** indicates the outcome or current execution state of the test.
 
 Common statuses include:
 
-### Not Run
+- Not Run
 
 The test has not yet been executed.
 
@@ -326,7 +292,7 @@ The test has not yet been executed.
 Status: Not Run
 ```
 
-### Pass
+- Pass
 
 The actual result matches the expected result.
 
@@ -334,7 +300,7 @@ The actual result matches the expected result.
 Status: Pass
 ```
 
-### Fail
+- Fail
 
 The actual result does not match the expected result.
 
@@ -342,13 +308,11 @@ The actual result does not match the expected result.
 Status: Fail
 ```
 
-### Blocked
+- Blocked
 
 The test cannot be executed because a dependency or required condition is unavailable.
 
-Example:
-
-> Payment service is unavailable, so checkout payment testing cannot proceed.
+Example: Payment service is unavailable, so checkout payment testing cannot proceed.
 
 ```text
 Status: Blocked
@@ -356,9 +320,7 @@ Status: Blocked
 
 These statuses become particularly important during **Test Execution** and **Test Summary Reporting**.
 
----
-
-# 11. Postcondition
+## 11. Postcondition
 
 A **postcondition** describes the state of the system after the test has been executed.
 
@@ -387,9 +349,7 @@ Postcondition:
 Product is present in the shopping cart.
 ```
 
----
-
-# 12. Notes
+## 12. Notes
 
 The **Notes** field contains additional information that may help the tester.
 
@@ -413,9 +373,7 @@ If there is nothing important to add:
 Notes: -
 ```
 
----
-
-# Complete Example
+## Complete Example
 
 ```text
 Test Case ID:
@@ -459,9 +417,7 @@ Notes:
 -
 ```
 
----
-
-# Test Case Structure at a Glance
+## Test Case Structure at a Glance
 
 ```text
 Test Case
@@ -497,9 +453,7 @@ Each field answers a different question:
 | Postcondition   | What state is the system left in?              |
 | Notes           | Is there anything else the tester should know? |
 
----
-
-# Key Takeaways
+## Key Takeaways
 
 A well-structured test case should allow another tester to answer:
 

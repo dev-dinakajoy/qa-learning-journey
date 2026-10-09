@@ -10,27 +10,19 @@ They answer two different questions:
 
 Comparing these two results allows a QA tester to determine whether a test has **Passed or Failed**.
 
----
-
-# 1. Expected Result
+## 1. Expected Result
 
 The **Expected Result** describes the behavior the system should produce based on the requirements, specifications, acceptance criteria, or other agreed product behavior.
 
 ### Example
 
-Requirement:
+Requirement: A registered user who enters valid credentials should be successfully logged in and redirected to the dashboard.
 
-> A registered user who enters valid credentials should be successfully logged in and redirected to the dashboard.
-
-Expected Result:
-
-> The user is successfully logged in and redirected to the dashboard.
+Expected Result: The user is successfully logged in and redirected to the dashboard.
 
 The Expected Result represents the **correct or required behavior**.
 
----
-
-# 2. Actual Result
+## 2. Actual Result
 
 The **Actual Result** records what the tester observed when executing the test.
 
@@ -50,9 +42,7 @@ The system displays "Invalid email or password" and the user remains on the Logi
 
 The Actual Result should describe what actually happened, not what the tester expected to happen.
 
----
-
-# Expected vs Actual
+## Expected vs Actual
 
 The basic relationship is:
 
@@ -84,132 +74,75 @@ Expected Result ≠ Actual Result
             FAIL
 ```
 
----
+## Example: Passing Test
 
-# Example: Passing Test
+**Expected Result:** The user is successfully logged in and redirected to the dashboard.
 
-### Expected Result
+**Actual Result:** The user is successfully logged in and redirected to the dashboard.
 
-> The user is successfully logged in and redirected to the dashboard.
-
-### Actual Result
-
-> The user is successfully logged in and redirected to the dashboard.
-
-### Status
-
-> **Pass**
+**Status:** Pass
 
 The observed behavior matches the expected behavior.
 
----
+## Example: Failed Test
 
-# Example: Failed Test
+**Expected Result:** The user is successfully logged in and redirected to the dashboard.
 
-### Expected Result
+**Actual Result:** The system displays "Invalid email or password" and the user remains on the Login page.
 
-> The user is successfully logged in and redirected to the dashboard.
-
-### Actual Result
-
-> The system displays "Invalid email or password" and the user remains on the Login page.
-
-### Status
-
-> **Fail**
+**Status:** Fail
 
 The observed behavior does not match the requirement.
 
-This is what happened with our Easy Buy login defect:
-
-```text
-Expected:
-User logs in and reaches dashboard.
-
-Actual:
-User remains on Login page.
-
-Result:
-Fail
-```
-
----
-
-# Expected Result Should Come From Requirements
+## Expected Result Should Come From Requirements
 
 The Expected Result should not be based on what the tester personally thinks the application should do.
 
-Consider:
+Consider: Users should be able to search for products using keywords.
 
-> Users should be able to search for products using keywords.
-
-A tester should not automatically assume:
-
-> Search must be case-insensitive.
+A tester should not automatically assume: Search must be case-insensitive.
 
 That behavior might be reasonable, but unless it is specified or established as intended product behavior, it should not automatically become the Expected Result of a requirement-based test.
 
 This is particularly important when testing behavior that is not explicitly defined.
 
----
+## Avoid Vague Expected Results
 
-# Avoid Vague Expected Results
-
-### Poor
-
-> The system works correctly.
+**Poor -** The system works correctly.
 
 This doesn't tell us what "correctly" means.
 
-### Better
+**Better -** Matching products are displayed.
 
-> Matching products are displayed.
-
-### Even better when appropriate
-
-> Products matching the entered keyword are displayed in the search results.
+**Even better when appropriate -** Products matching the entered keyword are displayed in the search results.
 
 The Expected Result should be specific enough that another tester can objectively determine whether it happened.
 
----
-
-# Expected Results Should Be Observable
+## Expected Results Should Be Observable
 
 A tester should be able to observe whether the expected behavior occurred.
 
-### Weak
+**Weak -** The system processes the request properly.
 
-> The system processes the request properly.
-
-### Stronger
-
-> The order confirmation page is displayed and the order number is shown.
+**Stronger -** The order confirmation page is displayed and the order number is shown.
 
 The second result gives the tester something concrete to verify.
 
----
-
-# Actual Results Should Describe Facts
+## Actual Results Should Describe Facts
 
 The Actual Result should report what the tester observed without adding unnecessary assumptions.
 
-### Poor
-
-> The backend authentication system is broken.
+**Poor -** The backend authentication system is broken.
 
 The tester may not have enough evidence to make this conclusion.
 
-### Better
-
-> The system displays "Invalid email or password" and the user remains on the Login page.
+**Better -** The system displays "Invalid email or password" and the user remains on the Login page.
 
 The second statement describes the observable behavior.
 
 This distinction becomes very important when writing bug reports.
 
----
-
-# Actual Result Should Not Be Written Before Execution
+## Actual Result Should Not Be Written Before Execution
 
 Before execution:
 
@@ -252,9 +185,7 @@ Fail
 
 Do not predict the Actual Result.
 
----
-
-# Expected vs Actual During Test Execution
+## Expected vs Actual During Test Execution
 
 A typical execution process looks like this:
 
@@ -276,9 +207,7 @@ A typical execution process looks like this:
 
 This makes test execution objective and repeatable.
 
----
-
-# What Counts as a Pass?
+## What Counts as a Pass?
 
 A test **Passes** when the observed behavior satisfies the expected behavior.
 
@@ -314,9 +243,7 @@ Pass
 
 These describe the same behavior.
 
----
-
-# What Counts as a Fail?
+## What Counts as a Fail?
 
 A test **Fails** when the observed behavior does not satisfy the Expected Result.
 
@@ -346,9 +273,7 @@ Status:
 Fail
 ```
 
----
-
-# Fail Does Not Automatically Mean the Software Is Broken
+## Fail Does Not Automatically Mean the Software Is Broken
 
 A failed test tells us:
 
@@ -369,9 +294,7 @@ Possible causes include:
 
 Therefore, after a failure, the QA tester should investigate before concluding exactly what caused it.
 
----
-
-# Expected vs Actual and Defect Reporting
+## Expected vs Actual and Defect Reporting
 
 When a test fails because of a software defect, the Expected and Actual Results become important parts of the defect report.
 
@@ -407,9 +330,7 @@ Investigate
 Bug Report (if defect is confirmed)
 ```
 
----
-
-# Example: Easy Buy Login
+## Example: Easy Buy Login
 
 Our practical project provides a good example.
 
@@ -441,9 +362,7 @@ Login rejects valid credentials and keeps registered user on the Login page.
 
 This demonstrates how test execution connects directly to defect reporting.
 
----
-
-# Expected Results and Negative Testing
+## Expected Results and Negative Testing
 
 Expected behavior isn't always a successful business action.
 
@@ -451,13 +370,9 @@ For negative tests, the expected result may be that the system **rejects** an in
 
 Example:
 
-### Test
+Test: User enters an invalid email format.
 
-> User enters an invalid email format.
-
-### Expected Result
-
-> The system displays an email validation message and does not authenticate the user.
+Expected Result: The system displays an email validation message and does not authenticate the user.
 
 If the application correctly rejects the invalid input:
 
@@ -467,56 +382,35 @@ Expected = Actual
       PASS
 ```
 
-So:
+So: **Pass does not always mean "the user successfully completed the action."**
 
-> **Pass does not always mean "the user successfully completed the action."**
+It means: **The application behaved as expected.**
 
-It means:
+## Expected Results and Validation Testing
 
-> **The application behaved as expected.**
-
----
-
-# Expected Results and Validation Testing
-
-Consider:
-
-> Password must contain at least 8 characters.
+Consider: Password must contain at least 8 characters.
 
 Test:
-
 ```text
 Password: F@fgfh6
 Length: 7
 ```
 
-Expected:
+Expected: The system rejects the password and displays a validation message indicating that at least 8 characters are required.
 
-> The system rejects the password and displays a validation message indicating that at least 8 characters are required.
+Actual: The system rejects the password and displays the minimum-length validation message.
 
-Actual:
-
-> The system rejects the password and displays the minimum-length validation message.
-
-Result:
-
-> **Pass**
+Result: **Pass**
 
 The application successfully rejected an invalid input.
 
----
-
-# Multiple Expected Conditions
+## Multiple Expected Conditions
 
 Sometimes a test has more than one expected condition.
 
-For example:
+For example: After successful login, the user should be redirected to the dashboard and their profile name should be displayed.
 
-> After successful login, the user should be redirected to the dashboard and their profile name should be displayed.
-
-The Expected Result could be:
-
-> The user is redirected to the dashboard and the user's profile name is displayed.
+The Expected Result could be: The user is redirected to the dashboard and the user's profile name is displayed.
 
 During execution, suppose:
 
@@ -527,9 +421,7 @@ Then the overall test should be considered **Fail**, because one required condit
 
 When a test contains multiple expected conditions, make them explicit so it is clear what failed.
 
----
-
-# Actual Result Should Include Useful Evidence
+## Actual Result Should Include Useful Evidence
 
 When appropriate, the Actual Result can reference evidence such as:
 
@@ -542,6 +434,115 @@ When appropriate, the Actual Result can reference evidence such as:
 * Relevant application data
 
 Example:
+```text
+Actual Result:
+No matching products are displayed and no error message appears.
 
-```t
+Evidence:
+Screenshot attached.
 ```
+
+The evidence itself may be stored separately from the test case.
+
+## Common Mistakes
+
+### Mistake 1: Putting the expected result in Actual Result
+
+Incorrect:
+
+```text
+Expected:
+User is redirected to dashboard.
+
+Actual:
+User should be redirected to dashboard.
+```
+
+The Actual Result must describe what happened.
+
+### Mistake 2: Changing the Expected Result after seeing the behavior
+
+Suppose the requirement says: User should be redirected to dashboard.
+
+But the application remains on the Login page.
+
+Do not change: Expected: User is redirected to dashboard.
+
+to: Expected: User remains on Login page.
+
+That would hide the defect.
+
+The requirement determines the Expected Result.
+
+### Mistake 3: Writing conclusions instead of observations
+
+**Poor -** The database query failed.
+
+Unless the tester has evidence of this, that is an assumption.
+
+**Better -** The search results page displays no products even though matching products are available.
+
+### Mistake 4: Being too vague
+
+**Poor -** Something went wrong.
+
+**Better -** Clicking Search produces no results and no error message when a matching product exists.
+
+## Practical Checklist
+
+Before marking a test Pass or Fail, ask:
+
+### Expected Result
+
+* [ ] Is it based on a requirement or defined behavior?
+* [ ] Is it specific?
+* [ ] Is it observable?
+* [ ] Is it objective?
+
+### Actual Result
+
+* [ ] Did I record what actually happened?
+* [ ] Did I avoid assumptions?
+* [ ] Did I include useful details?
+* [ ] Did I record relevant evidence?
+
+### Comparison
+
+* [ ] Does Actual Result satisfy Expected Result?
+* [ ] If yes → Pass
+* [ ] If no → Fail
+* [ ] If the test could not be executed → Blocked or Not Run, depending on the situation
+
+## Key Takeaways
+
+The most important distinction is:
+
+```text
+EXPECTED RESULT
+"What should happen?"
+        ↓
+   Execute Test
+        ↓
+ACTUAL RESULT
+"What actually happened?"
+        ↓
+    Compare
+        ↓
+ ┌──────┴──────┐
+ ↓             ↓
+MATCH       DOESN'T MATCH
+ ↓             ↓
+PASS          FAIL
+```
+
+Remember:
+
+> **Expected Result comes from the required behavior.**
+
+> **Actual Result comes from observation.**
+
+> **Pass means the actual behavior satisfies the expected behavior.**
+
+> **Fail means the actual behavior does not satisfy the expected behavior.**
+
+A clear separation between Expected and Actual Results is essential for accurate test execution, reliable defect reporting, and trustworthy QA reports.

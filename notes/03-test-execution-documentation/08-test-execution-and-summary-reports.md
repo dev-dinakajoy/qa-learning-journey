@@ -28,15 +28,11 @@ They need an overall picture of the testing activity:
 
 This is where **Test Execution Reports** and **Test Summary Reports** become useful.
 
----
-
-# 1. What Is a Test Execution Report?
+## What Is a Test Execution Report?
 
 A **Test Execution Report** provides information about the tests that have been executed during a test cycle.
 
-It focuses primarily on:
-
-> **What happened during test execution?**
+It focuses primarily on: **What happened during test execution?**
 
 It can include:
 
@@ -54,15 +50,11 @@ It can include:
 
 The exact format depends on the project and organization.
 
----
-
-# 2. What Is a Test Summary Report?
+## What Is a Test Summary Report?
 
 A **Test Summary Report** provides a higher-level summary of the overall testing activity.
 
-It answers:
-
-> **What is the current testing status, what did we find, and what risks remain?**
+It answers: **What is the current testing status, what did we find, and what risks remain?**
 
 A summary report may include:
 
@@ -78,9 +70,7 @@ A summary report may include:
 
 The summary is generally intended to help stakeholders understand the overall state of testing.
 
----
-
-# 3. Test Execution Report vs Test Summary Report
+## Test Execution Report vs Test Summary Report
 
 The two reports are related, but they have different purposes.
 
@@ -109,9 +99,7 @@ Summary
 Test Summary Report
 ```
 
----
-
-# 4. Why Test Reports Matter
+## Why Test Reports Matter
 
 Test reports help the team make informed decisions about the current state of testing.
 
@@ -128,9 +116,7 @@ A report should not simply contain numbers.
 
 It should provide enough context to understand what those numbers mean.
 
----
-
-# 5. Basic Test Execution Metrics
+## Basic Test Execution Metrics
 
 Let's use a simple example.
 
@@ -153,9 +139,7 @@ First, verify that the numbers account for all planned tests:
 
 Good.
 
----
-
-# 6. Executed Test Cases
+### Executed Test Cases
 
 A test is considered **executed** when it has actually been run.
 
@@ -182,9 +166,7 @@ So:
 
 Blocked and Not Run tests are not counted as successfully executed tests.
 
----
-
-# 7. Execution Coverage
+### Execution Coverage
 
 **Execution Coverage** tells us what percentage of the planned test cases have actually been executed.
 
@@ -213,9 +195,7 @@ This means 76% of the planned test cases were executed.
 
 It does **not** mean that 76% of the software is defect-free.
 
----
-
-# 8. Pass Rate
+### Pass Rate
 
 The **Pass Rate** tells us what percentage of executed tests passed.
 
@@ -244,9 +224,7 @@ This means approximately 84% of the tests that were executed passed.
 
 It does not mean that 84% of the entire application is working correctly.
 
----
-
-# 9. Fail Rate
+### Fail Rate
 
 The **Fail Rate** tells us what percentage of executed tests failed.
 
@@ -279,9 +257,7 @@ Notice:
 
 Because these rates are calculated from the executed tests.
 
----
-
-# 10. Blocked Rate
+### Blocked Rate
 
 The **Blocked Rate** tells us what percentage of planned tests are currently blocked.
 
@@ -308,9 +284,7 @@ Therefore:
 
 This is useful because blocked tests represent testing that could not proceed.
 
----
-
-# 11. Not Run Rate
+### Not Run Rate
 
 The **Not Run Rate** tells us what percentage of planned tests have not yet been executed.
 
@@ -335,49 +309,37 @@ Therefore:
 
 > **Not Run Rate = 16%**
 
----
-
-# 12. Important: Know Which Denominator You Are Using
+### Important: Know Which Denominator You Are Using
 
 This is one of the most important things to understand when calculating QA metrics.
 
 For example:
 
-### Execution Coverage
-
-Uses:
+Execution Coverage uses:
 
 ```text
 Total Planned Tests
 ```
 
-### Pass Rate
-
-Uses:
+Pass Rate uses:
 
 ```text
 Executed Tests
 ```
 
-### Fail Rate
-
-Uses:
+Fail Rate uses:
 
 ```text
 Executed Tests
 ```
 
-### Blocked Rate
-
-Usually uses:
+Blocked Rate usually uses:
 
 ```text
 Total Planned Tests
 ```
 
-### Not Run Rate
-
-Usually uses:
+Not Run Rate usually uses:
 
 ```text
 Total Planned Tests
@@ -385,9 +347,7 @@ Total Planned Tests
 
 Always make the denominator clear when reporting metrics.
 
----
-
-# 13. Example Test Execution Summary
+### Example Test Execution Summary
 
 For our Easy Buy project:
 
@@ -407,9 +367,7 @@ For our Easy Buy project:
 
 These numbers provide a quick view of the test cycle.
 
----
-
-# 14. Defect Summary
+## Defect Summary
 
 Test reports should also summarize discovered defects.
 
@@ -434,9 +392,7 @@ Closed: 1
 
 The exact defect categories depend on the project's workflow.
 
----
-
-# 15. Why Defect Statistics Matter
+### Why Defect Statistics Matter
 
 Suppose:
 
@@ -456,9 +412,7 @@ That information changes the interpretation of the testing results.
 
 This is why a good test summary should provide **context**, not just percentages.
 
----
-
-# 16. Findings
+## Findings
 
 A Test Summary Report should explain important findings.
 
@@ -481,7 +435,7 @@ This allows stakeholders to understand the testing situation quickly.
 
 ---
 
-# 17. Risks
+## Risks
 
 A good report should identify important testing risks.
 
@@ -501,9 +455,7 @@ The purpose is not to exaggerate the situation.
 
 The purpose is to make remaining uncertainty visible.
 
----
-
-# 18. Recommendations
+## Recommendations
 
 Based on the documented testing results, the report can identify next testing actions.
 
@@ -523,9 +475,7 @@ These are testing actions rather than a release decision.
 
 Release decisions may involve QA, Product, Engineering, and other stakeholders according to the team's process.
 
----
-
-# 19. Test Environment
+## Test Environment
 
 A report should identify the environment in which testing was performed.
 
@@ -557,9 +507,7 @@ Example:
 
 This helps identify environment-specific problems.
 
----
-
-# 20. Test Cycle Information
+## Test Cycle Information
 
 A report should identify the testing cycle.
 
@@ -584,9 +532,7 @@ September 2026
 
 The exact fields depend on the project.
 
----
-
-# 21. Sample Test Execution Report
+## Sample Test Execution Report
 
 ```text
 TEST EXECUTION REPORT
@@ -635,9 +581,7 @@ Eight tests remain unexecuted.
 
 This report focuses primarily on execution results.
 
----
-
-# 22. Sample Test Summary Report
+## Sample Test Summary Report
 
 A higher-level summary could look like:
 
@@ -693,7 +637,6 @@ Fixed: 2
 Closed: 1
 
 Key Findings:
-
 - 38 of 50 planned tests were executed.
 - 32 executed tests passed.
 - 6 executed tests failed.
@@ -704,14 +647,12 @@ Key Findings:
 - Login and checkout require additional attention.
 
 Risks:
-
 - Checkout testing is incomplete.
 - Some login scenarios remain untested.
 - Three defects remain open.
 - Eight planned test cases have not been executed.
 
 Recommended Testing Actions:
-
 - Resolve blockers.
 - Complete remaining test execution.
 - Retest fixed defects.
@@ -719,9 +660,7 @@ Recommended Testing Actions:
 - Review open defects and remaining coverage.
 ```
 
----
-
-# 23. Test Reports Should Be Evidence-Based
+## Test Reports Should Be Evidence-Based
 
 A test report should be based on recorded testing information.
 
@@ -755,9 +694,7 @@ A better statement is:
 
 Even then, the report should clearly identify what was actually tested.
 
----
-
-# 24. Don't Misinterpret Pass Rate
+## Don't Misinterpret Pass Rate
 
 Suppose:
 
@@ -779,9 +716,7 @@ The Pass Rate among executed tests is:
 
 But only 10% of the planned tests were executed.
 
-Therefore, reporting only:
-
-> **100% pass rate**
+Therefore, reporting only: **100% pass rate**
 
 would provide incomplete information.
 
@@ -795,15 +730,11 @@ Not Run: 90%
 
 This gives the necessary context.
 
----
-
-# 25. Test Coverage vs Execution Coverage
+## Test Coverage vs Execution Coverage
 
 These terms can mean different things depending on the organization.
 
-**Execution Coverage** answers:
-
-> How many planned test cases have we executed?
+**Execution Coverage** answers: How many planned test cases have we executed?
 
 Example:
 
@@ -825,15 +756,11 @@ R4 → Not Tested
 
 This is why QA reports should clearly define what a reported percentage represents.
 
-Don't simply write:
-
-> Coverage = 76%
+Don't simply write: Coverage = 76%
 
 without explaining what the 76% measures.
 
----
-
-# 26. Test Execution and RTM
+## Test Execution and RTM
 
 Test execution results can also be connected to the **Requirements Traceability Matrix (RTM)**.
 
@@ -870,11 +797,9 @@ This gives stakeholders visibility into:
 
 We will revisit this in the next lesson on the RTM.
 
----
+## Common Reporting Mistakes
 
-# 27. Common Reporting Mistakes
-
-## Mistake 1 — Reporting only the pass rate
+### Mistake 1 — Reporting only the pass rate
 
 Example:
 
@@ -884,9 +809,7 @@ Without knowing how many tests were executed, this can be misleading.
 
 Always provide the planned and executed counts.
 
----
-
-## Mistake 2 — Mixing denominators
+### Mistake 2 — Mixing denominators
 
 For example:
 
@@ -900,17 +823,13 @@ The correct calculation would be:
 32 / 38 × 100 ≈ 84%
 ```
 
----
-
-## Mistake 3 — Treating blocked tests as failures
+### Mistake 3 — Treating blocked tests as failures
 
 A blocked test was not successfully executed.
 
 Don't automatically include it as a failed test unless your organization's reporting rules explicitly define it that way.
 
----
-
-## Mistake 4 — Treating Not Run as Pass
+### Mistake 4 — Treating Not Run as Pass
 
 Not Run means:
 
@@ -918,9 +837,7 @@ Not Run means:
 
 It does not mean the test passed.
 
----
-
-## Mistake 5 — Reporting numbers without context
+### Mistake 5 — Reporting numbers without context
 
 Instead of:
 
@@ -932,9 +849,7 @@ Say:
 
 This is much clearer.
 
----
-
-## Mistake 6 — Making unsupported conclusions
+### Mistake 6 — Making unsupported conclusions
 
 Avoid:
 
@@ -948,9 +863,7 @@ Instead, report the facts:
 
 Stakeholders can then use this information together with other release criteria.
 
----
-
-# 28. Test Summary Report Checklist
+## Test Summary Report Checklist
 
 Before finalizing a report, check:
 
@@ -998,9 +911,7 @@ Before finalizing a report, check:
 * [ ] Regression testing
 * [ ] Other required testing activities
 
----
-
-# 29. Key Takeaways
+## Key Takeaways
 
 The purpose of a test report is not simply to produce numbers.
 
