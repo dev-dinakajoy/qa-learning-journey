@@ -140,7 +140,7 @@ Test the Login and Logout functionality.
 
 ## 8. Bug Lifecycle
 
-Example: `BUG_LOGIN_001`
+`BUG_LOGIN_001`
 
 ```text
 New
@@ -158,7 +158,7 @@ Verified
 Closed
 ```
 
-`BUG_LOGIN_001` fix failed during retesting, and the bug was reopened.
+`BUG_LOGIN_002` fix failed during retesting, and the bug was reopened.
 
 ## 9. Retesting and Regression
 
@@ -169,6 +169,8 @@ After the developer fixed `BUG_LOGIN_001`:
 I ran `TC_LOGIN_006` again.
 
 **Expected:** A password with fewer than 8 characters is rejected.
+
+**Actual:** The system rejected password with fewer than 8 characters.
 
 **Result:** Pass.
 

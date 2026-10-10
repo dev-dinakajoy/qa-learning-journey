@@ -56,12 +56,12 @@ I practiced testing how a system changes from one state to another based on an a
 
 **Example — Login Attempts**
 
-| Current State | Action           | Expected State |
-| ------------- | ---------------- | -------------- |
-| Active        | Wrong password   | Active         |
-| Active        | Wrong password   | Active         |
-| Active        | Wrong password   | Locked         |
-| Locked        | Correct password | Locked         |
+| Current State | Action                     | Expected State |
+| ------------- | -------------------------- | -------------- |
+| Active        | Wrong password (attempt 1) | Active         |
+| Active        | Wrong password (attempt 2) | Active         |
+| Active        | Wrong password (attempt 3) | Locked         |
+| Locked        | Correct password           | Locked         |
 
 ---
 

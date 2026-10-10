@@ -16,9 +16,7 @@ It can also help answer:
 
 The RTM provides **traceability** between what the software is supposed to do and what QA actually tested.
 
----
-
-# 1. What Is Traceability?
+## What Is Traceability?
 
 **Traceability** means being able to follow a requirement through the testing process.
 
@@ -54,9 +52,7 @@ BUG-LOGIN-001
 
 This allows the QA team to understand exactly how a requirement was tested and whether an issue was discovered.
 
----
-
-# 2. What Is an RTM?
+## What Is an RTM?
 
 An RTM is usually a table that maps requirements to test cases.
 
@@ -70,9 +66,7 @@ A simple RTM might look like:
 
 This gives us a quick view of requirement coverage and test results.
 
----
-
-# 3. Why Is an RTM Important?
+## Why Is an RTM Important?
 
 An RTM helps QA teams:
 
@@ -87,9 +81,7 @@ An RTM helps QA teams:
 
 Without traceability, it can become difficult to determine whether all required functionality has actually been tested.
 
----
-
-# 4. Requirement Coverage
+## Requirement Coverage
 
 One important purpose of the RTM is identifying whether requirements have test coverage.
 
@@ -115,9 +107,7 @@ Requirement R3 does not currently have a mapped test case.
 
 That represents a **test coverage gap**.
 
----
-
-# 5. One Requirement Can Have Multiple Test Cases
+## One Requirement Can Have Multiple Test Cases
 
 A requirement does not necessarily need only one test case.
 
@@ -148,9 +138,7 @@ This is one reason the RTM is useful.
 
 It shows the relationship between a requirement and all the tests used to verify it.
 
----
-
-# 6. One Test Case Can Sometimes Cover Multiple Requirements
+## 6. One Test Case Can Sometimes Cover Multiple Requirements
 
 A test case may also verify more than one requirement when the requirements are closely related.
 
@@ -166,9 +154,7 @@ However, avoid forcing unrelated requirements into one test case simply to incre
 
 The mapping should reflect the actual purpose of the test.
 
----
-
-# 7. RTM and Test Scenarios
+## RTM and Test Scenarios
 
 Our QA workflow is:
 
@@ -194,9 +180,7 @@ This gives more visibility into the testing structure.
 
 Not every organization includes the Scenario column in the RTM.
 
----
-
-# 8. RTM and Defects
+## RTM and Defects
 
 An RTM can also connect failed test cases to defects.
 
@@ -234,9 +218,7 @@ BUG-SEARCH-001
 
 This provides useful defect traceability.
 
----
-
-# 9. A Basic RTM Structure
+## A Basic RTM Structure
 
 A simple RTM can contain:
 
@@ -259,9 +241,7 @@ Example:
 
 The exact columns depend on the team's needs.
 
----
-
-# 10. Forward Traceability
+## Forward Traceability
 
 **Forward traceability** means following a requirement forward to the tests that verify it.
 
@@ -293,9 +273,7 @@ TC_LOGIN_010
 
 This shows that the password-length requirement has multiple test cases.
 
----
-
-# 11. Backward Traceability
+## Backward Traceability
 
 **Backward traceability** means following a test case back to the requirement it verifies.
 
@@ -321,9 +299,7 @@ TC_LOGIN_009
 
 This tells us that the test exists to verify requirement R3.
 
----
-
-# 12. Bidirectional Traceability
+## Bidirectional Traceability
 
 When both directions are possible, we have **bidirectional traceability**.
 
@@ -365,9 +341,7 @@ TC_CART_009 → No Requirement
 
 An orphaned test may still be useful for exploratory or risk-based testing, but it should have a documented purpose rather than existing without context.
 
----
-
-# 13. RTM and Test Design Techniques
+## RTM and Test Design Techniques
 
 RTM does not replace test design.
 
@@ -387,9 +361,7 @@ Map to Requirement
 
 For example:
 
-### Requirement
-
-> Transfer amount must be between ₦5,000 and ₦500,000.
+Requirement Transfer amount must be between ₦5,000 and ₦500,000.
 
 Using Boundary Value Analysis:
 
@@ -418,9 +390,7 @@ TC_TRANSFER_006
 
 This demonstrates why a single requirement can have many test cases.
 
----
-
-# 14. RTM and Test Execution
+## RTM and Test Execution
 
 The RTM becomes more useful after test execution begins.
 
@@ -442,9 +412,7 @@ After execution:
 
 The RTM now provides visibility into the current state of requirement testing.
 
----
-
-# 15. RTM and Defect Tracking
+## RTM and Defect Tracking
 
 Suppose:
 
@@ -466,9 +434,7 @@ The RTM can become:
 
 Now someone reviewing the RTM can trace the issue back to the original requirement.
 
----
-
-# 16. Requirement Coverage Percentage
+## Requirement Coverage Percentage
 
 We can calculate basic requirement coverage.
 
@@ -488,9 +454,7 @@ Requirement Coverage =
 = 80%
 ```
 
-So:
-
-> **Requirement coverage = 80%**
+So: **Requirement coverage = 80%**
 
 This means 80% of the identified requirements have at least one mapped test case.
 
@@ -498,9 +462,7 @@ It does **not** mean 80% of the software has been completely tested.
 
 Coverage metrics should always define exactly what they measure.
 
----
-
-# 17. Requirement Coverage vs Test Execution Coverage
+## Requirement Coverage vs Test Execution Coverage
 
 These are different metrics.
 
@@ -539,9 +501,7 @@ Execution Coverage: 60%
 
 This means all requirements have tests, but many of those tests have not yet been executed.
 
----
-
-# 18. RTM Example — Easy Buy
+## RTM Example — Easy Buy
 
 Let's use our Easy Buy requirements.
 
@@ -579,9 +539,7 @@ Notice that:
 * A failed test can be connected to a defect.
 * Multiple test cases can provide coverage for one requirement.
 
----
-
-# 19. RTM Can Reveal Testing Gaps
+## RTM Can Reveal Testing Gaps
 
 Suppose the requirements are:
 
@@ -618,9 +576,7 @@ This tells the QA team that R8 needs test coverage.
 
 The RTM therefore helps prevent requirements from being forgotten.
 
----
-
-# 20. RTM Can Reveal Overlapping or Unnecessary Tests
+## RTM Can Reveal Overlapping or Unnecessary Tests
 
 Suppose we have:
 
@@ -658,9 +614,7 @@ and all three test exactly the same condition, there may be unnecessary duplicat
 
 The RTM can help expose this.
 
----
-
-# 21. RTM and Regression Testing
+## RTM and Regression Testing
 
 RTM can also help identify tests that should be considered for regression after a change.
 
@@ -678,23 +632,17 @@ R1
 
 These tests may be candidates for re-execution depending on the change and the team's regression strategy.
 
-RTM therefore helps answer:
+RTM therefore helps answer: **Which tests are related to this requirement?**
 
-> **Which tests are related to this requirement?**
+## Common RTM Mistakes
 
----
-
-# 22. Common RTM Mistakes
-
-## Mistake 1 — Mapping every requirement to exactly one test
+### Mistake 1 — Mapping every requirement to exactly one test
 
 A requirement can require multiple test cases.
 
 Don't artificially limit the mapping.
 
----
-
-## Mistake 2 — Treating coverage as execution
+### Mistake 2 — Treating coverage as execution
 
 Having a test case mapped to a requirement does not mean the test has been executed.
 
@@ -707,9 +655,7 @@ Status: Not Run
 
 R1 has test coverage, but the test has not yet been executed.
 
----
-
-## Mistake 3 — Forgetting defects
+### Mistake 3 — Forgetting defects
 
 If a test fails because of a confirmed defect, linking the defect provides useful traceability.
 
@@ -723,9 +669,7 @@ Fail
 Defect
 ```
 
----
-
-## Mistake 4 — Including tests with no clear purpose
+### Mistake 4 — Including tests with no clear purpose
 
 Every test should have a reason for existing.
 
@@ -733,9 +677,7 @@ Requirement-based tests should normally map to requirements.
 
 Exploratory or error-guessing tests may not map directly to a formal requirement, but their purpose should still be clear.
 
----
-
-## Mistake 5 — Treating 100% requirement coverage as complete testing
+### Mistake 5 — Treating 100% requirement coverage as complete testing
 
 Suppose:
 
@@ -763,9 +705,7 @@ Therefore:
 
 > **100% requirement coverage does not mean testing is complete.**
 
----
-
-# 23. RTM Checklist
+## RTM Checklist
 
 Before considering an RTM complete, check:
 
@@ -797,9 +737,7 @@ Before considering an RTM complete, check:
 * [ ] Are orphaned tests identified?
 * [ ] Are unnecessary duplicate tests reviewed?
 
----
-
-# 24. Complete Traceability Flow
+## Complete Traceability Flow
 
 The complete relationship we have learned throughout Level 3 is:
 
@@ -835,9 +773,7 @@ Regression Testing
 
 The RTM provides a way to connect important parts of this flow.
 
----
-
-# 25. Key Takeaways
+## Key Takeaways
 
 Remember the purpose of the RTM:
 
