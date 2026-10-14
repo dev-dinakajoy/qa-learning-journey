@@ -13,8 +13,6 @@ A customer receives **free delivery only when both conditions are true**:
 
 If either condition is false, the customer does not receive free delivery.
 
----
-
 ## Decision Table
 
 | Rule | Premium Member | Order ≥ ₦50,000 | Free Delivery |
@@ -24,8 +22,6 @@ If either condition is false, the customer does not receive free delivery.
 | R3   | No             | Yes             | No            |
 | R4   | No             | No              | No            |
 
----
-
 ## Test Cases
 
 | Test Case ID | Test Case                                        | Premium Member | Order Amount | Expected Result              |
@@ -34,8 +30,6 @@ If either condition is false, the customer does not receive free delivery.
 | TC_FD_002    | Premium member places an order below ₦50,000     | Yes            | ₦49,999      | Free delivery is not applied |
 | TC_FD_003    | Non-premium member places an order of ₦50,000    | No             | ₦50,000      | Free delivery is not applied |
 | TC_FD_004    | Non-premium member places an order below ₦50,000 | No             | ₦49,999      | Free delivery is not applied |
-
----
 
 ## Test Case Details
 
@@ -60,8 +54,6 @@ If either condition is false, the customer does not receive free delivery.
 
 **Decision Table Rule:** R1
 
----
-
 ### TC_FD_002 — Premium Member + Ineligible Order
 
 **Preconditions:**
@@ -82,8 +74,6 @@ If either condition is false, the customer does not receive free delivery.
 * The applicable delivery charge is displayed.
 
 **Decision Table Rule:** R2
-
----
 
 ### TC_FD_003 — Non-Premium Member + Eligible Order
 
@@ -106,8 +96,6 @@ If either condition is false, the customer does not receive free delivery.
 
 **Decision Table Rule:** R3
 
----
-
 ### TC_FD_004 — Non-Premium Member + Ineligible Order
 
 **Preconditions:**
@@ -128,8 +116,6 @@ If either condition is false, the customer does not receive free delivery.
 * The applicable delivery charge is displayed.
 
 **Decision Table Rule:** R4
-
----
 
 ## Coverage
 

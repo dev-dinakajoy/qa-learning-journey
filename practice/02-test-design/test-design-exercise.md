@@ -1,15 +1,17 @@
 ## Test Design Exercise
 
-Consider this requirement: A product quantity must be between **1 and 10**.
+Requirement: A product quantity must be between **1 and 10**.
 
 Create:
 
-### Positive tests
+- Positive tests: Write at least 3 valid test cases.
+- Negative tests: Write at least 5 invalid test cases.  
+Then apply:
+- Equivalence Partitioning
+- Boundary Value Analysis
 
-Write at least **3 valid test cases**.
-
-**Answer:**
-
+### Answers
+- **Positive tests**
 ```text
 1
 5
@@ -22,18 +24,14 @@ Write at least **3 valid test cases**.
 | TC_PROD_002  | Add a product with a quantity within the allowed range | product quantity: 5      | 5 products can be added   |
 | TC_PROD_003  | Add a product with the maximum allowed quantity.       | product quantity: 10     | 10 product can be added   |
 
-### Negative tests
-
-Write at least **5 invalid test cases**.
-
-**Answer:**
-
+- **Negative tests**
 ```text
 0
 11
 -1
 "abc"
 empty
+"  10" -> Invalid
 ```
 
 | ID           | Test Case                                    | Test Data                | Expected Result         |
@@ -44,10 +42,7 @@ empty
 | TC_PROD_007  | Reject non-numeric product quantity          | product quantity: "abc"  | Quantity is rejected    |
 | TC_PROD_008  | Reject an empty product quantity             | product quantity:        | Quantity is rejected    |
 
-Then apply:
-
-* **Equivalence Partitioning**
-Answer:
+- **Equivalence Partitioning**
 ```text
 < 1 -> Invalid
 1 - 10 -> valid
@@ -60,8 +55,7 @@ Answer:
 | Quantity from 1 to 10  | 5       | Valid             |
 | Quantity above 10      | 11      | Invalid           |
 
-* **Boundary Value Analysis**
-Answer:
+- **Boundary Value Analysis**
 ```text
 0 -> Invalid
 1 -> valid
@@ -79,18 +73,3 @@ Answer:
 | 9      | Valid           | Just below maximum     |
 | 10     | Valid           | Maximum boundary       |
 | 11     | Invalid         | Just above maximum     |
-
-* **Positive Testing**
-**Answer:**
-```text
-3 -> valid
-6 -> valid
-8 -> valid
-```
-* **Negative Testing**
-Answer:
-```text
--2 -> Invalid
-13 -> Invalid
-"  10" -> Invalid
-```

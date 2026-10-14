@@ -16,8 +16,6 @@ I divided inputs into valid and invalid groups and selected representative value
 | Valid     | 1–10            |       6 |
 | Invalid   | Greater than 10 |      15 |
 
----
-
 ### 2. Boundary Value Analysis
 
 I tested values at and around the boundaries of an allowed range.
@@ -33,8 +31,6 @@ I tested values at and around the boundaries of an allowed range.
 |    10 | Valid    |
 |    11 | Invalid  |
 
----
-
 ### 3. Decision Table Testing
 
 I created test cases by combining different conditions and checking the expected outcome. This shows how the understanding of decision tables can make business rules easier to test systematically.
@@ -48,8 +44,6 @@ I created test cases by combining different conditions and checking the expected
 | No             | Yes             | No            |
 | No             | No              | No            |
 
----
-
 ### 4. State Transition Testing
 
 I practiced testing how a system changes from one state to another based on an action. This helped me understand that some systems need to be tested based on **what happened previously**, not just the current input.
@@ -62,8 +56,6 @@ I practiced testing how a system changes from one state to another based on an a
 | Active        | Wrong password (attempt 2) | Active         |
 | Active        | Wrong password (attempt 3) | Locked         |
 | Locked        | Correct password           | Locked         |
-
----
 
 ### 5. Positive and Negative Testing
 
@@ -79,8 +71,6 @@ I practiced testing both valid and invalid inputs.
 | Empty value | Negative | Validation error |
 | Spaces      | Negative | Validation error |
 
----
-
 ### 6. Error Guessing
 
 I practiced thinking about mistakes users might make that could expose defects.
@@ -91,6 +81,7 @@ Examples:
 * Entering spaces instead of a value
 * Entering too few or too many digits
 * Entering unexpected characters
+* Adding leading or trailing spaces
 * Using invalid combinations of inputs
 * Performing an action when the system is in an invalid state
 
