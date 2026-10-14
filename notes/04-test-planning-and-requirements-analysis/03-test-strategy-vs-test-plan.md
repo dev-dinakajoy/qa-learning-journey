@@ -19,8 +19,6 @@ It can cover areas such as:
 
 A Test Strategy is generally more high-level than a Test Plan.
 
----
-
 ## What is a Test Plan?
 
 A Test Plan describes the **specific testing activities for a particular project, release, feature, or testing effort**.
@@ -42,8 +40,6 @@ It may include:
 * Risks
 * Deliverables
 
----
-
 ## Test Strategy vs Test Plan
 
 | Test Strategy                        | Test Plan                                               |
@@ -53,8 +49,6 @@ It may include:
 | May apply across projects            | Usually applies to a project/release/feature            |
 | Focuses on how testing is approached | Focuses on what, when, who, and how testing will happen |
 | Usually less frequently changed      | Can change as project conditions change                 |
-
----
 
 ## Example
 
@@ -69,8 +63,6 @@ This describes a **general testing approach**.
 > For the January release, QA will test login, transfers, account balance, and transaction history from January 5–15 using the QA environment and Chrome/Firefox.
 
 This describes the **specific testing effort**.
-
----
 
 ## Test Policy
 
@@ -95,8 +87,6 @@ Test Execution
 ```
 
 The exact terminology and document structure can vary between organizations.
-
----
 
 ## Key Takeaway
 

@@ -17,9 +17,7 @@ It answers important questions such as:
 * What are the risks?
 * When will testing be considered complete?
 
----
-
-## Typical Test Plan Structure
+## Typical Structure of a Test Plan 
 
 A Test Plan may contain:
 
@@ -40,8 +38,6 @@ A Test Plan may contain:
 15. Test Deliverables
 
 The exact structure may vary between organizations.
-
----
 
 ## Example: Food Delivery Application
 
@@ -77,9 +73,7 @@ Verify that users can:
 * Payment gateway
 * Delivery processing
 
----
-
-## Testing Types
+### Testing Types
 
 The test plan may specify:
 
@@ -91,9 +85,7 @@ The test plan may specify:
 * Usability Testing
 * Compatibility Testing
 
----
-
-## Test Environment
+### Test Environment
 
 The environment describes where testing will take place.
 
@@ -105,9 +97,7 @@ Example:
 * Android
 * Test database
 
----
-
-## Entry Criteria
+### Entry Criteria
 
 Entry criteria define the conditions that should be met **before testing can begin**.
 
@@ -120,9 +110,7 @@ Examples:
 * Test data is available.
 * Critical dependencies are working.
 
----
-
-## Exit Criteria
+### Exit Criteria
 
 Exit criteria define the conditions that should be met before testing can be considered complete.
 
@@ -135,9 +123,7 @@ Examples:
 * Regression testing is completed.
 * Test results have been documented.
 
----
-
-## Risks
+### Risks
 
 A Test Plan should identify potential risks.
 
@@ -151,9 +137,7 @@ Example:
 | Developer build delayed         | High   | Adjust testing schedule       |
 | Third-party service unavailable | High   | Use a sandbox or mock         |
 
----
-
-## Test Deliverables
+### Test Deliverables
 
 Test deliverables are documents or outputs produced during testing.
 
@@ -168,12 +152,10 @@ Examples:
 * Test Execution Report
 * Test Summary Report
 
----
-
 ## Key Takeaway
 
 A Test Plan provides a structured view of the testing effort.
 
 It tells the team:
 
-> **What will be tested, how it will be tested, who will test it, when it will happen, what is needed, and what conditions determine completion.**
+**What will be tested, how it will be tested, who will test it, when it will happen, what is needed, and what conditions determine completion.**

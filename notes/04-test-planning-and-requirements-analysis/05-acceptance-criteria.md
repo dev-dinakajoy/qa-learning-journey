@@ -8,8 +8,6 @@ They provide clear, testable expectations for a user story or requirement.
 
 They help developers understand what to build and help QA understand what to verify.
 
----
-
 ## Example
 
 ### User Story
@@ -29,8 +27,6 @@ They help developers understand what to build and help QA understand what to ver
 **AC3**
 
 > Given the user is on the restaurant search page, when the user enters a restaurant name using different letter casing, then matching restaurants should still be displayed.
-
----
 
 ## Given / When / Then
 
@@ -64,8 +60,6 @@ Example:
 
 > Then the food item should be added to the cart.
 
----
-
 ## Good Acceptance Criteria
 
 Good acceptance criteria should be:
@@ -76,8 +70,6 @@ Good acceptance criteria should be:
 * Unambiguous
 * Relevant
 * Understandable
-
----
 
 ## Poor Acceptance Criteria
 
@@ -90,8 +82,6 @@ This is difficult to test because "properly" is undefined.
 Better:
 
 > Given the user enters a valid restaurant name, when they click Search, then matching restaurants are displayed.
-
----
 
 ## Ambiguous Acceptance Criteria
 
@@ -106,8 +96,6 @@ Which behavior is actually required?
 QA should ask the Product Owner to clarify.
 
 The expected behavior should be defined before the test case is finalized.
-
----
 
 ## Turning Acceptance Criteria Into Tests
 
@@ -139,8 +127,6 @@ The test case then specifies:
 * Preconditions
 * Steps
 * Expected result
-
----
 
 ## Key Takeaway
 

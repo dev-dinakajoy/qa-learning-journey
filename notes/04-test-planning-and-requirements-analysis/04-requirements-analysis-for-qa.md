@@ -15,8 +15,6 @@ QA should not simply wait until development is finished before reading requireme
 
 QA can contribute during requirement review and refinement.
 
----
-
 ## Why is Requirements Analysis Important?
 
 Poorly understood requirements can lead to:
@@ -30,15 +28,11 @@ Poorly understood requirements can lead to:
 
 Good requirements analysis helps QA identify problems before implementation.
 
----
-
 ## What Does QA Look For?
 
 ### 1. Is the requirement clear?
 
-Example:
-
-> The application should load quickly.
+Example: The application should load quickly.
 
 This is vague.
 
@@ -50,25 +44,17 @@ How quickly?
 
 The requirement needs clarification.
 
----
-
 ### 2. Is the requirement testable?
 
 A requirement should describe behavior that can be verified.
 
-Instead of:
-
-> The application should be user-friendly.
+Instead of: The application should be user-friendly.
 
 A more testable requirement might specify measurable usability expectations.
 
----
-
 ### 3. Is anything missing?
 
-Suppose the requirement says:
-
-> Users can search for restaurants by name.
+Suppose the requirement says: Users can search for restaurants by name.
 
 QA may ask:
 
@@ -80,13 +66,9 @@ QA may ask:
 
 These questions can reveal missing requirements.
 
----
-
 ### 4. Are there ambiguities?
 
-Example:
-
-> Users can add food items to their cart.
+Example: Users can add food items to their cart.
 
 Questions:
 
@@ -98,8 +80,6 @@ Questions:
 The requirement doesn't answer these questions.
 
 QA should seek clarification rather than make assumptions.
-
----
 
 ## QA Questions During Requirement Review
 
@@ -132,8 +112,6 @@ A QA tester may ask:
 * What data is required?
 * What happens when the data doesn't exist?
 
----
-
 ## Requirements Should Be Testable
 
 A useful requirement should provide enough information for QA to determine whether the implementation satisfies it.
@@ -147,14 +125,10 @@ A good requirement should generally be:
 * Complete
 * Relevant
 
----
-
 ## Key Takeaway
 
 Requirements analysis is not simply reading requirements.
 
-QA should actively ask:
-
-> **"Can I understand this requirement clearly enough to test it?"**
+QA should actively ask: **"Can I understand this requirement clearly enough to test it?"**
 
 If the answer is no, the requirement may need clarification before testing can be designed properly.

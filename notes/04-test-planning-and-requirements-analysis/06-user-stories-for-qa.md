@@ -8,9 +8,7 @@ A common format is:
 
 > **As a [user type], I want [goal], so that [benefit].**
 
----
-
-## Example
+Example:
 
 > As a registered user, I want to search for restaurants by name so that I can find a restaurant I want to order from.
 
@@ -19,8 +17,6 @@ This tells us:
 * **Who?** Registered user
 * **What?** Search for restaurants by name
 * **Why?** Find a restaurant to order from
-
----
 
 ## Why Does QA Care About User Stories?
 
@@ -32,8 +28,6 @@ User stories help QA understand:
 * What behavior should be tested
 
 QA can use the story as a starting point for identifying questions and test conditions.
-
----
 
 ## QA's Role During Refinement
 
@@ -51,8 +45,6 @@ QA can ask questions such as:
 * What happens after the user logs out?
 
 These questions can help uncover missing requirements before development is complete.
-
----
 
 ## User Story → Acceptance Criteria → Tests
 
@@ -91,8 +83,6 @@ The tester defines:
 * Steps
 * Expected result
 
----
-
 ## One User Story Can Have Many Tests
 
 A single user story may produce many acceptance criteria and test cases.
@@ -113,11 +103,7 @@ Possible test scenarios include:
 * Login with invalid email format
 * Verify successful login
 
-Therefore:
-
-> **One user story does not equal one test case.**
-
----
+Therefore: **One user story does not equal one test case.**
 
 ## Key Takeaway
 

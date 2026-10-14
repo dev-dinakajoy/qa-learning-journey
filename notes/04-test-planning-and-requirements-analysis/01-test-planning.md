@@ -8,8 +8,6 @@ It happens before test execution and provides direction for the testing activiti
 
 Test planning helps the QA team understand the scope, objectives, approach, resources, schedule, risks, and expected deliverables of testing.
 
----
-
 ## Why is Test Planning Important?
 
 Without proper planning, testing can become:
@@ -31,8 +29,6 @@ Test planning helps the team:
 * Identify risks
 * Define entry and exit criteria
 * Define testing deliverables
-
----
 
 ## What Does a QA Tester Plan?
 
@@ -107,23 +103,15 @@ Examples:
 * Database
 * Testing tools
 
----
-
 ## Test Planning vs Test Execution
 
 Test planning happens **before and during preparation for testing**.
 
 Test execution happens when testers actually execute the test cases.
 
-### Test Planning
+**Test Planning:** "How are we going to test this application?"
 
-> "How are we going to test this application?"
-
-### Test Execution
-
-> "Let's execute the tests and record what actually happens."
-
----
+**Test Execution:** "Let's execute the tests and record what actually happens."
 
 ## Test Planning Output
 
@@ -131,12 +119,10 @@ One of the main outputs of test planning is the **Test Plan**.
 
 A Test Plan documents the testing approach and provides a reference for the QA team and stakeholders.
 
----
-
 ## Key Takeaway
 
 Test planning provides direction for testing.
 
 A good test plan helps the QA team understand:
 
-> **What to test + how to test + when to test + who will test + what resources are needed + what risks exist.**
+**What to test + how to test + when to test + who will test + what resources are needed + what risks exist.**
