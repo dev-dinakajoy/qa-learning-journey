@@ -658,9 +658,9 @@ Precondition:
 - Two products are available.
 
 Test Data:
-- Phone: ₦50,000 × 2
-- Headphones: ₦10,000 × 1
-- Expected cart total: ₦110,000
+- Phone: ₦250,000 × 2
+- Headphone: ₦70,000 × 1
+- Expected cart total: ₦570,000
 
 Steps:
 1. Add two Phones to the cart.

@@ -1,4 +1,4 @@
-# E-Commerce Web App Testing
+# Easy Buy Web App Testing
 
 This covers a realistic QA workflow from understanding requirements through test planning, test design, execution, defect reporting, and test reporting.
 
@@ -391,4 +391,309 @@ TC_LOGIN_008 -> 7 characters
 TC_LOGIN_009 -> 8 characters
 TC_LOGIN_010 -> 9 characters
 ```
-Test cases on [easy-buy-test-cases.md](./easy-buy-test-cases.md)
+Test cases on [02-easy-buy-test-cases.md](./02-easy-buy-test-cases.md)
+
+## Test Execution
+
+During execution:
+
+```text
+Test Case
+    ↓
+Prepare Data
+    ↓
+Execute Steps
+    ↓
+Observe Application
+    ↓
+Record Actual Result
+    ↓
+Compare Expected vs Actual
+    ↓
+Assign Status - Not Run/Pass/Fail/Blocked
+```
+
+| Test Case       | Expected Result                   | Actual Result                     | Status |
+| --------------- | --------------------------------- | --------------------------------- | ------ |
+| TC_LOGIN_001    | User is redirected to Dashboard   | User redirected to Dashboard      | Pass   |
+| TC_LOGIN_002    | Email validation displayed        | Wrong validation message          | Fail   |
+| TC_LOGIN_003    | Error message displayed           | Error message displayed           | Pass   |
+| TC_LOGIN_004    | Error message displayed           | Error message displayed           | Pass   |
+| TC_LOGIN_005    | Both validations displayed        | "Invalid credentials" displayed   | Pass   |
+| TC_LOGIN_006    | Invalid email message displayed   | Invalid email message displayed   | Pass   |
+| TC_LOGIN_007    | Password validation displayed     |  Wrong validation message         | Fail   |
+| TC_LOGIN_008    | Password below 8 chars rejected   | Password accepted                 | Fail   |
+| TC_LOGIN_009    | Display dashboard                 | Dashboard displayed               | Pass   |
+| TC_LOGIN_010    | Display dashboard                 | Dashboard displayed               | Pass   |
+| TC_SEARCH_001   | Display matching products         | Matching products displayed       | Pass   |
+| TC_SEARCH_002   | "No results" message              | "No results" message              | Pass   |
+| TC_SEARCH_003   | No system error                   | No system error                   | Pass   |
+| TC_SEARCH_004   | “Invalid keyword" displayed       | “Invalid keyword" displayed       | Pass   |
+| TC_SEARCH_005   | Matching products displayed       | Matching products displayed       | Pass   |
+| TC_SEARCH_006   | Matching products displayed       | Matching products displayed       | Pass   |
+| TC_SEARCH_007   | Matching products displayed       | Matching products displayed       | Pass   |
+| TC_CART_001     | Product added to cart             | Product added to cart             | Pass   |
+| TC_CART_002     | Increase and decrease product quantity| Product quantity can be increased and decreased| Pass   |
+| TC_CART_003     | Product can be removed from cart  | Product removed from cart         | Pass   |
+| TC_CART_004     | Cart total is correct             | Cart total is correct             | Pass   |
+| TC_CHECKOUT_001 | Display checkout page             | Displayed checkout                | Pass   |
+| TC_CHECKOUT_002 | Validate delivery information before order| Users delivery information is validated| Pass   |
+| TC_CHECKOUT_003 | Users can place orders            | Users can place orders            | Pass   |
+| TC_CHECKOUT_004 | Cannot proceed to checkout with empty cart| Cannot proceed to checkout with empty cart| Pass   |
+
+Test execution details on [03-easy-buy-test-execution.md](./03-easy-buy-test-execution.md)
+
+## Initial Test Execution Report
+
+After executing the tests, I summarized the results.
+
+```text
+Project: Easy Buy
+
+Test Cycle: Release 1.0
+
+Planned: 25
+
+Executed: 25
+
+Passed: 22
+
+Failed: 3
+
+Blocked: 0
+
+Not Run: 0
+```
+
+I then calculated:
+
+```text
+Execution Coverage = 25 / 25 × 100 = 100%
+
+Pass Rate = 22 / 25 × 100 ≈ 88%
+
+Fail Rate = 3 / 25 × 100 ≈ 12%
+```
+
+These metrics describe the current execution results.
+
+## Defect Reporting
+
+When I confirm a failed test to be a software defect, I create a bug report.
+
+Example:
+
+```text
+BUG-LOGIN-001
+
+Title:
+Wrong error message is displayed when a user tries to login with an empty email
+
+Expected:
+The user is not authenticated and receive an appropriate error message.
+
+Actual:
+The system displays "Invalid email or password" and keeps the user on the Login page. The error should tell that the email is empty not invalid.
+
+Related Test Case:
+TC_LOGIN_002
+```
+
+Bug reports on [04-easy-buy-bug-report.md](./04-easy-buy-bug-report.md)
+
+I ensured the defects contain enough information for another person to reproduce the issue.
+
+## Bug/Defect Lifecycle
+
+I followed this simplified defect lifecycle:
+
+```text
+New
+ ↓
+Assigned
+ ↓
+In Progress
+ ↓
+Fixed
+ ↓
+Ready for Retest
+ ↓
+Retest
+ ↓
+Verified
+ ↓
+Closed or Reopened
+```
+
+Some other states include:
+
+```text
+Rejected
+Duplicate
+Deferred
+Cannot Reproduce
+```
+
+## Retesting
+
+After developer fixes a confirmed defect, I retest the original failing scenario.
+
+Example:
+
+```text
+BUG-LOGIN-001 -> Developer Fix -> TC_LOGIN_002 -> Retest
+```
+
+If the issue is fixed:
+
+```text
+Expected = Actual -> Status: Closed
+```
+
+If the problem remains:
+
+```text
+Expected != Actual -> Status: Reopened
+```
+
+## Regression Testing
+
+After important fixes, I run related regression tests. The purpose is to check whether the fix introduced problems elsewhere.
+
+For example, after a login fix:
+
+```text
+TC_LOGIN_001
+TC_LOGIN_002
+TC_LOGIN_003
+TC_LOGIN_004
+TC_LOGIN_005
+...
+```
+
+## Final Test Execution Report
+
+After executing the tests, we summarize the results.
+
+```text
+Project: Easy Buy
+
+Test Cycle: Release 1.0
+
+Planned: 25
+
+Executed: 25
+
+Passed: 24
+
+Failed:
+1
+
+Blocked:
+0
+
+Not Run:
+0
+```
+
+We can calculate:
+
+```text
+Execution Coverage = 38 / 25 × 100 = 76%
+
+Pass Rate = 24 / 25 × 100 ≈ 96%
+
+Fail Rate = 1 / 25 × 100 ≈ 4%
+```
+
+These metrics describe the current execution results.
+
+## Defect Summary
+
+```text
+Total Defects: 3
+
+Critical: 0
+High: 1
+Medium: 2
+Low: 0
+
+Open: 1
+Fixed: 2
+Closed: 2
+```
+
+## Test Summary Report
+
+| Metric     | Result |
+| ---------- | -----: |
+| Planned    |     25 |
+| Executed   |     25 |
+| Passed     |     22 |
+| Failed     |      3 |
+| Blocked    |      0 |
+| Not Run    |      0 |
+| Bugs Found |      3 |
+
+## Summary
+
+Testing was completed for the Login feature.
+
+25 test cases were executed. 22 passed and 3 failed.
+
+Three defects were identified:
+
+* Incorrect email validation message
+* Incorrect password validation message
+* Password length validation failure
+
+The email validation defect was fixed and successfully retested.
+The password validation defect was fixed and successfully retested.
+
+The remaining defects should be addressed before the Login feature is considered ready for release.
+
+## Requirements Traceability Matrix
+
+Finally, I connected requirements to their test cases and results.
+
+Example:
+
+| Requirement | Test Case     | Status | Defect         |
+| ----------- | ------------- | ------ | -------------- |
+| R1          | TC_LOGIN_001  | Fail   | -              |
+| R2          | TC_LOGIN_002  | Fail   | BUG-LOGIN-001  |
+| R3          | TC_LOGIN_003  | Pass   | -              |
+| R4          | TC_LOGIN_004  | Pass   | -              |
+
+RTM on [05-easy-buy-rtm.md](./05-easy-buy-rtm.md)
+
+This allows us to trace:
+
+```text
+Requirement
+    ↓
+Test Case
+    ↓
+Execution Result
+    ↓
+Defect
+```
+
+## Project Deliverables
+
+By the end of this practical project, I practiced creating:
+
+```text
+01. Requirements
+02. Test Plan
+03. Test Scenarios
+04. Test Cases
+05. Test Data
+06. Test Execution Results
+07. Bug Reports
+08. Retest Results
+09. Regression Test Results
+10. Test Execution Report
+11. Test Summary Report
+12. Requirements Traceability Matrix
+```
